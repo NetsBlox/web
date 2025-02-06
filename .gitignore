@@ -1,0 +1,8 @@
+# exclude node modules
+node_modules
+
+# exclude ide specific configs
+.idea
+
+# build artifacts
+public/js/main.js
