@@ -19,7 +19,7 @@ const navItems = [
     ],
   },
   { name: "Editor", href: "https://editor.netsblox.org/?" },
-  { name: "Contact", href: "/contact" },
+  { name: "People", href: "/people" },
 ];
 
 const Navbar = ({ darkMode, setDarkMode }) => {

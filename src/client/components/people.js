@@ -1,11 +1,10 @@
 import React from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Entry = ({ img, name }) => {
   return (
     <div className="text-center flex" style={{display: "inline-block", padding: "20px"}}>
-      <img src={img} width="100px" height="100px" style={{borderRadius: "100%"}}></img>
-      <p className="text-slate-600 dark:text-slate-300">{name}</p>
+      <img className="shadow-lg" src={img} width="150px" height="150px" style={{borderRadius: "100%", display: "inline-block"}}></img>
+      <p className="text-slate-600 dark:text-slate-300" style={{paddingTop: 15}}>{name}</p>
     </div>
   );
 };
@@ -37,6 +36,7 @@ export default function PeoplePage() {
                 <Entry img="images/devin-jean.jpg" name="Devin Jean"></Entry>
                 <Entry img="images/placeholder.png" name="Saman Kittani"></Entry>
                 <Entry img="images/placeholder.png" name="Gabriel Barnard"></Entry>
+                <Entry img="images/placeholder.png" name="Tito Ebiwonjumi"></Entry>
               </div>
             </div>
 
@@ -44,15 +44,13 @@ export default function PeoplePage() {
               <h2 className="text-center text-xl font-bold mb-4">Undergraduate Students</h2>
 
               <div className="flex flex-row flex-wrap text-center justify-center">
-                <Entry img="images/placeholder.png" name="person 1"></Entry>
-                <Entry img="images/placeholder.png" name="person 2"></Entry>
-                <Entry img="images/placeholder.png" name="person 3"></Entry>
-                <Entry img="images/placeholder.png" name="person 4"></Entry>
-                <Entry img="images/placeholder.png" name="person 5"></Entry>
-                <Entry img="images/placeholder.png" name="person 6"></Entry>
-                <Entry img="images/placeholder.png" name="person 7"></Entry>
-                <Entry img="images/placeholder.png" name="person 8"></Entry>
-                <Entry img="images/placeholder.png" name="person 9"></Entry>
+                <Entry img="images/tabitha-lee.jpeg" name="Tabitha Lee"></Entry>
+                <Entry img="images/marina-rizk.jpeg" name="Marina Rizk"></Entry>
+                <Entry img="images/marissa-schwarz.jpeg" name="Marissa Schwarz"></Entry>
+                <Entry img="images/eleanor-summerfield.jpeg" name="Eleanor Summerfield"></Entry>
+                <Entry img="images/yizhou-tan.jpeg" name="Yizhou Tan"></Entry>
+                <Entry img="images/siyuan-wang.jpeg" name="Siyuan Wang"></Entry>
+                <Entry img="images/michelle-zhu.jpeg" name="Michelle Zhu"></Entry>
               </div>
             </div>
           </div>
