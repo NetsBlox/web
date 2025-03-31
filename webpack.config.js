@@ -9,12 +9,14 @@ const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 export default {
   context: path.join(__dirname, "/src"),
   entry: "./main.js",
-  // devtool: "eval-source-map",
   output: {
     filename: "index.js",
     path: path.resolve(__dirname, "public"),
-    publicPath: "./",
+    publicPath: process.env.NODE_ENV === 'production' ? '/web/' : "/",
   },
+  // optimization: {
+  //   minimize: process.env.NODE_ENV === "production", // Minifies in production
+  // },
   module: {
     rules: [
       {
@@ -29,5 +31,5 @@ export default {
     ],
   },
   plugins: [],
-  mode: "production",
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
 };

@@ -2,24 +2,24 @@ import React, { useState, useEffect } from "react";
 import { Sun, Moon, Menu, X, ChevronDown } from "lucide-react";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "Resources", href: "/learn" },
-  { name: "For Teachers", href: "/curriculum" },
-  { name: "Multiplayer", href: "/multiplayer" },
-  { name: "Projects", href: "/projects" },
+  { name: "Home", href: "." },
+  { name: "Resources", href: "learn" },
+  { name: "For Teachers", href: "curriculum" },
+  { name: "Multiplayer", href: "multiplayer" },
+  { name: "Projects", href: "projects" },
   {
     name: "Tools",
-    href: "/tools",
+    href: "tools",
     submenu: [
-      { name: "PhoneIoT", href: "/phoneiot" },
-      { name: "RoboScape", href: "/roboscape" },
-      { name: "BeatBlox", href: "/beatblox" },
-      { name: "Extensions", href: "/extensions" },
-      { name: "PyBlox", href: "/pyblox" },
+      { name: "PhoneIoT", href: "phoneiot" },
+      { name: "RoboScape", href: "roboscape" },
+      { name: "BeatBlox", href: "beatblox" },
+      { name: "Extensions", href: "extensions" },
+      { name: "PyBlox", href: "pyblox" },
     ],
   },
   { name: "Editor", href: "https://editor.netsblox.org/?" },
-  { name: "People", href: "/people" },
+  { name: "People", href: "people" },
 ];
 
 const Navbar = ({ darkMode, setDarkMode }) => {
@@ -35,12 +35,12 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <img
-            src="/images/netsblox-logo-bluetransp.png"
+            src="images/netsblox-logo-bluetransp.png"
             alt="NetsBlox"
             style={{ height: "50px", paddingRight: "6px" }}
           />
           <a
-            href="/"
+            href="."
             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600"
             style={{ marginRight: "auto" }}
           >

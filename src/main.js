@@ -47,7 +47,7 @@ const MyApp = () => {
   }, [darkMode]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/web">
       <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />

@@ -2,6 +2,7 @@
   "name": "NetsBlox",
   "version": "1.0.0",
   "description": "NetsBlox",
+  "homepage": "https://netsblox.github.io/web",
   "main": "/src/server/index.js",
   "type": "module",
   "dependencies": {
