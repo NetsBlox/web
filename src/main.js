@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import LandingPage from "./components/landing_page.js";
 import NavBar from "./components/navbar.js";
-import "../index.css";
+import "../public/index.css";
 import Projects from "./components/projects.js";
 import { Footer } from "./components/footer.js";
 import PhoneIOT from "./components/phoneiot.js";

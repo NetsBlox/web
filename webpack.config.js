@@ -7,13 +7,13 @@ import url from "url";
 const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
 
 export default {
-  context: path.join(__dirname, "/src/client"),
+  context: path.join(__dirname, "/src"),
   entry: "./main.js",
-  mode: "development",
-  devtool: "eval-source-map",
+  // devtool: "eval-source-map",
   output: {
-    filename: "[name].js",
-    path: path.resolve(__dirname, "public/js"),
+    filename: "index.js",
+    path: path.resolve(__dirname, "public"),
+    publicPath: "./",
   },
   module: {
     rules: [
@@ -28,4 +28,6 @@ export default {
       },
     ],
   },
+  plugins: [],
+  mode: "production",
 };

@@ -5,4 +5,5 @@ node_modules
 .idea
 
 # build artifacts
-public/js/main.js
+public/index.js*
+public/index.css*

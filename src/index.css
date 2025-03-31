@@ -1147,9 +1147,6 @@ select {
 .prose :where(.prose > :last-child):not(:where([class~="not-prose"],[class~="not-prose"] *)) {
   margin-bottom: 0;
 }
-.static {
-  position: static;
-}
 .absolute {
   position: absolute;
 }
@@ -1726,12 +1723,6 @@ select {
 }
 .font-semibold {
   font-weight: 600;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.lowercase {
-  text-transform: lowercase;
 }
 .italic {
   font-style: italic;
