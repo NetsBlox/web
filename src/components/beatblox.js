@@ -147,7 +147,7 @@ const BeatBlox = () => {
             <div className="text-center mb-12">
               <div className="w-32 h-32 mx-auto mb-6 relative">
                 <img
-                  src="/images/beatblox.png"
+                  src="images/beatblox.png"
                   alt="BeatBlox Logo"
                   width={128}
                   height={128}
@@ -159,7 +159,7 @@ const BeatBlox = () => {
               </h1>
               <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
                 BeatBlox is the latest extension to the{" "}
-                <a href="/" className="text-blue-500 hover:text-blue-600">
+                <a href="." className="text-blue-500 hover:text-blue-600">
                   NetsBlox
                 </a>{" "}
                 block-based programming environment, designed to teach

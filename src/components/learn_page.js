@@ -205,7 +205,7 @@ const LearnPage = () => {
         },
       ],
       buttonText: "View",
-      buttonLink: "/tutorials", //TODO
+      buttonLink: "tutorials", //TODO
     },
     {
       title: "Documents",
@@ -215,43 +215,43 @@ const LearnPage = () => {
         {
           title:
             "Removing the Walls Around Visual Educational Programming Environments",
-          url: "/documents/removing_the_walls.pdf",
+          url: "documents/removing_the_walls.pdf",
           icon: Laptop,
         },
         {
           title:
             "A Visual Programming Environment for Introducing Distributed Computing",
-          url: "/documents/NetsBlox_JPDC.pdf",
+          url: "documents/NetsBlox_JPDC.pdf",
           icon: Globe,
         },
         {
           title: "Enabling Collaborative Distance Robotics Education",
-          url: "/documents/RoboScape_Online_VLHCC_2021.pdf",
+          url: "documents/RoboScape_Online_VLHCC_2021.pdf",
           icon: Bot,
         },
         {
           title: "Your Phone as a Sensor: Making IoT Accessible",
-          url: "/documents/PhoneIoT-your-phone-as-a-sensor.pdf",
+          url: "documents/PhoneIoT-your-phone-as-a-sensor.pdf",
           icon: Smartphone,
         },
         {
           title: "Teaching Cybersecurity with Networked Robots",
-          url: "/documents/cybersec_with_networked_robots.pdf",
+          url: "documents/cybersec_with_networked_robots.pdf",
           icon: Shield,
         },
         {
           title: "Broadening Participation in Computing",
-          url: "/documents/Ledeczi-ITEST-PI-Mtg.pdf",
+          url: "documents/Ledeczi-ITEST-PI-Mtg.pdf",
           icon: Users,
         },
         {
           title: "CSTA19: Session",
-          url: "/documents/CSTA-2019-Session.pptx",
+          url: "documents/CSTA-2019-Session.pptx",
           icon: Users,
         },
         {
           title: "CSTA19: Workshop",
-          url: "/documents/CSTA-2019-Workshop.pptx",
+          url: "documents/CSTA-2019-Workshop.pptx",
           icon: Users,
         },
 
@@ -262,7 +262,7 @@ const LearnPage = () => {
         },
         {
           title: "Flyer",
-          url: "/documents/NetsBloxFlyer.pdf",
+          url: "documents/NetsBloxFlyer.pdf",
           icon: Newspaper,
         },
       ],
@@ -274,48 +274,48 @@ const LearnPage = () => {
       links: [
         {
           title: "Map and Weather",
-          url: "/documents/NetsBloxLessonMapandWeather.pdf",
+          url: "documents/NetsBloxLessonMapandWeather.pdf",
           icon: Globe,
         },
         {
           title: "Intro to Plotting",
-          url: "/documents/NetsBloxLessonPlotting.pdf",
+          url: "documents/NetsBloxLessonPlotting.pdf",
           icon: BarChart2,
         },
         {
           title: "Plotting Climate Change data",
-          url: "/documents/NetsBloxLessonIceCore.pdf",
+          url: "documents/NetsBloxLessonIceCore.pdf",
           icon: Cloud,
         },
         {
           title: "Plotting COVID-19 data",
-          url: "/documents/NetsBloxLessonCOVID-19.pdf",
+          url: "documents/NetsBloxLessonCOVID-19.pdf",
           icon: BarChart2,
         },
         {
           title: "Movies",
-          url: "/documents/NetsBloxLessonListsandMovies.pdf",
+          url: "documents/NetsBloxLessonListsandMovies.pdf",
           icon: Video,
         },
         {
           title: "Texting app",
-          url: "/documents/NetsBloxLessonTexting.pdf",
+          url: "documents/NetsBloxLessonTexting.pdf",
           icon: MessageSquare,
         },
         {
           title: "Chatroom app",
-          url: "/documents/NetsBloxLessonChat.pdf",
+          url: "documents/NetsBloxLessonChat.pdf",
           icon: MessageSquare,
         },
         {
           title: "Multi-player game",
-          url: "/documents/NetsBloxLessonMulti-PlayerGames.pdf",
+          url: "documents/NetsBloxLessonMulti-PlayerGames.pdf",
           icon: Gamepad,
           isMultiplayer: true,
         },
       ],
       buttonText: "Explore Resources",
-      buttonLink: "/curriculum",
+      buttonLink: "curriculum",
     },
     {
       title: "Sample Projects",
@@ -393,7 +393,7 @@ const LearnPage = () => {
         },
       ],
       buttonText: "Explore Projects",
-      buttonLink: "/projects",
+      buttonLink: "projects",
     },
   ];
 

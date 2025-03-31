@@ -21,7 +21,7 @@ export const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="/learn"
+                  href="learn"
                   className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
                   Documentation
@@ -29,7 +29,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/learn"
+                  href="learn"
                   className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
                   Tutorials
@@ -60,7 +60,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="/contact"
+                  href="contact"
                   className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
                 >
                   Contact Us

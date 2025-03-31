@@ -68,14 +68,14 @@ export default function RoboScapeOnline() {
               <div className="grid gap-6">
                 <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
                   <img
-                    src="/images/roboscapeonlinecybersec.png"
+                    src="images/roboscapeonlinecybersec.png"
                     alt="RoboScape Online Simulator Interface"
                     className="object-cover w-full h-full"
                   />
                 </div>
                 <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg">
                   <img
-                    src="/images/roboscape_transparent.png"
+                    src="images/roboscape_transparent.png"
                     alt="Virtual Robot on Computer"
                     className="object-cover w-full h-full"
                   />
@@ -106,7 +106,7 @@ export default function RoboScapeOnline() {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="/documents/RoboScape_Online_VLHCC_2021.pdf"
+                    href="documents/RoboScape_Online_VLHCC_2021.pdf"
                     className="text-blue-500 hover:text-blue-600 flex items-center gap-2"
                   >
                     <ExternalLink className="h-4 w-4" />

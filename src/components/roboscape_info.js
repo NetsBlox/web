@@ -55,7 +55,7 @@ export default function RoboScapeInfo() {
               </div>
               <div className="relative aspect-[6/3] rounded-xl overflow-hidden">
                 <img
-                  src="/images/roboscape_info_bot.png"
+                  src="images/roboscape_info_bot.png"
                   alt="Parallax ActivityBot 360 robots"
                   className="object-cover w-full h-full"
                 />
@@ -117,7 +117,7 @@ export default function RoboScapeInfo() {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="/documents/cybersec_with_networked_robots.pdf"
+                    href="documents/cybersec_with_networked_robots.pdf"
                     className="text-blue-500 hover:text-blue-600 flex items-center gap-2"
                   >
                     <ExternalLink className="h-4 w-4" />
@@ -126,7 +126,7 @@ export default function RoboScapeInfo() {
                 </li>
                 <li>
                   <a
-                    href="/documents/cybersec_curriculum_robotics.pdf"
+                    href="documents/cybersec_curriculum_robotics.pdf"
                     className="text-blue-500 hover:text-blue-600 flex items-center gap-2"
                   >
                     <ExternalLink className="h-4 w-4" />A Hands-On Cybersecurity

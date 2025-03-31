@@ -5,50 +5,50 @@ import { ChevronRight, Code, Cloud, Users, Zap } from "lucide-react";
 const taglines = [
   {
     text: "Beats and Music",
-    image: "/images/beats.jpeg?height=600&width=1200",
-    link: "/beatblox",
+    image: "images/beats.jpeg?height=600&width=1200",
+    link: "beatblox",
     buttonText: "BeatBlox Extension",
   },
   {
     text: "Robot Worlds",
-    image: "/images/robot_world.jpeg?height=600&width=1200",
-    link: "/roboscape",
+    image: "images/robot_world.jpeg?height=600&width=1200",
+    link: "roboscape",
     buttonText: "RoboScape Extension",
   },
   {
     text: "Phone Apps",
-    image: "/images/apps.jpeg?height=600&width=1200",
-    link: "/phoneiot",
+    image: "images/apps.jpeg?height=600&width=1200",
+    link: "phoneiot",
     buttonText: "PhoneIoT Page",
   },
   {
     text: "Multi-Player Games",
-    image: "/images/multi_player_games.jpeg?height=600&width=1200",
-    link: "/multiplayer",
+    image: "images/multi_player_games.jpeg?height=600&width=1200",
+    link: "multiplayer",
     buttonText: "Start Playing",
   },
   {
     text: "Together",
-    image: "/images/together_background.jpeg?height=600&width=1200",
-    link: "/editor",
+    image: "images/together_background.jpeg?height=600&width=1200",
+    link: "editor",
     buttonText: "Start Creating: NetsBlox Editor",
   },
   {
     text: "with AI",
-    image: "/images/AI.jpeg?height=600&width=1200",
-    link: "/editor",
+    image: "images/AI.jpeg?height=600&width=1200",
+    link: "editor",
     buttonText: "Start Creating: NetsBlox Editor",
   },
   {
     text: "with Blocks or Text",
-    image: "/images/block_based.jpeg?height=600&width=1200",
-    link: "/pyblox",
+    image: "images/block_based.jpeg?height=600&width=1200",
+    link: "pyblox",
     buttonText: "Get Started: PyBlox",
   },
   {
     text: "Online programs",
-    image: "/images/robot_on_laptop.jpeg?height=600&width=1200",
-    link: "/editor",
+    image: "images/robot_on_laptop.jpeg?height=600&width=1200",
+    link: "editor",
     buttonText: "Start Creating: NetsBlox Editor",
   },
 ];
@@ -167,7 +167,7 @@ export default function LandingPage() {
             distributed programs, collaborate in real-time, and bring their
             ideas to life through code.
           </motion.p>
-          <a href="/learn">
+          <a href="learn">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

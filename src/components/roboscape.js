@@ -33,7 +33,7 @@ const RoboScapePage = () => {
       buttonText: "Discover RoboScape Magic!",
       color:
         "from-purple-400 to-pink-500 hover:from-pink-500 hover:to-purple-400",
-      href: "/roboscape/info",
+      href: "roboscape/info",
     },
     {
       title: "RoboScape Online",
@@ -43,7 +43,7 @@ const RoboScapePage = () => {
       buttonText: "Explore Virtual Robots!",
       color:
         "from-green-400 to-blue-500 hover:from-blue-500 hover:to-green-400",
-      href: "/roboscape/online",
+      href: "roboscape/online",
     },
     {
       title: "RoboScape Learning Journey",
@@ -53,7 +53,7 @@ const RoboScapePage = () => {
       buttonText: "Start Your Robot Adventure!",
       color:
         "from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-400",
-      href: "/roboscape/curriculum",
+      href: "roboscape/curriculum",
     },
   ];
 

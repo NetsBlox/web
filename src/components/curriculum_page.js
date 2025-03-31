@@ -50,7 +50,7 @@ const CurriculumPage = () => {
       description:
         "ROCCEM provides middle school educators with accessible, focused, and engaging educational material for schools across Tennessee and beyond. Using NetsBlox, the ROCCEM curriculum introduces students to robotics, cybersecurity, and advanced computer science concepts without the text-based programming hurdle.",
       color: "from-purple-400 to-pink-500",
-      href: "/roccem",
+      href: "roccem",
       buttonText: "Explore ROCCEM",
     },
     {
@@ -59,7 +59,7 @@ const CurriculumPage = () => {
       description:
         "With RoboScape and RoboScape Online, students can write NetsBlox programs that remotely control physical or virtual robots. Learn about encryption, cipher-breaking, and hack other robots in exciting challenges!",
       color: "from-blue-400 to-cyan-500",
-      href: "/roboscape",
+      href: "roboscape",
       buttonText: "Start Robotics Adventure",
     },
     {
@@ -97,7 +97,7 @@ const CurriculumPage = () => {
       description:
         "Create exciting projects using real-world wildlife databases! Learn how technology can help solve conservation problems through hands-on, project-based learning.",
       color: "from-purple-400 to-pink-500",
-      href: "/wildlife",
+      href: "wildlife",
       buttonText: "Explore Wildlife Tech",
     },
     {
@@ -106,7 +106,7 @@ const CurriculumPage = () => {
       description:
         "Dive into the fascinating world of AI! Create your own AI agents, solve puzzles, and learn about everything from classical AI algorithms to the latest advances in modern AI.",
       color: "from-blue-400 to-cyan-500",
-      href: "/aicamp",
+      href: "aicamp",
       buttonText: "Join AI Adventure",
     },
   ];

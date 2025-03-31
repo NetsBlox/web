@@ -50,7 +50,7 @@ const MultiplayerPage = () => {
       title: "Find & open a game",
       content:
         "You can go through the list of our examples and user created apps on NetsBlox home page, or have a friend share his own creation with you.",
-      link: "/",
+      link: ".",
       linkText: "NetsBlox home page",
       color: "from-green-400 to-emerald-500",
     },

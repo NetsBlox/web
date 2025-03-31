@@ -124,14 +124,14 @@ export default function PhoneIOT() {
               <div className="justify-items-center">
                 <div className="grid md:grid-cols-2 gap-8 mb-12">
                   <img
-                    src="/images/phoneIOT-photo1.jpg"
+                    src="images/phoneIOT-photo1.jpg"
                     alt="PhoneIoT Map Interface"
                     width={300}
                     height={600}
                     className="rounded-xl shadow-lg"
                   />
                   <img
-                    src="/images/phoneIOT-photo2.jpg"
+                    src="images/phoneIOT-photo2.jpg"
                     alt="PhoneIoT Controls Interface"
                     width={300}
                     height={600}
@@ -174,7 +174,7 @@ export default function PhoneIOT() {
                 ))}
               </div>
               <div className="justify-self-center ">
-                <a href="/projects">
+                <a href="projects">
                   <button className="text-lg px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-110">
                     Explore More Projects
                   </button>
