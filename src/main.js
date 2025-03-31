@@ -47,7 +47,7 @@ const MyApp = () => {
   }, [darkMode]);
 
   return (
-    <BrowserRouter basename="/web">
+    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/web/' : "/"}>
       <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />

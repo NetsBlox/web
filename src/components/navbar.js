@@ -22,6 +22,8 @@ const navItems = [
   { name: "People", href: "people" },
 ];
 
+const SHOW_THEME_TOGGLE = false;
+
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
@@ -34,17 +36,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     <nav className="bg-gradient-to-r from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 bg-opacity-90 dark:bg-opacity-90 backdrop-blur-md shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <img
-            src="images/netsblox-logo-bluetransp.png"
-            alt="NetsBlox"
-            style={{ height: "50px", paddingRight: "6px" }}
-          />
-          <a
-            href="."
-            className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600"
-            style={{ marginRight: "auto" }}
-          >
-            NetsBlox
+          <a href=".">
+            <img src="images/netsblox-logo-bluetransp.png" alt="NetsBlox" style={{ height: "50px", paddingRight: "6px", display: "inline-block" }} />
+            <div href="." className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600" style={{ marginRight: "auto", display: "inline-block" }}>
+              NetsBlox
+            </div>
           </a>
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item, index) => (
@@ -84,7 +80,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 )}
               </div>
             ))}
-            <button
+            {SHOW_THEME_TOGGLE ? <button
               onClick={() => {
                 localStorage.setItem("darkMode", !darkMode);
                 setDarkMode(!darkMode);
@@ -99,7 +95,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               ) : (
                 <Moon className="w-5 h-5" />
               )}
-            </button>
+            </button> : null}
           </div>
           <button
             className="md:hidden p-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-700 dark:to-gray-600 text-blue-500 dark:text-blue-400"
@@ -148,7 +144,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 )}
               </div>
             ))}
-            <button
+            {SHOW_THEME_TOGGLE ? <button
               onClick={() => {
                 setDarkMode(!darkMode);
                 setMobileMenuOpen(false);
@@ -156,7 +152,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               className="w-full text-left py-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
             >
               {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
-            </button>
+            </button> : null}
           </div>
         )}
       </div>
