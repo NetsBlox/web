@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Sun, Moon, Menu, X, ChevronDown } from "lucide-react";
+import { Sun, Moon, Menu, X, ChevronDown, ChevronUp, Flag } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "." },
   {
     name: "Resources",
     submenu: [
+      { name: "For Teachers", href: "curriculum" },
+      { name: "Projects", href: "projects" },
+      { name: "Multiplayer", href: "multiplayer" },
       { name: "Documentation", href: "https://editor.netsblox.org/docs/" },
+      { name: "Learn More", href: "learn" },
     ],
   },
-  { name: "For Teachers", href: "curriculum" },
-  { name: "Multiplayer", href: "multiplayer" },
-  { name: "Projects", href: "projects" },
   {
     name: "Tools",
     submenu: [
@@ -22,7 +23,6 @@ const navItems = [
       { name: "PyBlox", href: "pyblox" },
     ],
   },
-  { name: "Editor", href: "https://editor.netsblox.org/?" },
   { name: "People", href: "people" },
 ];
 
@@ -63,11 +63,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   }
                 >
                   {item.name}
-                  {item.submenu && (
-                    <ChevronDown
-                      style={{ display: "inline" }}
-                      className="inline ml-1 display:inline"
-                    />
+                  {item.submenu && (openSubmenu === index ?
+                    <ChevronUp style={{ display: "inline" }} className="inline ml-1 display:inline"/> :
+                    <ChevronDown style={{ display: "inline" }} className="inline ml-1 display:inline"/>
                   )}
                 </a>
                 {item.submenu && openSubmenu === index && (
@@ -76,7 +74,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       <a
                         key={subItem.name}
                         href={subItem.href}
-                        className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"
+                        className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-gray-700 transition-colors rounded-lg"
                       >
                         {subItem.name}
                       </a>
@@ -85,6 +83,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 )}
               </div>
             ))}
+            <a href="https://editor.netsblox.org">
+              <Flag size="32" stroke="green" fill="green"></Flag>
+            </a>
             {SHOW_THEME_TOGGLE ? <button
               onClick={() => {
                 localStorage.setItem("darkMode", !darkMode);
@@ -121,6 +122,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 <a
                   href={item.href}
                   className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  style={{ userSelect: "none" }}
                   onClick={
                     item.submenu
                       ? (e) => {
@@ -131,7 +133,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   }
                 >
                   {item.name}
-                  {item.submenu && <ChevronDown className="inline ml-1" />}
+                  {item.submenu && (openSubmenu === index ?
+                    <ChevronUp className="inline ml-1" /> :
+                    <ChevronDown className="inline ml-1" />
+                  )}
                 </a>
                 {item.submenu && openSubmenu === index && (
                   <div className="mt-2 w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg">
@@ -139,7 +144,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                       <a
                         key={subItem.name}
                         href={subItem.href}
-                        className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"
+                        className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors rounded-lg"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {subItem.name}
