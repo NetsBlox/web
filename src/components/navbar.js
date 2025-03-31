@@ -3,13 +3,17 @@ import { Sun, Moon, Menu, X, ChevronDown } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "." },
-  { name: "Resources", href: "learn" },
+  {
+    name: "Resources",
+    submenu: [
+      { name: "Documentation", href: "https://editor.netsblox.org/docs/" },
+    ],
+  },
   { name: "For Teachers", href: "curriculum" },
   { name: "Multiplayer", href: "multiplayer" },
   { name: "Projects", href: "projects" },
   {
     name: "Tools",
-    href: "tools",
     submenu: [
       { name: "PhoneIoT", href: "phoneiot" },
       { name: "RoboScape", href: "roboscape" },
@@ -44,10 +48,11 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           </a>
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item, index) => (
-              <div key={item.name} className="relative">
+              <div key={item.name} className="relative" style={item.submenu ? {cursor: "pointer"} : {}} >
                 <a
                   href={item.href}
                   className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  style={{ userSelect: "none" }}
                   onClick={
                     item.submenu
                       ? (e) => {
