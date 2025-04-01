@@ -23,7 +23,7 @@ const navItems = [
       { name: "PyBlox", href: "pyblox" },
     ],
   },
-  { name: "People", href: "people" },
+  { name: "Contact", href: "contact" },
 ];
 
 const SHOW_THEME_TOGGLE = false;

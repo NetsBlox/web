@@ -1,5 +1,14 @@
 import React from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+
+const Person = ({ img, name }) => {
+  return (
+    <div className="text-center flex p-2" style={{display: "inline-block"}}>
+      <img className="shadow-lg" src={img} width="100px" height="100px" style={{borderRadius: "100%", display: "inline-block"}}></img>
+      <p className="text-slate-600 dark:text-slate-300 pt-2" style={{width: 100}}>{name}</p>
+    </div>
+  );
+};
 
 export default () => (
   <div>
@@ -10,56 +19,54 @@ export default () => (
             Contact Us
           </h1>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md">
-              <h2 className="text-xl font-bold mb-4">Get in Touch</h2>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-blue-600" />
-                  <span className="text-slate-600 dark:text-slate-300">
-                    contact@netsblox.org
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-blue-600" />
-                  <span className="text-slate-600 dark:text-slate-300">
-                    (123) 456-7890
-                  </span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-blue-600" />
-                  <span className="text-slate-600 dark:text-slate-300">
-                    123 NetsBlox St, Codeville, TX 12345
-                  </span>
-                </div>
-              </div>
-            </div>
+          <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-lg shadow-md mt-8">
+            <h2 className="text-center text-xl font-bold mb-4">Faculty and Research Staff</h2>
 
-            <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md">
-              <h2 className="text-xl font-bold mb-4">Send us a Message</h2>
-              <form className="space-y-4">
-                <div className="space-y-2">
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300">
-                    Name
-                  </label>
-                  <input id="name" placeholder="Your Name" className="block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-slate-400 dark:text-white" />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300">
-                    Email
-                  </label>
-                  <input id="email" type="email" placeholder="your@email.com" className="block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-slate-400 dark:text-white" />
-                </div>
-                <div className="space-y-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300">
-                    Message
-                  </label>
-                  <textarea id="message" placeholder="Your message here..." className="block w-full px-3 py-2 border border-slate-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-700 dark:border-slate-600 dark:placeholder-slate-400 dark:text-white" />
-                </div>
-                <button type="submit" className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                  <Send className="mr-2 h-4 w-4" /> Send Message
-                </button>
-              </form>
+            <div className="flex flex-row flex-wrap text-center justify-center">
+              <Person img="images/akos-ledeczi.jpeg" name="Akos Ledeczi" />
+              <Person img="images/brian-broll.jpeg" name="Brian Broll" />
+              <Person img="images/gordon-stein.jpeg" name="Gordon Stein" />
+            </div>
+          </div>
+
+          <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-lg shadow-md mt-8">
+            <h2 className="text-center text-xl font-bold mb-4">Graduate Students</h2>
+
+            <div className="flex flex-row flex-wrap text-center justify-center">
+              <Person img="images/devin-jean.jpg" name="Devin Jean" />
+              <Person img="images/placeholder.png" name="Saman Kittani" />
+              <Person img="images/placeholder.png" name="Gabriel Barnard" />
+              <Person img="images/placeholder.png" name="Tito Ebiwonjumi" />
+            </div>
+          </div>
+
+          <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-lg shadow-md mt-8">
+            <h2 className="text-center text-xl font-bold mb-4">Undergraduate Students</h2>
+
+            <div className="flex flex-row flex-wrap text-center justify-center">
+              <Person img="images/tabitha-lee.jpeg" name="Tabitha Lee" />
+              <Person img="images/marina-rizk.jpeg" name="Marina Rizk" />
+              <Person img="images/marissa-schwarz.jpeg" name="Marissa Schwarz" />
+              <Person img="images/eleanor-summerfield.jpeg" name="Eleanor Summerfield" />
+              <Person img="images/yizhou-tan.jpeg" name="Yizhou Tan" />
+              <Person img="images/siyuan-wang.jpeg" name="Siyuan Wang" />
+              <Person img="images/michelle-zhu.jpeg" name="Michelle Zhu" />
+            </div>
+          </div>
+
+          <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md mt-8">
+            <h2 className="text-xl font-bold mb-4">Get in Touch</h2>
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <Mail className="h-5 w-5 text-blue-600" />
+                <a className="text-blue-600 hover:underline" href="mailto:akos.ledeczi@vanderbilt.edu">akos.ledeczi@vanderbilt.edu</a>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="h-5 w-5 text-blue-600" />
+                <span className="text-slate-600 dark:text-slate-300">
+                  1025 16th Ave S, Nashville, TN 37212
+                </span>
+              </div>
             </div>
           </div>
 
