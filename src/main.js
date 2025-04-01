@@ -26,12 +26,8 @@ import RoboScapeOnline from "./components/roboscape_online.js";
 import RoboScapeCurriculum from "./components/roboscape_curriculum.js";
 import ContactPage from "./components/contact.js";
 import RoboScapeCyberSec from "./components/roboscape_cybersec.js";
+import Research from "./components/research.js";
 
-/***
- * Main application entry point
- * @returns {JSX.Element}
- * @constructor
- */
 const MyApp = () => {
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem("darkMode");
@@ -68,6 +64,7 @@ const MyApp = () => {
         <Route path="/wildlife" element={<WildlifePage />} />
         <Route path="/aicamp" element={<AICamp />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/research" element={<Research />} />
       </Routes>
       <Footer />
     </BrowserRouter>

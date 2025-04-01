@@ -14,17 +14,12 @@ export default () => (
         </div>
         <div>
           <h3 className="text-xl font-semibold mb-4 text-blue-500 dark:text-blue-400">
-            Quick Links
+            Additional Resources
           </h3>
           <ul className="space-y-2">
             <li>
-              <a href="learn" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a href="learn" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                Tutorials
+              <a href="research" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
+                Research
               </a>
             </li>
           </ul>

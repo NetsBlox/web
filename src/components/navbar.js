@@ -19,11 +19,10 @@ const navItems = [
       { name: "PhoneIoT", href: "phoneiot" },
       { name: "RoboScape", href: "roboscape" },
       { name: "BeatBlox", href: "beatblox" },
-      { name: "Extensions", href: "extensions" },
       { name: "PyBlox", href: "pyblox" },
+      { name: "Extensions", href: "https://extensions.netsblox.org/" },
     ],
   },
-  { name: "Contact", href: "contact" },
 ];
 
 const SHOW_THEME_TOGGLE = false;

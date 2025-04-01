@@ -26,6 +26,7 @@ export default () => (
               <Person img="images/akos-ledeczi.jpeg" name="Akos Ledeczi" />
               <Person img="images/brian-broll.jpeg" name="Brian Broll" />
               <Person img="images/gordon-stein.jpeg" name="Gordon Stein" />
+              <Person img="images/devin-jean.jpg" name="Devin Jean" />
             </div>
           </div>
 
@@ -33,7 +34,6 @@ export default () => (
             <h2 className="text-center text-xl font-bold mb-4">Graduate Students</h2>
 
             <div className="flex flex-row flex-wrap text-center justify-center">
-              <Person img="images/devin-jean.jpg" name="Devin Jean" />
               <Person img="images/placeholder.png" name="Saman Kittani" />
               <Person img="images/placeholder.png" name="Gabriel Barnard" />
               <Person img="images/placeholder.png" name="Tito Ebiwonjumi" />

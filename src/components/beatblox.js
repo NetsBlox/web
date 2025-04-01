@@ -72,7 +72,7 @@ const demos = [
 ];
 
 const IntroCard = ({ card }) => (
-  <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg shadow-md">
+  <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg shadow-md transition-all duration-300 hover:shadow-xl">
     <div className="p-4">
       <div className="flex items-center gap-2 mb-2">
         <card.icon className="h-10 w-10 mr-4 text-blue-500" />
