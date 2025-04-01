@@ -75,7 +75,7 @@ const IntroCard = ({ card }) => (
   <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg shadow-md">
     <div className="p-4">
       <div className="flex items-center gap-2 mb-2">
-        <card.icon className="h-6 w-6 text-blue-500" />
+        <card.icon className="h-10 w-10 mr-4 text-blue-500" />
         <h3 className="text-lg font-bold">{card.title}</h3>
       </div>
       <p className="text-slate-600 dark:text-slate-300">{card.content}</p>
@@ -85,7 +85,7 @@ const IntroCard = ({ card }) => (
 
 const Demo = ({ demo }) => (
   <div className="space-y-4" style={{marginBottom: 40}}>
-    <h3 className="text-xl font-bold text-center text-slate-700 dark:text-slate-200 flex items-center justify-center gap-2">
+    <h3 className="text-2xl font-bold text-center text-slate-700 dark:text-slate-200 flex items-center justify-center gap-2">
       <demo.icon className="h-6 w-6 text-blue-500" />
       {demo.title}
     </h3>
@@ -118,11 +118,7 @@ export default () => (
               BeatBlox
             </h1>
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 text-justify">
-              BeatBlox is the latest extension to the{" "}
-              <a href="." className="text-blue-500 hover:text-blue-600">
-                NetsBlox
-              </a>{" "}
-              block-based programming environment, designed to teach cutting-edge computing concepts through music. NetsBlox was built on top of the open-source codebase of Snap! from UC Berkeley and was specifically designed to teach cutting edge computing concepts such as distributed computing, the Internet of Things, and cybersecurity to novices. It opens the internet to student projects, making computing more relevant to their lives and more engaging. A modular, full year, high school curriculum called{" "}
+              BeatBlox is the latest extension to the NetsBlox block-based programming environment, designed to teach cutting-edge computing concepts through music. NetsBlox was built on top of the open-source codebase of Snap! from UC Berkeley and was specifically designed to teach cutting edge computing concepts such as distributed computing, the Internet of Things, and cybersecurity to novices. It opens the internet to student projects, making computing more relevant to their lives and more engaging. A modular, full year, high school curriculum called{" "}
               <a className="text-blue-500 hover:text-blue-600" href="https://csfrontiers.org/">
                 Computer Science Frontiers (CSF)
               </a>{" "}
@@ -141,7 +137,7 @@ export default () => (
           </div>
 
           <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 rounded-lg p-4 mb-12">
-            <p className="text-sm text-yellow-800 dark:text-yellow-200 text-justify">
+            <p className="text-yellow-800 dark:text-yellow-200 text-justify">
               Each demo is summarized in a brief video, and a link is provided to open the corresponding project in BeatBlox for tinkering. For best compatibility, use Google Chrome on a computer. To run a project, click the green flag in the BeatBlox interface. For HD playback, set YouTube quality to 1080p.
             </p>
           </div>
