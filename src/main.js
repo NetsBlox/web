@@ -5,11 +5,12 @@ import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import LandingPage from "./components/landing_page.js";
-import NavBar from "./components/navbar.js";
 import "../public/index.css";
+
+import Home from "./components/home.js";
+import NavBar from "./components/navbar.js";
 import Projects from "./components/projects.js";
-import { Footer } from "./components/footer.js";
+import Footer from "./components/footer.js";
 import PhoneIOT from "./components/phoneiot.js";
 import CurriculumPage from "./components/curriculum_page.js";
 import MultiplayerPage from "./components/multiplayer.js";
@@ -19,11 +20,11 @@ import LearnPage from "./components/learn_page.js";
 import Beatblox from "./components/beatblox.js";
 import Roccem from "./components/roccem.js";
 import WildlifePage from "./components/wildlife.js";
-import AICamp from "./components/ai_camp.js";
+import AICamp from "./components/aicamp.js";
 import RoboScapeInfo from "./components/roboscape_info.js";
 import RoboScapeOnline from "./components/roboscape_online.js";
 import RoboScapeCurriculum from "./components/roboscape_curriculum.js";
-import ContactPage from "./components/contact_us.js";
+import ContactPage from "./components/contact.js";
 import PeoplePage from "./components/people.js";
 import RoboScapeCyberSec from "./components/roboscape_cybersec.js";
 
@@ -50,7 +51,7 @@ const MyApp = () => {
     <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/web/' : "/"}>
       <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Routes>
-        <Route exact path="/" element={<LandingPage />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/phoneiot" element={<PhoneIOT />} />
         <Route path="/curriculum" element={<CurriculumPage />} />
