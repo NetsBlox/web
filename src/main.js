@@ -12,7 +12,7 @@ import NavBar from "./components/navbar.js";
 import Projects from "./components/projects.js";
 import Footer from "./components/footer.js";
 import PhoneIOT from "./components/phoneiot.js";
-import CurriculumPage from "./components/curriculum_page.js";
+import CurriculumPage from "./components/curriculum.js";
 import MultiplayerPage from "./components/multiplayer.js";
 import PyBloxPage from "./components/pyblox.js";
 import RoboScapePage from "./components/roboscape.js";
