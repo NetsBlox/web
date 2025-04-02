@@ -68,7 +68,7 @@ const ProjectCard = ({ project }) => (
 
 const ExternalLinks = infos => infos.map((info, i) => [
   <a key={i} href={info[1]} className="text-blue-500 hover:text-blue-600 flex items-center gap-2">
-    <ExternalLink className="h-5 w-4" />
+    <ExternalLink className="h-4 w-4" />
     {info[0]}
   </a>,
   info[2] && <span className="text-sm text-slate-500 dark:text-slate-400 italic">

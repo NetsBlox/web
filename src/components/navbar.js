@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Sun, Moon, Menu, X, ChevronDown, ChevronUp, Flag } from "lucide-react";
 
+const flagColor = "#28b52a";
+
 const navItems = [
   { name: "Home", href: "." },
   {
@@ -83,7 +85,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               </div>
             ))}
             <a href="https://editor.netsblox.org">
-              <Flag size="32" stroke="green" fill="green"></Flag>
+              <div className="bg-gradient-to-r from-blue-500 to-blue-700 shadow-sm hover:shadow-xl rounded-full py-1 px-4">
+                <Flag stroke={flagColor} fill={flagColor} className="w-8 h-8 inline-block" style={{filter: "drop-shadow(0px 0px 4px rgb(0 0 0 / 0.5))"}}></Flag>
+                <span className="inline-block text-white font-semibold ml-1">Create!</span>
+              </div>
             </a>
             {SHOW_THEME_TOGGLE ? <button
               onClick={() => {

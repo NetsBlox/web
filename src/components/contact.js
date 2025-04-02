@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, ExternalLink } from "lucide-react";
 
 const Person = ({ img, name }) => {
   return (
@@ -77,7 +77,7 @@ export default () => (
             </p>
             <div className="mt-4">
               <a href="https://github.com/NetsBlox/NetsBlox" className="text-blue-600 hover:underline">
-                Visit our GitHub repository
+                <ExternalLink className="inline-block w-4 h-4"/> Visit our GitHub repository
               </a>
             </div>
           </div>
