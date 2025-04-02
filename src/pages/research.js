@@ -1,6 +1,8 @@
 import React from "react";
 import {Download} from "lucide-react";
 
+import {Page, Card} from "../components.js";
+
 const publications = [
   {
     authors: "Gordon Stein, Devin Jean, Corey Brady, and Akos Ledeczi",
@@ -108,27 +110,16 @@ const publications = [
 ];
 
 export default () => (
-  <div>
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-slate-900 dark:to-slate-800">
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center text-blue-600 dark:text-white">
-            Research
-          </h1>
-
-          <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-4 rounded-lg shadow-md mt-8">
-            <h2 className="text-center text-xl font-bold mb-4">Publications</h2>
-
-            <ol className="text-justify pl-6" style={{listStyle: "list-item outside"}}>
-              {publications.map(info => <li className="mt-2 mb-2">
-                {info.authors}. <em>{info.title}</em>. {info.journal}, {info.year}.
-                {info.doi && <> doi: <a href={`https://doi.org/${info.doi}`} className="text-blue-600 hover:underline">{info.doi}</a></>}
-                {info.link && <> <a href={info.link} className="text-blue-600 hover:underline"><Download className="inline-block w-4 h-4" /></a></>}
-              </li>)}
-            </ol>
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
+  <Page>
+    <h1>Research</h1>
+    <Card>
+      <ol className="text-justify pl-6" style={{listStyle: "list-item outside"}}>
+        {publications.map(info => <li className="my-2">
+          {info.authors}. <em>{info.title}</em>. {info.journal}, {info.year}.
+          {info.doi && <> doi: <a href={`https://doi.org/${info.doi}`}>{info.doi}</a>.</>}
+          {info.link && <> <a href={info.link}><Download className="inline-block w-4 h-4" /></a></>}
+        </li>)}
+      </ol>
+    </Card>
+  </Page>
 );

@@ -1,6 +1,8 @@
 import React from "react";
 import { Brain, Bot, Gamepad, MessageSquare, Code, ExternalLink, GraduationCap, BookOpen, BookOpenCheck } from "lucide-react";
 
+import {Page, Card} from "../components.js";
+
 const projects = [
   {
     title: "Ball-Balancing Reinforcement Learning Agent",
@@ -77,93 +79,57 @@ const ExternalLinks = infos => infos.map((info, i) => [
 ]);
 
 export default () => (
-  <div>
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-slate-900 dark:to-slate-800">
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <Bot className="h-12 w-12 text-purple-600" />
-            <h1 className="text-4xl font-bold text-center text-blue-600 dark:text-white">
-              AI Camp Curriculum
-            </h1>
-          </div>
+  <Page>
+    <h1><Bot className="h-12 w-12 mr-3 text-purple-600 inline-block"/>AI Camp Curriculum</h1>
 
-          <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg mb-8">
-            <p className="text-lg text-slate-600 dark:text-slate-300 text-justify">
-              This page provides resources for our NetsBlox-based AI summer camp curriculum. Over the course of this module, students are introduced to some of the earliest history of AI, a few "classical" AI algorithms, and finally some of the most recent breakthroughs in AI, such as the Large Language Models that power ChatGPT. However, we won't only be learning these topics: we'll be building many of them in NetsBlox!
-            </p>
-          </div>
+    <p className="text-justify">
+      This page provides resources for our NetsBlox-based AI summer camp curriculum. Over the course of this module, students are introduced to some of the earliest history of AI, a few "classical" AI algorithms, and finally some of the most recent breakthroughs in AI, such as the Large Language Models that power ChatGPT. However, we won't only be learning these topics: we'll be building many of them in NetsBlox!
+    </p>
 
-          <div className="space-y-6 mb-8">
-            <h2 className="text-2xl font-bold text-blue-600 dark:text-white">
-              Materials
-            </h2>
-            <div className="space-y-4 p-4">
-              <div className="flex items-center gap-2">
-                <GraduationCap className="h-6 w-6 text-purple-600" />
-                <a href="https://docs.google.com/document/d/1cYXk0e5gJvPNNAK7hVaYL92rY6LBhiG1/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true" className="text-blue-500 hover:text-blue-600">
-                  Syllabus
-                </a>
-                and
-                <a href="https://docs.google.com/document/d/18NAtN2zkJ43KiPlO2KIB5-Pv-Uab_mLK/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true" className="text-blue-500 hover:text-blue-600">
-                  Lesson Plan
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <BookOpen className="h-6 w-6 text-purple-600" />
-                Slides for{" "}
-                {[
-                  "https://docs.google.com/presentation/d/188nltVxQSKqMbygC-cd1nB52rxQriuf4nzLJg2cUnRw/edit?usp=sharing",
-                  "https://docs.google.com/presentation/d/1z3IEMEtK6uhHfu40vUL1Cjno3X9erOQKx7-owggN-ZU/edit?usp=sharing",
-                  "https://docs.google.com/presentation/d/1Pf9qvz1UVUmnt87XwkeZcpm_RYAV4NMebHIW9Jk63kk/edit?usp=sharing",
-                  "https://docs.google.com/presentation/d/1BliPIzu7qy2ejdJTajxnuXhLtopXgeMgRt4c0DtwXMg/edit?usp=sharing",
-                ].map((url, i) =>
-                  <span key={i}>
-                    <a href={url} className="text-blue-500 hover:text-blue-600">
-                      Day {i + 1}
-                    </a>
-                    {i < 2 ? ", " : i < 3 ? ", and" : ""}
-                  </span>
-                )}
-              </div>
-            </div>
-          </div>
+    <h2>Materials</h2>
 
-          <div className="space-y-6 mb-8">
-            <h2 className="text-2xl font-bold text-blue-600 dark:text-white">
-              Projects
-            </h2>
-            {projects.map((project, index) => <ProjectCard key={index} project={project} />)}
-          </div>
+    <p>
+      <GraduationCap className="h-6 w-6 text-purple-600 inline-block"/> <a href="https://docs.google.com/document/d/1cYXk0e5gJvPNNAK7hVaYL92rY6LBhiG1/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Syllabus</a> and <a href="https://docs.google.com/document/d/18NAtN2zkJ43KiPlO2KIB5-Pv-Uab_mLK/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Lesson Plan</a>
+    </p>
 
-          <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg mb-8">
-            <div className="flex items-center gap-2 mb-4">
-              <Brain className="h-5 w-5" />
-              <h2 className="text-xl font-bold">AI Topic Exploration</h2>
-            </div>
-            <div className="grid gap-2">
-              {ExternalLinks([
-                ["But what is a neural network?", "https://www.youtube.com/watch?v=aircAruvnKk", null],
-                ["Gradient descent, how neural networks learn", "https://www.youtube.com/watch?v=IHZwWFHWa-w", null],
-                ["What is backpropagation really doing?", "https://www.youtube.com/watch?v=Ilg3gGewQ5U", null],
-                ["Backpropagation calculus", "https://www.youtube.com/watch?v=tIeHLnjs5U8", null],
-                ["But what is a GPT? Visual intro to transformers", "https://www.youtube.com/watch?v=wjZofJX0v4M", null],
-                ["Attention in transformers, visually explained", "https://www.youtube.com/watch?v=eMlx5fFNoYc", null],
-              ])}
-            </div>
-          </div>
+    <p>
+      <BookOpen className="h-6 w-6 text-purple-600 inline-block"/> Slides for {[
+        "https://docs.google.com/presentation/d/188nltVxQSKqMbygC-cd1nB52rxQriuf4nzLJg2cUnRw/edit?usp=sharing",
+        "https://docs.google.com/presentation/d/1z3IEMEtK6uhHfu40vUL1Cjno3X9erOQKx7-owggN-ZU/edit?usp=sharing",
+        "https://docs.google.com/presentation/d/1Pf9qvz1UVUmnt87XwkeZcpm_RYAV4NMebHIW9Jk63kk/edit?usp=sharing",
+        "https://docs.google.com/presentation/d/1BliPIzu7qy2ejdJTajxnuXhLtopXgeMgRt4c0DtwXMg/edit?usp=sharing",
+      ].map((url, i) => <><a href={url}>Day {i + 1}</a>{i < 2 ? ", " : i < 3 ? ", and " : ""}</>)}
+    </p>
 
-          <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg">
-            <div className="flex items-center gap-2 mb-4">
-              <Code className="h-5 w-5" />
-              <h2 className="text-xl font-bold">AI Coding in Python</h2>
-            </div>
-            {ExternalLinks([
-              ["Q-Learning in Python", "https://www.geeksforgeeks.org/q-learning-in-python/", "This is the algorithm we implemented for you in our RL projects"],
-            ])}
-          </div>
-        </div>
-      </main>
+    <h2>Projects</h2>
+
+    {projects.map((project, index) => <ProjectCard key={index} project={project} />)}
+
+    <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg mb-8">
+      <div className="flex items-center gap-2 mb-4">
+        <Brain className="h-5 w-5" />
+        <h2 className="text-xl font-bold">AI Topic Exploration</h2>
+      </div>
+      <div className="grid gap-2">
+        {ExternalLinks([
+          ["But what is a neural network?", "https://www.youtube.com/watch?v=aircAruvnKk", null],
+          ["Gradient descent, how neural networks learn", "https://www.youtube.com/watch?v=IHZwWFHWa-w", null],
+          ["What is backpropagation really doing?", "https://www.youtube.com/watch?v=Ilg3gGewQ5U", null],
+          ["Backpropagation calculus", "https://www.youtube.com/watch?v=tIeHLnjs5U8", null],
+          ["But what is a GPT? Visual intro to transformers", "https://www.youtube.com/watch?v=wjZofJX0v4M", null],
+          ["Attention in transformers, visually explained", "https://www.youtube.com/watch?v=eMlx5fFNoYc", null],
+        ])}
+      </div>
     </div>
-  </div>
+
+    <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg">
+      <div className="flex items-center gap-2 mb-4">
+        <Code className="h-5 w-5" />
+        <h2 className="text-xl font-bold">AI Coding in Python</h2>
+      </div>
+      {ExternalLinks([
+        ["Q-Learning in Python", "https://www.geeksforgeeks.org/q-learning-in-python/", "This is the algorithm we implemented for you in our RL projects"],
+      ])}
+    </div>
+  </Page>
 );

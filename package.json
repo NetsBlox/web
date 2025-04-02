@@ -17,7 +17,7 @@
     "underscore": "^1.13.1"
   },
   "scripts": {
-    "build": "postcss src/tailwind.css -o public/index.css && webpack",
+    "build": "postcss src/global.css -o public/index.css && webpack",
     "start": "node ./src/server/index.js",
     "prettier": "prettier --single-quote --write 'src/**/*js'"
   },
