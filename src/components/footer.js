@@ -1,5 +1,7 @@
 import React from "react";
 
+const generateLinks = links => links.map(([text, url]) => <li><a href={url} className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">{text}</a></li>);
+
 export default () => (
   <footer className="bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 py-8">
     <div className="container mx-auto px-4">
@@ -17,11 +19,9 @@ export default () => (
             Additional Resources
           </h3>
           <ul className="space-y-2">
-            <li>
-              <a href="research" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                Research
-              </a>
-            </li>
+            {generateLinks([
+              ["Research", "research"],
+            ])}
           </ul>
         </div>
         <div>
@@ -29,21 +29,11 @@ export default () => (
             Connect
           </h3>
           <ul className="space-y-2">
-            <li>
-              <a href="https://www.facebook.com/netsblox" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                Facebook
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/netsblox" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="contact" className="hover:text-blue-500 dark:hover:text-blue-400 transition-colors">
-                Contact Us
-              </a>
-            </li>
+            {generateLinks([
+              ["Contact Us", "contact"],
+              ["Facebook", "https://www.facebook.com/netsblox"],
+              ["GitHub", "https://github.com/netsblox"],
+            ])}
           </ul>
         </div>
       </div>

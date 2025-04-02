@@ -38,7 +38,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <nav className="bg-gradient-to-r from-white to-blue-50 dark:from-gray-900 dark:to-gray-800 bg-opacity-90 dark:bg-opacity-90 backdrop-blur-md shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           <a href=".">
             <img src="images/netsblox-logo-bluetransp.png" alt="NetsBlox" style={{ height: "50px", paddingRight: "6px", display: "inline-block" }} />
             <div href="." className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-400 dark:to-blue-600" style={{ marginRight: "auto", display: "inline-block", verticalAlign: "middle" }}>

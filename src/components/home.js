@@ -97,7 +97,7 @@ export default () => {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
       <main className="container mx-auto px-4 pb-16">
         <div className="h-screen">
           <AnimatePresence mode="wait">
@@ -122,10 +122,10 @@ export default () => {
         </div>
 
         <div className="text-center mb-20">
-          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300">
+          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
             NetsBlox is more than just a coding platform - it's an educational ecosystem designed to inspire and empower young minds. With our innovative tools and connected approach, students can create distributed programs, collaborate in real-time, and bring their ideas to life through code.
           </p>
-          <a href="learn">
+          <a href="curriculum">
             <button className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-full text-lg font-semibold inline-flex items-center shadow-lg transition-all duration-300">
               Get Started <ChevronRight className="ml-2" />
             </button>
