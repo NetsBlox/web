@@ -4,7 +4,7 @@ import { Mail, MapPin } from "lucide-react";
 const Person = ({ img, name }) => {
   return (
     <div className="text-center flex p-2" style={{display: "inline-block"}}>
-      <img className="shadow-lg" src={img} width="100px" height="100px" style={{borderRadius: "100%", display: "inline-block"}}></img>
+      <img className="shadow-lg inline-block rounded-full" src={img} width="100px" height="100px"></img>
       <p className="text-slate-600 dark:text-slate-300 pt-2" style={{width: 100}}>{name}</p>
     </div>
   );
