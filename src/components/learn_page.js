@@ -208,66 +208,6 @@ const LearnPage = () => {
       buttonLink: "tutorials", //TODO
     },
     {
-      title: "Documents",
-      icon: FileText,
-      description: "Academic papers and research publications about NetsBlox.",
-      links: [
-        {
-          title:
-            "Removing the Walls Around Visual Educational Programming Environments",
-          url: "documents/removing_the_walls.pdf",
-          icon: Laptop,
-        },
-        {
-          title:
-            "A Visual Programming Environment for Introducing Distributed Computing",
-          url: "documents/NetsBlox_JPDC.pdf",
-          icon: Globe,
-        },
-        {
-          title: "Enabling Collaborative Distance Robotics Education",
-          url: "documents/RoboScape_Online_VLHCC_2021.pdf",
-          icon: Bot,
-        },
-        {
-          title: "Your Phone as a Sensor: Making IoT Accessible",
-          url: "documents/PhoneIoT-your-phone-as-a-sensor.pdf",
-          icon: Smartphone,
-        },
-        {
-          title: "Teaching Cybersecurity with Networked Robots",
-          url: "documents/cybersec_with_networked_robots.pdf",
-          icon: Shield,
-        },
-        {
-          title: "Broadening Participation in Computing",
-          url: "documents/Ledeczi-ITEST-PI-Mtg.pdf",
-          icon: Users,
-        },
-        {
-          title: "CSTA19: Session",
-          url: "documents/CSTA-2019-Session.pptx",
-          icon: Users,
-        },
-        {
-          title: "CSTA19: Workshop",
-          url: "documents/CSTA-2019-Workshop.pptx",
-          icon: Users,
-        },
-
-        {
-          title: "Snap! Manual",
-          url: "https://snap.berkeley.edu/snap/help/SnapManual.pdf",
-          icon: BookOpen,
-        },
-        {
-          title: "Flyer",
-          url: "documents/NetsBloxFlyer.pdf",
-          icon: Newspaper,
-        },
-      ],
-    },
-    {
       title: "For Educators",
       icon: GraduationCap,
       description: "Find NetsBlox lesson plans here in this section.",

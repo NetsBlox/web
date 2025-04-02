@@ -84,7 +84,7 @@ const IntroCard = ({ card }) => (
 );
 
 const Demo = ({ demo }) => (
-  <div className="space-y-4" style={{marginBottom: 40}}>
+  <div className="space-y-4 mb-10">
     <h3 className="text-2xl font-bold text-center text-slate-700 dark:text-slate-200 flex items-center justify-center gap-2">
       <demo.icon className="h-6 w-6 text-blue-500" />
       {demo.title}
