@@ -1,7 +1,7 @@
 import React from "react";
 import { Brain, Bot, Gamepad, MessageSquare, Code, ExternalLink, GraduationCap, BookOpen, BookOpenCheck } from "lucide-react";
 
-import {Page, Card} from "../components.js";
+import {Page, Card, Warning} from "../components.js";
 
 const projects = [
   {
@@ -58,31 +58,17 @@ const ProjectCard = ({ project }) => (
         </a>
       )}
     </div>
-    {project.note &&
-      <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 p-4 rounded-lg mt-4">
-        <p className="text-yellow-800 dark:text-yellow-200 text-justify">
-          Note: {project.note}
-        </p>
-      </div>
-    }
+    {project.note && <Warning>Note: {project.note}</Warning>}
   </div>
 );
 
-const ExternalLinks = infos => infos.map((info, i) => [
-  <a key={i} href={info[1]} className="text-blue-500 hover:text-blue-600 flex items-center gap-2">
-    <ExternalLink className="h-4 w-4" />
-    {info[0]}
-  </a>,
-  info[2] && <span className="text-sm text-slate-500 dark:text-slate-400 italic">
-    {info[2]}
-  </span>
-]);
+const ExternalLinks = infos => infos.map(info => <li><a href={info[1]}><ExternalLink className="h-4 w-4 mr-3 inline-block"/>{info[0]}</a>{info[2] && <><br/><em>{info[2]}</em></>}</li>);
 
 export default () => (
   <Page>
     <h1><Bot className="h-12 w-12 mr-3 text-purple-600 inline-block"/>AI Camp Curriculum</h1>
 
-    <p className="text-justify">
+    <p>
       This page provides resources for our NetsBlox-based AI summer camp curriculum. Over the course of this module, students are introduced to some of the earliest history of AI, a few "classical" AI algorithms, and finally some of the most recent breakthroughs in AI, such as the Large Language Models that power ChatGPT. However, we won't only be learning these topics: we'll be building many of them in NetsBlox!
     </p>
 
@@ -105,12 +91,9 @@ export default () => (
 
     {projects.map((project, index) => <ProjectCard key={index} project={project} />)}
 
-    <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg mb-8">
-      <div className="flex items-center gap-2 mb-4">
-        <Brain className="h-5 w-5" />
-        <h2 className="text-xl font-bold">AI Topic Exploration</h2>
-      </div>
-      <div className="grid gap-2">
+    <Card>
+      <h2><Brain className="h-5 w-5 mr-3 text-purple-600 inline-block"/> AI Topic Exploration</h2>
+      <ul>
         {ExternalLinks([
           ["But what is a neural network?", "https://www.youtube.com/watch?v=aircAruvnKk", null],
           ["Gradient descent, how neural networks learn", "https://www.youtube.com/watch?v=IHZwWFHWa-w", null],
@@ -119,17 +102,16 @@ export default () => (
           ["But what is a GPT? Visual intro to transformers", "https://www.youtube.com/watch?v=wjZofJX0v4M", null],
           ["Attention in transformers, visually explained", "https://www.youtube.com/watch?v=eMlx5fFNoYc", null],
         ])}
-      </div>
-    </div>
+      </ul>
+    </Card>
 
-    <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg">
-      <div className="flex items-center gap-2 mb-4">
-        <Code className="h-5 w-5" />
-        <h2 className="text-xl font-bold">AI Coding in Python</h2>
-      </div>
-      {ExternalLinks([
-        ["Q-Learning in Python", "https://www.geeksforgeeks.org/q-learning-in-python/", "This is the algorithm we implemented for you in our RL projects"],
-      ])}
-    </div>
+    <Card>
+      <h2><Code className="h-5 w-5 mr-3 text-purple-600 inline-block"/>AI Coding in Python</h2>
+      <ul>
+        {ExternalLinks([
+          ["Q-Learning in Python", "https://www.geeksforgeeks.org/q-learning-in-python/", "This is the algorithm we implemented for you in our RL projects"],
+        ])}
+      </ul>
+    </Card>
   </Page>
 );
