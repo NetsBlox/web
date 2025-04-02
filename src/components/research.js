@@ -3,11 +3,20 @@ import {Download} from "lucide-react";
 
 const publications = [
   {
+    authors: "Gordon Stein, Devin Jean, Corey Brady, and Akos Ledeczi",
+    title: "Browser-Based Simulation for Novice-Friendly Classroom Robots",
+    journal: "Frontiers in Computer Science 4",
+    year: 2023,
+    link: "documents/publications/browser-bot-sim.pdf",
+    doi: "10.3389/fcomp.2022.1031572",
+  },
+  {
     authors: "Devin Jean, Brian Broll, Gordon Stein, and Akos Ledeczi",
     title: "Utilizing Smartphones for Approachable IoT Education in K-12",
     journal: "Sensors 22 (24)",
     year: 2022,
     link: "documents/publications/sensors-phoneiot.pdf",
+    doi: "10.3390/s22249778",
   },
   {
     authors: "Corey Brady, Brian Broll, Gordon Stein, Devin Jean, Shuchi Grover, Veronica Catete, Tiffany Barnes, and Akos Ledeczi",
@@ -15,6 +24,7 @@ const publications = [
     journal: "Journal of Computer Languages 73",
     year: 2022,
     link: "documents/publications/block-based-abstractions.pdf",
+    doi: "10.1016/j.cola.2022.101156",
   },
   {
     authors: "Gordon Stein, Isabella Gransbury, Devin Jean, Lauren Alvarez, Marnie Hill, Veronica Catete, Shuchi Grover, Tiffany Barnes, Brian Broll, and Akos Ledeczi",
@@ -29,6 +39,7 @@ const publications = [
     journal: "Proceedings of the AAAI Conference on Artificial Intelligence, 36 (11)",
     year: 2022,
     link: "documents/publications/socially-relevant-ai.pdf",
+    doi: "10.1609/aaai.v36i11.21546",
   },
   {
     authors: "Yizhou Tan, Marina Rizk, Gordon Stein, and Akos Ledeczi",
@@ -36,6 +47,7 @@ const publications = [
     journal: "SoutheastCon",
     year: 2022,
     link: "documents/publications/edu-iot-blocks.pdf",
+    doi: "10.1109/SoutheastCon48659.2022.9763937",
   },
   {
     authors: "Brian Broll, Akos Ledeczi, Gordon Stein, Devin Jean, Corey Brady, Shuchi Grover, Veronica Catete, and Tiffany Barnes",
@@ -43,6 +55,7 @@ const publications = [
     journal: "IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), St Louis, Missouri, October 10-13",
     year: 2021,
     link: "documents/publications/removing-walls.pdf",
+    doi: "10.1109/VL/HCC51201.2021.9576399",
   },
   {
     authors: "Devin Jean, Brian Broll, Gordon Stein, and Akos Ledeczi",
@@ -50,6 +63,7 @@ const publications = [
     journal: "Frontiers in Education (FIE), Lincoln, Nebraska, October 13-16",
     year: 2021,
     link: "documents/publications/accessible-iot.pdf",
+    doi: "10.1109/FIE49875.2021.9637272",
   },
   {
     authors: "Gordon Stein and Akos Ledeczi",
@@ -57,6 +71,7 @@ const publications = [
     journal: "IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), St Louis, Missouri, October 10-13",
     year: 2021,
     link: "documents/publications/collab-dist-robots.pdf",
+    doi: "10.1109/VL/HCC51201.2021.9576314",
   },
   {
     authors: "Bernard Yett, Nicole Hutchins, Gordon Stein, Hamid Zare, Caitlin Snyder, Gautam Biswas, Mary Metelko, and Akos Ledeczi",
@@ -64,6 +79,7 @@ const publications = [
     journal: "SIGCSE",
     year: 2020,
     link: "documents/publications/cybersec-net-bots-2.pdf",
+    doi: "10.1145/3328778.336687",
   },
   {
     authors: "Shuchi Grover, Veronica Catete, Tiffany Barnes, Marnie Hill, Akos Ledeczi, Brian Broll",
@@ -71,6 +87,7 @@ const publications = [
     journal: "Koli Calling '20: 20th Koli Calling International Conference on Computing Education Research, Koli, Finland, November 19-22",
     year: 2020,
     link: "documents/publications/first-principles.pdf",
+    doi: "10.1145/3428029.3428059",
   },
   {
     authors: "Akos Ledeczi, Miklos Maroti, Hamid Zare, Bernard Yett, Nicole Hutchins, Brian Broll, Peter Volgyesi, Michael Smith, Timothy Darrah, Mary Metelko, Xenofon Koutsoukos, and Gautam Biswas",
@@ -78,6 +95,7 @@ const publications = [
     journal: "ACO Technical Symposium on Computer Science Education",
     year: 2019,
     link: "documents/publications/cybersec-net-bots-1.pdf",
+    doi: "10.1145/3287324.3287450",
   },
   {
     authors: "Brian Broll, Akos Ledeczi, Hamid Zare, Dung Nguyen Do, Janos Sallai, Peter Volgyesi, Miklos Maroti, Lesa Brown, and Chris Vanags",
@@ -85,6 +103,7 @@ const publications = [
     journal: "Journal of Parallel and Distributed Computing 118",
     year: 2018,
     link: "documents/publications/viz-intro-dc.pdf",
+    doi: "10.1016/j.jpdc.2018.02.021",
   },
 ];
 
@@ -103,6 +122,7 @@ export default () => (
             <ol className="text-justify pl-6" style={{listStyle: "list-item outside"}}>
               {publications.map(info => <li className="mt-2 mb-2">
                 {info.authors}. <em>{info.title}</em>. {info.journal}, {info.year}.
+                {info.doi && <> doi: <a href={`https://doi.org/${info.doi}`} className="text-blue-600 hover:underline">{info.doi}</a></>}
                 {info.link && <> <a href={info.link} className="text-blue-600 hover:underline"><Download className="inline-block w-4 h-4" /></a></>}
               </li>)}
             </ol>
