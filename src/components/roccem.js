@@ -43,7 +43,7 @@ const ModuleCard = ({ module, number }) => (
         </h3>
       </div>
     </div>
-    <p className="text-slate-600 dark:text-slate-300">{module.description}</p>
+    <p className="text-slate-600 dark:text-slate-300 text-justify">{module.description}</p>
   </div>
 );
 
@@ -60,7 +60,7 @@ export default () => (
 
           <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 my-6 rounded-lg shadow-md text-justify">
             <p className="text-lg text-slate-600 dark:text-slate-300 mb-6">
-              "Bringing <span className="text-red-500 font-semibold">Ro</span>botics, <span className="text-blue-500 font-semibold">C</span>ybersecurity and <span className="text-green-500 font-semibold">C</span>omputer Scienc<span className="text-green-500">e</span> to the <span className="text-purple-500 font-semibold">M</span>iddle School Classroom" (<span className="text-blue-600 font-semibold">ROCCEM</span>) is an educational development effort funded by the National Science Foundation.
+              "Bringing <span className="text-blue-600 font-semibold">Ro</span>botics, <span className="text-blue-600 font-semibold">C</span>ybersecurity and <span className="text-blue-600 font-semibold">C</span>omputer Scienc<span className="text-blue-600 font-semibold">e</span> to the <span className="text-blue-600 font-semibold">M</span>iddle School Classroom" (<span className="text-blue-600 font-semibold">ROCCEM</span>) is an educational development effort funded by the National Science Foundation.
             </p>
             <p className="text-slate-600 dark:text-slate-300">
               The aim of ROCCEM is to provide middle school educators with accessible, focused, and engaging educational material for schools across Tennessee and beyond. Using NetsBlox, a block-based programming environment, the ROCCEM curriculum introduces students to robotics, cybersecurity, and advanced computer science concepts without the text-based programming hurdle. The work is based on a previous effort targeting high school students using physical robots as described in{" "}
