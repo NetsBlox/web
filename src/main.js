@@ -7,26 +7,26 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "../public/index.css";
 
-import Home from "./components/home.js";
-import NavBar from "./components/navbar.js";
-import Projects from "./components/projects.js";
-import Footer from "./components/footer.js";
-import PhoneIOT from "./components/phoneiot.js";
-import CurriculumPage from "./components/curriculum.js";
-import MultiplayerPage from "./components/multiplayer.js";
-import PyBloxPage from "./components/pyblox.js";
-import RoboScapePage from "./components/roboscape.js";
-import LearnPage from "./components/learn_page.js";
-import Beatblox from "./components/beatblox.js";
-import Roccem from "./components/roccem.js";
-import WildlifePage from "./components/wildlife.js";
-import AICamp from "./components/aicamp.js";
-import RoboScapeInfo from "./components/roboscape_info.js";
-import RoboScapeOnline from "./components/roboscape_online.js";
-import RoboScapeCurriculum from "./components/roboscape_curriculum.js";
-import ContactPage from "./components/contact.js";
-import RoboScapeCyberSec from "./components/roboscape_cybersec.js";
-import Research from "./components/research.js";
+import Home from "./pages/home.js";
+import NavBar from "./pages/navbar.js";
+import Projects from "./pages/projects.js";
+import Footer from "./pages/footer.js";
+import PhoneIOT from "./pages/phoneiot.js";
+import CurriculumPage from "./pages/curriculum.js";
+import MultiplayerPage from "./pages/multiplayer.js";
+import PyBloxPage from "./pages/pyblox.js";
+import RoboScapePage from "./pages/roboscape.js";
+import LearnPage from "./pages/learn_page.js";
+import Beatblox from "./pages/beatblox.js";
+import Roccem from "./pages/roccem.js";
+import WildlifePage from "./pages/wildlife.js";
+import AICamp from "./pages/aicamp.js";
+import RoboScapeInfo from "./pages/roboscape_info.js";
+import RoboScapeOnline from "./pages/roboscape_online.js";
+import RoboScapeCurriculum from "./pages/roboscape_curriculum.js";
+import ContactPage from "./pages/contact.js";
+import RoboScapeCyberSec from "./pages/roboscape_cybersec.js";
+import Research from "./pages/research.js";
 
 const MyApp = () => {
   const [darkMode, setDarkMode] = useState(() => {
