@@ -18,14 +18,14 @@ export function Card({children}) {
 
 export function Flex({children}) {
   return <div className="flex flex-row flex-wrap justify-center">
-    {children.map(x => <div>{x}</div>)}
+    {children && children.map(x => <div>{x}</div>)}
   </div>;
 }
 
 export function Grid({children, cols}) {
   return (
-    <div className={`grid grid-cols-${Math.round(0.5 * cols)} md:grid-cols-${Math.round(0.75 * cols)} lg:grid-cols-${cols} gap-8 my-8`}>
-      {children.map(x => <div>{x}</div>)}
+    <div className={`grid grid-cols-1 md:grid-cols-${cols} gap-x-8 gap-y-16 my-8 first:mt-0 last:mb-0`}>
+      {children && children.map(x => <div>{x}</div>)}
     </div>
   );
 }

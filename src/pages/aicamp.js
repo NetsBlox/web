@@ -1,7 +1,6 @@
 import React from "react";
 import { Brain, Bot, Gamepad, MessageSquare, Code, ExternalLink, GraduationCap, BookOpen, BookOpenCheck } from "lucide-react";
-
-import {Page, Card, Warning} from "../components.js";
+import { Page, Card, Warning } from "../components.js";
 
 const color = "text-purple-600 dark:text-purple-40";
 

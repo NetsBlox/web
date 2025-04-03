@@ -1,7 +1,6 @@
 import React from "react";
 import { Headphones, Music, PlayCircle, Share2, Users, PenTool, Layers } from "lucide-react";
-
-import {Page, Card, Grid, Youtube, Warning} from "../components.js";
+import { Page, Card, Grid, Youtube, Warning } from "../components.js";
 
 export default () => (
   <Page>
