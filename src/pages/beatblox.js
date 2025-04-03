@@ -7,7 +7,7 @@ export default () => (
   <Page>
     <Youtube id="WcL1ppEsiyE"/>
 
-    <h1><img src="images/beatblox.png" className="w-24 h-24 mr-8 inline-block"/>BeatBlox</h1>
+    <h1><img src="images/beatblox.png" className="w-24 h-24 mr-4 inline-block"/>BeatBlox</h1>
 
     <p>
       BeatBlox is the latest extension to the NetsBlox block-based programming environment, designed to teach cutting-edge computing concepts through music. NetsBlox was built on top of the open-source codebase of Snap! from UC Berkeley and was specifically designed to teach cutting edge computing concepts such as distributed computing, the Internet of Things, and cybersecurity to novices. It opens the internet to student projects, making computing more relevant to their lives and more engaging. A modular, full year, high school curriculum called <a href="https://csfrontiers.org/">Computer Science Frontiers (CSF)</a> utilizes NetsBlox and is freely available to teachers to bring these capabilities to their classrooms. A <a href="https://www.coursera.org/learn/programming-for-a-networked-world/">new online course</a> can help both students and teachers learn NetsBlox from the ground up.

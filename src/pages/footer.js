@@ -1,31 +1,27 @@
 import React from "react";
-
-const generateLinks = links => links.map(([text, url]) => <li><a href={url}>{text}</a></li>);
+import {MapPin, Mail} from "lucide-react";
 
 export default () => (
-  <footer className="bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 py-4">
+  <footer className="bg-white dark:bg-gray-900 py-4">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3>About NetsBlox</h3>
           <p>NetsBlox is a project of the Institute for Software Integrated Systems at Vanderbilt University.</p>
+          <p><MapPin className="h-5 w-5 mr-1 inline-block" /> 1025 16th Ave S, Nashville, TN 37212</p>
         </div>
         <div>
           <h3>Additional Resources</h3>
-          <ul className="space-y-2">
-            {generateLinks([
-              ["Research", "research"],
-            ])}
+          <ul>
+            <li><a href="research">Research</a></li>
           </ul>
         </div>
         <div>
           <h3>Connect</h3>
-          <ul className="space-y-2">
-            {generateLinks([
-              ["Contact Us", "contact"],
-              ["Facebook", "https://www.facebook.com/netsblox"],
-              ["GitHub", "https://github.com/netsblox"],
-            ])}
+          <ul>
+            <li><a href="people">People</a></li>
+            <li><a href="https://www.facebook.com/netsblox">Facebook</a></li>
+            <li><a href="https://github.com/netsblox">Github</a></li>
           </ul>
         </div>
       </div>

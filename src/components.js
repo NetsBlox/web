@@ -13,11 +13,13 @@ export function Page({children}) {
 }
 
 export function Card({children}) {
-  return (
-    <div className="p-4 my-4 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg shadow-md">
-      {children}
-    </div>
-  );
+  return <div className="p-4 my-4 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg shadow-md">{children}</div>;
+}
+
+export function Flex({children}) {
+  return <div className="flex flex-row flex-wrap justify-center">
+    {children.map(x => <div>{x}</div>)}
+  </div>;
 }
 
 export function Grid({children, cols}) {
@@ -37,5 +39,5 @@ export function Warning({children}) {
 }
 
 export function Youtube({id}) {
-  return <iframe className="rounded-3xl shadow-lg" width="100%" style={{ aspectRatio: "16 / 9" }} src={`https://www.youtube.com/embed/${id}?rel=0`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>;
+  return <iframe className="rounded-3xl shadow-lg" width="100%" style={{ aspectRatio: "16 / 9" }} src={`https://www.youtube.com/embed/${id}?rel=0`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen/>;
 }

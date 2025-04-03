@@ -24,7 +24,7 @@ import AICamp from "./pages/aicamp.js";
 import RoboScapeInfo from "./pages/roboscape_info.js";
 import RoboScapeOnline from "./pages/roboscape_online.js";
 import RoboScapeCurriculum from "./pages/roboscape_curriculum.js";
-import ContactPage from "./pages/contact.js";
+import People from "./pages/people.js";
 import RoboScapeCyberSec from "./pages/roboscape_cybersec.js";
 import Research from "./pages/research.js";
 
@@ -63,7 +63,7 @@ const MyApp = () => {
         <Route path="/roccem" element={<Roccem />} />
         <Route path="/wildlife" element={<WildlifePage />} />
         <Route path="/aicamp" element={<AICamp />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/people" element={<People />} />
         <Route path="/research" element={<Research />} />
       </Routes>
       <Footer />

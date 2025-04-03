@@ -43,11 +43,14 @@ h3 {
 
 /* ------------------------------------------------------------------------- */
 
-p:not(:first-child), li:not(:first-child) {
-  @apply mt-4;
+p {
+  &:not(:first-child) { @apply mt-4; }
+  &:not(:last-child) { @apply mb-4; }
 }
-p:not(:last-child), li:not(:last-child) {
-  @apply mb-4;
+
+li {
+  &:not(:first-child) { @apply mt-2; }
+  &:not(:last-child) { @apply mb-2; }
 }
 
 /* ------------------------------------------------------------------------- */
