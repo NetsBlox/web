@@ -1,3 +1,6 @@
+# Deployment
+
+The deployed version is available here: https://netsblox.github.io/web/. This updates automatically on every push to the `master` branch.
 
 # Development
 
