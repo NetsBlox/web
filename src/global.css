@@ -9,15 +9,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   @apply text-4xl mb-8 justify-center;
-  &:not(:first-child) { @apply mt-8; }
+  &:not(:first-child) { @apply mt-16; }
 }
 h2 {
   @apply text-2xl mb-4;
-  &:not(:first-child) { @apply mt-4; }
+  &:not(:first-child) { @apply mt-8; }
 }
 h3 {
   @apply text-xl mb-2;
-  &:not(:first-child) { @apply mt-2; }
+  &:not(:first-child) { @apply mt-4; }
 }
 
 /* ------------------------------------------------------------------------- */
@@ -25,9 +25,15 @@ h3 {
 p {
   text-align: justify;
 }
-p:not(:first-child) {
+p:not(:first-child), li:not(:first-child) {
   @apply mt-4;
+}
+p:not(:last-child), li:not(:last-child) {
+  @apply mb-4;
 }
 a {
   @apply text-blue-600 hover:underline;
+}
+button {
+  @apply border border-gray-300 rounded px-2 py-1 mr-4;
 }
