@@ -4,11 +4,32 @@
 
 /* ------------------------------------------------------------------------- */
 
+.fancyjustify {
+  text-align: justify;
+
+  hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+
+  hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-lines: 2;
+
+  hyphenate-limit-chars: 4 2 2;
+  -ms-hyphenate-limit-chars: 4 2 2;
+  -moz-hyphenate-limit-chars: 4 2 2;
+  -webkit-hyphenate-limit-chars: 4 2 2;
+}
+
+/* ------------------------------------------------------------------------- */
+
 h1, h2, h3, h4, h5, h6 {
-  @apply font-bold text-blue-600 dark:text-white flex items-center;
+  @apply items-center font-bold text-blue-600 dark:text-white;
 }
 h1 {
-  @apply text-4xl mb-8 justify-center;
+  @apply text-4xl mb-8 text-center;
   &:not(:first-child) { @apply mt-16; }
 }
 h2 {
@@ -22,18 +43,23 @@ h3 {
 
 /* ------------------------------------------------------------------------- */
 
-p {
-  text-align: justify;
-}
 p:not(:first-child), li:not(:first-child) {
   @apply mt-4;
 }
 p:not(:last-child), li:not(:last-child) {
   @apply mb-4;
 }
+
+/* ------------------------------------------------------------------------- */
+
+p, li {
+  @apply fancyjustify;
+}
 a {
   @apply text-blue-600 hover:underline;
 }
 button {
-  @apply border border-gray-300 rounded px-2 py-1 mr-4;
+  @apply px-5 py-2 mr-4 text-white font-bold rounded-full transition-all duration-300 transform;
+  @apply shadow-md bg-gradient-to-r from-green-400 to-blue-500;
+  @apply hover:shadow-lg hover:scale-105;
 }

@@ -36,26 +36,26 @@ export default () => (
     <Card>
       <h3><Brain className={`h-6 w-6 mr-3 inline-block ${color}`}/>Ball-Balancing Reinforcement Learning Agent</h3>
       <p>In this project, we provide students a starter project that implements a reinforcement learning (RL) agent tasked with balancing a ball on a beam without letting it roll off either side. Students are challenged to come up with a "reward function" that quickly/efficiently teaches the RL agent what kinds of behaviors are good/bad in order to learn.</p>
-      <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=ball-balancing-starter&editMode&noRun"><button><BookOpen className="h-4 w-4 mr-3 inline-block"/>Starter Project</button></a>
-      <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=ball-balancing&editMode&noRun"><button><BookOpenCheck className="h-4 w-4 mr-3 inline-block"/>Completed Project</button></a>
+      <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=ball-balancing-starter&editMode&noRun"><button><BookOpen className="h-6 w-6 mr-3 inline-block"/>Starter Project</button></a>
+      <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=ball-balancing&editMode&noRun"><button><BookOpenCheck className="h-6 w-6 mr-3 inline-block"/>Completed Project</button></a>
     </Card>
 
     <Card>
       <h3><Gamepad className={`h-6 w-6 mr-3 inline-block ${color}`}/>Minecraft Maze Reinforcement Learning Agent</h3>
       <p>In this (more difficult) RL project, students must come up with a reward function that can teach a 2D character how to explore a maze and find diamonds. Students are encouraged to create reward functions that do not assume anything about the maze (i.e., the reward function should not include the distance to diamonds or any other information that a player should not be able to know).</p>
-      <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=minecraft-maze-starter&editMode&noRun"><button><BookOpen className="h-4 w-4 mr-3 inline-block"/>Starter Project</button></a>
-      <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=minecraft-maze&editMode&noRun"><button><BookOpenCheck className="h-4 w-4 mr-3 inline-block"/>Completed Project</button></a>
+      <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=minecraft-maze-starter&editMode&noRun"><button><BookOpen className="h-6 w-6 mr-3 inline-block"/>Starter Project</button></a>
+      <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=minecraft-maze&editMode&noRun"><button><BookOpenCheck className="h-6 w-6 mr-3 inline-block"/>Completed Project</button></a>
     </Card>
 
     <Card>
       <h3><MessageSquare className={`h-6 w-6 mr-3 inline-block ${color}`}/>Turing Test Activity</h3>
       <p>In this project, students join a NetsBlox distributed chatroom and are randomly paired either with another student or with an instance of ChatGPT. Students are then put into a time- and round-based back and forth dialog and are tasked with determining whether the other person is a human or a computer.</p>
-      <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FOpenAIBlocks%2Findex.js%22%5D&action=present&Username=devinjean&ProjectName=turing-test-client&editMode&noRun"><button><BookOpenCheck className="h-4 w-4 mr-3 inline-block"/>Completed Client</button></a>
-      <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FOpenAIBlocks%2Findex.js%22%5D&action=present&Username=devinjean&ProjectName=turing-test-server&editMode&noRun"><button><BookOpenCheck className="h-4 w-4 mr-3 inline-block"/>Completed Server</button></a>
+      <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FOpenAIBlocks%2Findex.js%22%5D&action=present&Username=devinjean&ProjectName=turing-test-client&editMode&noRun"><button><BookOpenCheck className="h-6 w-6 mr-3 inline-block"/>Completed Client</button></a>
+      <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FOpenAIBlocks%2Findex.js%22%5D&action=present&Username=devinjean&ProjectName=turing-test-server&editMode&noRun"><button><BookOpenCheck className="h-6 w-6 mr-3 inline-block"/>Completed Server</button></a>
       <Warning>Note: Whoever runs the server will need to have an OpenAI API key in order to use the OpenAI blocks provided by the extension. To add your key, use the puzzle-shaped Extensions menu near the top right of the NetsBlox editor. The API key is saved in local storage, so only do this on your personal computer!</Warning>
     </Card>
 
-    <h2><Brain className={`h-5 w-5 mr-3 inline-block ${color}`}/>AI Topic Exploration</h2>
+    <h2><Brain className={`h-6 w-6 mr-3 inline-block ${color}`}/>AI Topic Exploration</h2>
     <ul>
       {ExternalLinks([
         ["But what is a neural network?", "https://www.youtube.com/watch?v=aircAruvnKk", null],
@@ -67,7 +67,7 @@ export default () => (
       ])}
     </ul>
 
-    <h2><Code className={`h-5 w-5 mr-3 inline-block ${color}`}/>AI Coding in Python</h2>
+    <h2><Code className={`h-6 w-6 mr-3 inline-block ${color}`}/>AI Coding in Python</h2>
     <ul>
       {ExternalLinks([
         ["Q-Learning in Python", "https://www.geeksforgeeks.org/q-learning-in-python/", "This is the algorithm we implemented for you in our RL projects"],
