@@ -84,11 +84,13 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 )}
               </div>
             ))}
-            <a href="https://editor.netsblox.org">
-              <div className="bg-gradient-to-r from-blue-500 to-blue-700 shadow-sm hover:shadow-xl rounded-full py-1 px-4">
-                <Flag stroke={flagColor} fill={flagColor} className="w-8 h-8 inline-block" style={{filter: "drop-shadow(0px 0px 4px rgb(0 0 0 / 0.5))"}}></Flag>
-                <span className="inline-block text-white font-semibold ml-1">Create!</span>
-              </div>
+            <a href="https://editor.netsblox.org" target="_blank">
+              <button>
+              {/* <div className="bg-gradient-to-r from-blue-500 to-blue-700 shadow-sm hover:shadow-xl rounded-full py-1 px-4"> */}
+                <Flag stroke={flagColor} fill={flagColor} className="w-6 h-6 mr-2 inline-block" style={{filter: "drop-shadow(0px 0px 6px rgb(255 255 255 / 1.0))"}}></Flag>
+                Create!
+              {/* </div> */}
+              </button>
             </a>
             {SHOW_THEME_TOGGLE ? <button
               onClick={() => {
