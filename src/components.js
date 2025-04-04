@@ -13,7 +13,7 @@ export function Page({children}) {
 }
 
 export function Card({children}) {
-  return <div className="p-4 my-4 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg shadow-md">{children}</div>;
+  return <div className="p-4 my-4 first:mt-0 last:mb-0 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg shadow-md">{children}</div>;
 }
 
 export function Flex({children}) {
@@ -24,7 +24,7 @@ export function Flex({children}) {
 
 export function Grid({children, cols}) {
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-${cols} gap-x-8 gap-y-16 my-8 first:mt-0 last:mb-0`}>
+    <div className={`grid grid-cols-1 md:grid-cols-${cols} gap-8 my-4 first:mt-0 last:mb-0`}>
       {children && children.map(x => <div>{x}</div>)}
     </div>
   );

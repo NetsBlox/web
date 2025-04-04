@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronRight, Code, Cloud, Users, Zap } from "lucide-react";
+import { Page, Youtube } from "../components.js";
 
 const taglines = [
   {
@@ -97,55 +98,52 @@ export default () => {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
-      <main className="container mx-auto px-4 pb-16">
-        <div className="h-screen">
-          <AnimatePresence mode="wait">
-            <motion.div key={currentTagline} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }} className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${taglines[currentTagline].image})` }} />
-          </AnimatePresence>
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
-                Dream. Code. Create.
-              </h1>
-              <AnimatePresence mode="wait">
-                <motion.h2 key={currentTagline} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.5 }} className="text-2xl sm:text-4xl font-semibold text-blue-400 mb-8">
-                  {taglines[currentTagline].text}
-                </motion.h2>
-              </AnimatePresence>
-              <a href={taglines[currentTagline].link} className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-full text-lg font-semibold inline-flex items-center shadow-lg transition-all duration-300">
-                {taglines[currentTagline].buttonText}
-                <ChevronRight className="ml-2" size="20" />
-              </a>
-            </div>
+    <Page>
+      <div className="h-screen">
+        <AnimatePresence mode="wait">
+          <motion.div key={currentTagline} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }} className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${taglines[currentTagline].image})` }} />
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl sm:text-6xl font-bold text-white mb-4">
+              Dream. Code. Create.
+            </h1>
+            <AnimatePresence mode="wait">
+              <motion.h2 key={currentTagline} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} transition={{ duration: 0.5 }} className="text-2xl sm:text-4xl font-semibold text-blue-400 mb-8">
+                {taglines[currentTagline].text}
+              </motion.h2>
+            </AnimatePresence>
+            <a href={taglines[currentTagline].link} className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-full text-lg font-semibold inline-flex items-center shadow-lg transition-all duration-300">
+              {taglines[currentTagline].buttonText}
+              <ChevronRight className="ml-2" size="20" />
+            </a>
           </div>
         </div>
+      </div>
 
-        <div className="text-center mb-20">
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-700 dark:text-gray-300">
-            NetsBlox is more than just a coding platform - it's an educational ecosystem designed to inspire and empower young minds. With our innovative tools and connected approach, students can create distributed programs, collaborate in real-time, and bring their ideas to life through code.
-          </p>
-          <a href="curriculum">
-            <button className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-full text-lg font-semibold inline-flex items-center shadow-lg transition-all duration-300">
-              Get Started <ChevronRight className="ml-2" />
-            </button>
-          </a>
-        </div>
+      <Youtube id="b4YkDPtoaIs"/>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-              <feature.icon className={`w-12 h-12 mb-4 ${hoveredFeature === index ? "text-blue-500 dark:text-blue-400" : "text-gray-600 dark:text-gray-400"} transition-colors duration-300`} />
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
-                {feature.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </main>
-    </div>
+      <div className="text-center my-14">
+        <p className="max-w-xl text-center inline-block">
+          NetsBlox is more than just a coding platform - it's an educational ecosystem designed to inspire and empower young minds. With our innovative tools and connected approach, students can create distributed programs, collaborate in real-time, and bring their ideas to life through code.
+          <br/>
+        </p>
+        <br/><a href="curriculum"><button>Get Started!</button></a>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+        {features.map((feature, index) => (
+          <div key={index} className="bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+            <feature.icon className={`w-12 h-12 mb-4 ${hoveredFeature === index ? "text-blue-500 dark:text-blue-400" : "text-gray-600 dark:text-gray-400"} transition-colors duration-300`} />
+            <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+              {feature.title}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              {feature.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </Page>
   );
 };
