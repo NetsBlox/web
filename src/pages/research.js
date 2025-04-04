@@ -5,6 +5,38 @@ import {Page, Card} from "../components.js";
 
 const publications = [
   {
+    authors: "Devin Jean, Gordon Stein, Brian Broll, and Akos Ledeczi",
+    title: "Unleashing Creativity with Wireless Embedded Programming for Next-Generation Makers",
+    journal: "EDULEARN24, IATED",
+    year: 2024,
+    link: "documents/publications/unleash-creativity.pdf",
+    doi: "10.21125/edulearn.2024.0608",
+  },
+  {
+    authors: "Tito Ebiwonjumi, Will Hedgecock, Devin Jean, Gabriel Barnard, Saman Kittani, Brian Broll, and Akos Ledeczi",
+    title: "BeatBlox: A Visual Block-Based Approach to Integrating Music and Computer Science Education",
+    journal: "EDULEARN24, IATED",
+    year: 2024,
+    link: "documents/publications/beatblox-edulearn.pdf",
+    doi: "10.21125/edulearn.2024.0669",
+  },
+  {
+    authors: "Devin Jean, Shuchi Grover, Akos Ledeczi, and Brian Broll",
+    title: "PhoneIoT for Teaching 'Internet of Things': Smartphones to Promote Accessible, Engaging, and Authentic Experiences",
+    journal: "International Conference of the Learning Sciences",
+    year: 2023,
+    link: "documents/publications/phoneiot-isls.pdf",
+    doi: "10.22318/icls2023.870149",
+  },
+  {
+    authors: "Veronica Catete, Isabella Gransbury, Marnie Hill, Devin Hean, Brian Broll, Akos Ledeczi, and Tiffany Barnes",
+    title: "Board 243: CS Frontiers: Module 4 - A Software Engineering Curriculum for High School Females",
+    journal: "ASEE Conferences",
+    year: 2023,
+    link: "documents/publications/csf-module-4.pdf",
+    doi: "10.18260/1-2--42686",
+  },
+  {
     authors: "Gordon Stein, Devin Jean, Corey Brady, and Akos Ledeczi",
     title: "Browser-Based Simulation for Novice-Friendly Classroom Robots",
     journal: "Frontiers in Computer Science 4",
@@ -15,7 +47,7 @@ const publications = [
   {
     authors: "Devin Jean, Brian Broll, Gordon Stein, and Akos Ledeczi",
     title: "Low-Friction Transition from Blocks to Python",
-    journal: "ISLS Annual Meeting 2",
+    journal: "International Conference of the Learning Sciences",
     year: 2022,
     link: "documents/publications/low-friction-trans.pdf",
   },
