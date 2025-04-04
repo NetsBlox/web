@@ -21,8 +21,6 @@ import Beatblox from "./pages/beatblox.js";
 import Roccem from "./pages/roccem.js";
 import WildlifePage from "./pages/wildlife.js";
 import AICamp from "./pages/aicamp.js";
-import RoboScapeInfo from "./pages/roboscape_info.js";
-import RoboScapeOnline from "./pages/roboscape_online.js";
 import RoboScapeCurriculum from "./pages/roboscape_curriculum.js";
 import People from "./pages/people.js";
 import RoboScapeCyberSec from "./pages/roboscape_cybersec.js";
@@ -53,10 +51,8 @@ const MyApp = () => {
         <Route path="/multiplayer" element={<MultiplayerPage />} />
         <Route path="/pyblox" element={<PyBloxPage />} />
         <Route path="/roboscape" element={<RoboScapePage />} />
-        <Route path="/roboscape/info" element={<RoboScapeInfo />} />
-        <Route path="/roboscape/online" element={<RoboScapeOnline />} />
-        <Route path="/roboscape/curriculum" element={<RoboScapeCurriculum />} />
-        <Route path="/roboscape/curriculum/cybersecurity" element={<RoboScapeCyberSec />} />
+        <Route path="/roboscapecurriculum" element={<RoboScapeCurriculum />} />
+        <Route path="/roboscapecurriculumcybersecurity" element={<RoboScapeCyberSec />} />
         <Route path="/learn" element={<LearnPage />} />
         <Route path="/beatblox" element={<Beatblox />} />
         <Route path="/projects" element={<Projects />} />

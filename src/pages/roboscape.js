@@ -1,89 +1,68 @@
 import React from "react";
-import { Cpu, Globe, Book } from "lucide-react";
-
-const features = [
-  {
-    title: "RoboScape Adventures",
-    icon: Cpu,
-    description:
-      "Get ready for super cool robotics fun with RoboScape! It's just like your favorite NetsBlox activities, but now you can control robots and learn about cybersecurity. It's easy, exciting, and perfect for beginners!",
-    buttonText: "Discover RoboScape Magic!",
-    color:
-      "from-purple-400 to-pink-500 hover:from-pink-500 hover:to-purple-400",
-    href: "roboscape/info",
-  },
-  {
-    title: "RoboScape Online",
-    icon: Globe,
-    description:
-      "Imagine controlling robots in a virtual world! With RoboScape Online, you can team up with friends, solve puzzles, and create amazing robot adventures – all from your computer. It's like having a robot playground right at your fingertips!",
-    buttonText: "Explore Virtual Robots!",
-    color:
-      "from-green-400 to-blue-500 hover:from-blue-500 hover:to-green-400",
-    href: "roboscape/online",
-  },
-  {
-    title: "RoboScape Learning Journey",
-    icon: Book,
-    description:
-      "Ready to become a robot master? Our RoboScape curriculum is packed with fun challenges, cool projects, and awesome competitions. Learn how to make robots dance, solve mazes, and even battle each other – all while learning important coding skills!",
-    buttonText: "Start Your Robot Adventure!",
-    color:
-      "from-yellow-400 to-orange-500 hover:from-orange-500 hover:to-yellow-400",
-    href: "roboscape/curriculum",
-  },
-];
-
-const FeatureCard = ({ feature }) => (
-  <div className="bg-white dark:bg-slate-800 rounded-xl p-6 shadow-lg">
-    <div className="space-y-4">
-      <h2 className="text-2xl font-bold mb-4 text-blue-600 dark:text-white flex items-center justify-self-center">
-        <feature.icon className="mr-2 h-6 w-6" /> {feature.title}
-      </h2>
-      <p className="text-lg text-slate-600 dark:text-slate-300 mb-4">
-        {feature.description}
-      </p>
-      <div className="justify-self-center">
-        <a href={feature.href}>
-          <button
-            className={`w-full md:w-auto text-lg px-6 py-3 bg-gradient-to-r ${feature.color} text-white font-bold rounded-full transition-all duration-300 transform hover:scale-105`}
-          >
-            {feature.buttonText}
-          </button>
-        </a>
-      </div>
-    </div>
-  </div>
-);
+import { Globe, Wrench, PackageOpen, Users, PocketKnife, Clapperboard, GraduationCap, AppWindow, Wifi, Bot } from "lucide-react";
+import { Page, Card, Grid, Youtube } from "../components.js";
 
 export default () => (
-  <div>
-    <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-slate-900 dark:to-slate-800">
-      <main className="container mx-auto px-4 py-12">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8 text-center text-blue-600 dark:text-white">
-            RoboScape: Your Gateway to Awesome Robotics!
-          </h1>
+  <Page>
+    <Youtube id="UtcMZVPvnUs"/>
 
-          <div className="space-y-8 mb-12">
-            {features.map((feature, index) => (
-              <FeatureCard key={index} feature={feature} />
-            ))}
-          </div>
+    <h1><img src="images/logos/roboscape.png" className="w-24 h-24 inline-block"/>RoboScape</h1>
 
-          <div className="rounded-xl overflow-hidden shadow-lg">
-            <iframe
-              width="100%"
-              height="480"
-              src="https://www.youtube.com/embed/UtcMZVPvnUs"
-              title="Teaching Cybersecurity with Networked Robots"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="border-0"
-            />
-          </div>
-        </div>
-      </main>
-    </div>
-  </div>
+    <p>
+      RoboScape adds exciting new robotics activities to NetsBlox, while maintaining the novice-friendliness and accessibility enjoyed in other NetsBlox activities. Students can learn about autonomous robotics, cybersecurity, and much more, while staying within the familiar NetsBlox interface. Additionally, a robotics simulation is available through RoboScape Online. All the code used with RoboScape robots works with RoboScape Online, but the simulated robots can have additional sensors to perform more complex tasks. This simulation allows students to share a virtual space online, enabling collaborative learning and teamwork, whether they're inside or outside the classroom. Together, RoboScape and RoboScape Online provide students with exciting hands-on activities to demonstrate how code can interact with the physical world, while engaging them with new challenges and opportunities for collaboration and competition.
+    </p>
+
+    <Grid cols={2}>
+      <p className="text-center"><img src="images/roboscape/bot.png" className="h-64 inline-block rounded-xl shadow-md"/></p>
+      <p className="text-center"><img src="images/roboscape/cybersec.png" className="h-64 inline-block rounded-xl shadow-md"/></p>
+    </Grid>
+
+    <h3>Physical Robot Requirements</h3>
+
+    <ul>
+      <li><AppWindow className="h-6 w-6 mr-3 inline-block"/>Computers with an up-to-date Chromium-based browser such as Edge or Chrome.</li>
+      <li><Bot className="h-6 w-6 mr-3 inline-block"/>RoboScape supported robots: Parallax ActivityBot 360 (<a href="https://docs.google.com/document/d/1wudv0uNGX6zZxWaxV_bao0XyJYQgYNlu1Z-zYzvuRPA/edit?usp=sharing">assembly instructions</a>)</li>
+      <li><Wifi className="h-6 w-6 mr-3 inline-block"/>A public or password-protected Wi-Fi network with Internet access</li>
+    </ul>
+
+    <h2><Globe className="h-8 w-8 mr-3 inline-block"/>RoboScape Online</h2>
+
+    <p>
+      While RoboScape can bring many new and exciting activities to the classroom, physical robots can be expensive and difficult to maintain. To resolve this issue, we have introduced RoboScape Online, a robotics simulator for RoboScape robots (and much more).
+    </p>
+
+    <p className="text-center"><a href="https://docs.google.com/presentation/d/1iaUKDoqclTCwOBEVEZ7TKQ_ihas08rta2DIUaMPWPok/edit?usp=sharing"><button>Try RoboScape Online</button></a></p>
+
+    <Card>
+      <h3><Wrench className="w-6 h-6 mr-3 inline-block"/>Customizable</h3>
+      <p>
+        The RoboScape Online simulator loads specially-designed "scenario" files that specify details of the virtual environment, the available robots, the task to complete, and so on. These scenario files are simply NetsBlox projects, which students can create, customize, and share.
+      </p>
+    </Card>
+
+    <Card>
+      <h3><PocketKnife className="w-6 h-6 mr-3 inline-block"/>Advanced Sensing Features</h3>
+      <p>
+        Due to its simulated nature, RoboScape Online is able to simulate advanced types of sensors that would be impractically expensive in real-world classroom robotics projects. For instance, some scenarios equip robots with GPS or LIDAR sensors for advanced autonomous driving tasks.
+      </p>
+    </Card>
+
+    <Card>
+      <h3><Users className="w-6 h-6 mr-3 inline-block"/>Collaboration</h3>
+      <p>
+        RoboScape Online environments can be shared, allowing students to join the same robotics simulation and remotely manipulate the same robots. This allows students to collaborate on robotics problems even in online classroom scenarios where students cannot meet in-person.
+      </p>
+    </Card>
+
+    <Card>
+      <h3><PackageOpen className="w-6 h-6 mr-3 inline-block"/>Free and Open-Source</h3>
+      <p>
+        Simulated robots are completely free, allowing RoboScape to be used in any classroom or even at home.
+      </p>
+    </Card>
+
+    <h2><Clapperboard className="h-8 w-8 mr-3 inline-block"/>Demos</h2>
+
+    <Youtube id="9ldd-Gcqv1s"/>
+  </Page>
 );

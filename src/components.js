@@ -13,7 +13,7 @@ export function Page({children}) {
 }
 
 export function Card({children}) {
-  return <div className="p-4 my-4 first:mt-0 last:mb-0 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-lg shadow-md">{children}</div>;
+  return <div className="p-4 my-4 first:mt-0 last:mb-0 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-xl shadow-md">{children}</div>;
 }
 
 export function Flex({children}) {
@@ -32,12 +32,12 @@ export function Grid({children, cols}) {
 
 export function Warning({children}) {
   return (
-    <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 p-4 rounded-lg my-4 first:mt-0 last:mb-0 text-yellow-800 dark:text-yellow-200 shadow-md fancyjustify">
+    <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 p-4 rounded-xl my-4 first:mt-0 last:mb-0 text-yellow-800 dark:text-yellow-200 shadow-md fancyjustify">
       {children}
     </div>
   );
 }
 
 export function Youtube({id}) {
-  return <iframe className="rounded-3xl shadow-lg" width="100%" style={{ aspectRatio: "16 / 9" }} src={`https://www.youtube.com/embed/${id}?rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>;
+  return <iframe className="rounded-xl shadow-lg my-4 first:mt-0 last:mb-0" width="100%" style={{ aspectRatio: "16 / 9" }} src={`https://www.youtube.com/embed/${id}?rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>;
 }
