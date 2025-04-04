@@ -14,6 +14,13 @@ const publications = [
   },
   {
     authors: "Devin Jean, Brian Broll, Gordon Stein, and Akos Ledeczi",
+    title: "Low-Friction Transition from Blocks to Python",
+    journal: "ISLS Annual Meeting 2",
+    year: 2022,
+    link: "documents/publications/low-friction-trans.pdf",
+  },
+  {
+    authors: "Devin Jean, Brian Broll, Gordon Stein, and Akos Ledeczi",
     title: "Utilizing Smartphones for Approachable IoT Education in K-12",
     journal: "Sensors 22 (24)",
     year: 2022,

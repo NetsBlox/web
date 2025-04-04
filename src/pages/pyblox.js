@@ -1,133 +1,45 @@
 import React from "react";
-import { Code2, Play, BookOpen, Download, Wrench, Clapperboard } from "lucide-react";
-import { Page, Card, Grid } from "../components.js";
-
-const features = [
-  "Create NetsBlox projects using Python",
-  "Access to all NetsBlox blocks and RPCs",
-  "Easy integration with other Python libraries",
-  "Suitable for both beginners and advanced users",
-];
-
-const benefits = [
-  "Combine the power of Python with NetsBlox",
-  "Automate NetsBlox project creation",
-  "Perfect for data science and AI projects",
-  "Expand your coding skills",
-];
+import { Code2, Wrench, Rocket, Code, PackageOpen, Clapperboard } from "lucide-react";
+import { Page, Card, Youtube } from "../components.js";
 
 export default () => (
   <Page>
+    <Youtube id="ADnao4uZd9E"/>
+
     <h1><Code2 className="h-12 w-12 mr-3 inline-block"/>PyBlox</h1>
 
     <p>
-      PyBlox is a Python library that allows you to create NetsBlox projects programmatically.
+      NetsBlox has been shown to be effective at teaching advanced Computer Science (CS) concepts such distributed computing, robotics, cybersecurity, and the internet of things in ways which are attainable to novice programmers. However, despite its power, there are some students who may be put off by the block-based programming environment that NetsBlox provides for accessing these features. This can lead to students abandoning NetsBlox in favor of textual languages, which typically over-complicate access to these advanced CS concepts, and can result in students becoming frustrated with a lack of progression during this transition. To remedy this, we introduce PyBlox, a Python analogue of NetsBlox.
     </p>
 
-    <h2><Wrench className="h-6 w-6 mr-3 inline-block"/>Features</h2>
+    <p className="text-center"><a href="https://pypi.org/project/netsblox/"><button>Install PyBlox</button></a></p>
 
-    <Grid cols={2}>
-      <Card>
-        <h3>Feature 1</h3>
-        <p>Example text to explain the feature.</p>
-      </Card>
+    <h2><Wrench className="h-8 w-8 mr-3 inline-block"/>Features</h2>
 
-      <Card>
-        <h3>Feature 1</h3>
-        <p>Example text to explain the feature.</p>
-      </Card>
+    <Card>
+      <h3><Rocket className="w-6 h-6 mr-3 inline-block"/>Supports all the Features of NetsBlox</h3>
+      <p>
+        PyBlox is a complete Python equivalent for NetsBlox. This includes access to features such as sprites, turtle graphics, pen drawings, concurrently (simultaneously) executing scripts, key events, and more. Importantly, this also includes all of the advanced networking features of NetsBlox, allowing students to still make use of NetsBlox RPCs and internet-based message passing even in the Python world.
+      </p>
+    </Card>
 
-      <Card>
-        <h3>Feature 1</h3>
-        <p>Example text to explain the feature.</p>
-      </Card>
+    <Card>
+      <h3><Code className="w-6 h-6 mr-3 inline-block"/>Develop Real Python Programming Skills</h3>
+      <p>
+        PyBlox is a native tool, meaning it must be installed on your computer rather than running in the browser like NetsBlox. The reason for this is that PyBlox gives users the full, unlimited power of Python, rather than only a small subset that can run in isolation in a web browser. Because of this, any Python knowledge learned through PyBlox is directly applicable to real-world Python programming.
+      </p>
+    </Card>
 
-      <Card>
-        <h3>Feature 1</h3>
-        <p>Example text to explain the feature.</p>
-      </Card>
-    </Grid>
+    <Card>
+      <h3><PackageOpen className="w-6 h-6 mr-3 inline-block"/>Free and Open-Source</h3>
+      <p>
+        Just like NetsBlox, PyBlox is a free and open-source tool. This means that there will never be any financial cost to using PyBlox either at home or in the classroom.
+      </p>
+      <a href="https://github.com/dragazo/PyBlox"><button>Visit our Github</button></a>
+    </Card>
 
+    <h2><Clapperboard className="h-8 w-8 mr-3 inline-block"/>Demos</h2>
 
-    <div className="grid md:grid-cols-2 gap-8 mb-12">
-      <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md">
-        <h2 className="text-xl font-bold mb-4">Features</h2>
-        <ul className="space-y-2">
-          {features.map((feature, index) => (
-            <li
-              key={index}
-              className="text-slate-600 dark:text-slate-300"
-            >
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md">
-        <h2>Benefits</h2>
-        <ul>
-          {benefits.map(benefit => <li>{benefit}</li>)}
-        </ul>
-      </div>
-    </div>
-
-    <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-md mb-12">
-      <h2>PyBlox in Action</h2>
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="space-y-2">
-          <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
-            Python Tools for Snap
-          </h3>
-          <div className="aspect-video">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/your-video-id-1"
-              title="Python Tools for Snap"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg shadow-lg"
-            ></iframe>
-          </div>
-        </div>
-        <div className="space-y-2">
-          <h3 className="text-lg font-semibold text-slate-800 dark:text-slate-200">
-            PyBlox Teaser with Snap
-          </h3>
-          <div className="aspect-video">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/your-video-id-2"
-              title="PyBlox Teaser with Snap"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-lg shadow-lg"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <h2><Clapperboard className="w-6 h-6 mr-3 inline-block"/>Demos</h2>
-
-    <Grid cols={2}>
-      
-    </Grid>
-
-    <div className="flex justify-center gap-4">
-      <button className="flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-        <Play className="h-4 w-4" />
-        Try PyBlox
-      </button>
-      <button className="flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-        <BookOpen className="h-4 w-4" />
-        Documentation
-      </button>
-      <button className="flex items-center gap-2 px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-        <Download className="h-4 w-4" />
-        Download
-      </button>
-    </div>
+    <Youtube id="tSjbu90GhHM"/>
   </Page>
 );
