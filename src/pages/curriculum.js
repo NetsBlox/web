@@ -6,11 +6,15 @@ export default () => (
   <Page>
     <h1>Explore Our Fun Learning Programs!</h1>
 
+    <div className="py-2"/>
+
     <Grid cols={3}>
       <><h1><Users className="h-12 w-12 inline-block"/></h1><p className="text-center">For various educational levels and skillsets</p></>
       <><h1><BookOpen className="h-12 w-12 inline-block"/></h1><p className="text-center">Curated tutorials, projects, and lesson ideas</p></>
       <><h1><Lightbulb className="h-12 w-12 inline-block"/></h1><p className="text-center">Engaging and interactive education experiences</p></>
     </Grid>
+
+    <div className="py-8"/>
 
     <Grid cols={3}>
       <div className="text-center">
