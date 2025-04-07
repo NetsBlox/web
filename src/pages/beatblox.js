@@ -29,7 +29,7 @@ export default () => (
       <p>BeatBlox's networking feature enables students to collaborate in a digital orchestra and combine music with visualizations or sound effects for games and animations.</p>
     </Card>
 
-    <Warning>Each demo is summarized in a brief video, and a link is provided to open the corresponding project in BeatBlox for tinkering. For best compatibility, use Google Chrome on a computer. To run a project, click the green flag in the BeatBlox interface. For HD playback, set YouTube quality to 1080p.</Warning>
+    <h2><Clapperboard className="h-8 w-8 mr-3 inline-block"/>Demos</h2>
 
     <Grid cols={2}>
       <div className={demoClasses}>
