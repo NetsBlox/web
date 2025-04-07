@@ -1,5 +1,5 @@
 import React from "react";
-import { Brain, Bot, Gamepad, MessageSquare, Code, ExternalLink, Presentation, BookOpen, BookOpenCheck } from "lucide-react";
+import { Brain, Bot, Gamepad2, MessageSquare, Code, ExternalLink, Presentation, BookOpen, BookOpenCheck, Scale } from "lucide-react";
 import { Page, Card, Warning } from "../components.js";
 
 const ExternalLinks = (id, infos) => infos.map((info, i) => <li key={`${id}-${i}`}><a href={info[1]}><ExternalLink className="h-4 w-4 mr-3 inline-block"/>{info[0]}</a>{info[2] && <><br/><em>{info[2]}</em></>}</li>);
@@ -15,30 +15,30 @@ export default () => (
     <h2>Materials</h2>
 
     <ul>
-      <li key="materials-1">
+      <li>
         <BookOpen className="h-6 w-6 mr-3 inline-block"/> <a href="https://docs.google.com/document/d/1cYXk0e5gJvPNNAK7hVaYL92rY6LBhiG1/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Syllabus</a> and <a href="https://docs.google.com/document/d/18NAtN2zkJ43KiPlO2KIB5-Pv-Uab_mLK/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Lesson Plan</a>
       </li>
-      <li key="materials-2">
+      <li>
         <Presentation className="h-6 w-6 mr-3 inline-block"/> Slides for {[
           "https://docs.google.com/presentation/d/188nltVxQSKqMbygC-cd1nB52rxQriuf4nzLJg2cUnRw/edit?usp=sharing",
           "https://docs.google.com/presentation/d/1z3IEMEtK6uhHfu40vUL1Cjno3X9erOQKx7-owggN-ZU/edit?usp=sharing",
           "https://docs.google.com/presentation/d/1Pf9qvz1UVUmnt87XwkeZcpm_RYAV4NMebHIW9Jk63kk/edit?usp=sharing",
           "https://docs.google.com/presentation/d/1BliPIzu7qy2ejdJTajxnuXhLtopXgeMgRt4c0DtwXMg/edit?usp=sharing",
-        ].map((url, i) => <><a href={url}>Day {i + 1}</a>{i < 2 ? ", " : i < 3 ? ", and " : ""}</>)}
+        ].map((url, i) => <span key={url}><a href={url}>Day {i + 1}</a>{i < 2 ? ", " : i < 3 ? ", and " : ""}</span>)}
       </li>
     </ul>
 
     <h2>Projects</h2>
 
     <Card>
-      <h3><Brain className="h-6 w-6 mr-3 inline-block"/>Ball-Balancing Reinforcement Learning Agent</h3>
+      <h3><Scale className="h-6 w-6 mr-3 inline-block"/>Ball-Balancing Reinforcement Learning Agent</h3>
       <p>In this project, we provide students a starter project that implements a reinforcement learning (RL) agent tasked with balancing a ball on a beam without letting it roll off either side. Students are challenged to come up with a "reward function" that quickly/efficiently teaches the RL agent what kinds of behaviors are good/bad in order to learn.</p>
       <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=ball-balancing-starter&editMode&noRun"><button><BookOpen className="h-6 w-6 mr-3 inline-block"/>Starter Project</button></a>
       <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=ball-balancing&editMode&noRun"><button><BookOpenCheck className="h-6 w-6 mr-3 inline-block"/>Completed Project</button></a>
     </Card>
 
     <Card>
-      <h3><Gamepad className="h-6 w-6 mr-3 inline-block"/>Minecraft Maze Reinforcement Learning Agent</h3>
+      <h3><Gamepad2 className="h-6 w-6 mr-3 inline-block"/>Minecraft Maze Reinforcement Learning Agent</h3>
       <p>In this (more difficult) RL project, students must come up with a reward function that can teach a 2D character how to explore a maze and find diamonds. Students are encouraged to create reward functions that do not assume anything about the maze (i.e., the reward function should not include the distance to diamonds or any other information that a player should not be able to know).</p>
       <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=minecraft-maze-starter&editMode&noRun"><button><BookOpen className="h-6 w-6 mr-3 inline-block"/>Starter Project</button></a>
       <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=minecraft-maze&editMode&noRun"><button><BookOpenCheck className="h-6 w-6 mr-3 inline-block"/>Completed Project</button></a>
