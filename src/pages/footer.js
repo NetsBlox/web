@@ -22,6 +22,7 @@ export default () => (
           <li><a href="people">People</a></li>
           <li><a href="https://www.facebook.com/netsblox">Facebook</a></li>
           <li><a href="https://github.com/netsblox">Github</a></li>
+          <li><a href="mailto:netsblox.apis@gmail.com">Contact Us</a></li>
         </ul>
       </div>
     </Grid>
