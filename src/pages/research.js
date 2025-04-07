@@ -151,14 +151,12 @@ const publications = [
 export default () => (
   <Page>
     <h1>Research</h1>
-    <Card>
-      <ol className="text-justify pl-6" style={{listStyle: "list-item outside"}}>
-        {publications.map(info => <li className="my-2">
-          {info.authors}. <em>{info.title}</em>. {info.journal}, {info.year}.
-          {info.doi && <> doi: <a href={`https://doi.org/${info.doi}`}>{info.doi}</a>.</>}
-          {info.link && <> <a href={info.link}><Download className="inline-block w-4 h-4" /></a></>}
-        </li>)}
-      </ol>
-    </Card>
-  </Page>
+    <ol className="text-justify pl-6" style={{listStyle: "list-item outside"}}>
+      {publications.map(info => <li className="my-2">
+        {info.authors}. <em>{info.title}</em>. {info.journal}, {info.year}.
+        {info.doi && <> doi: <a href={`https://doi.org/${info.doi}`}>{info.doi}</a>.</>}
+        {info.link && <> <a href={info.link}><Download className="inline-block w-4 h-4" /></a></>}
+      </li>)}
+    </ol>
+</Page>
 );

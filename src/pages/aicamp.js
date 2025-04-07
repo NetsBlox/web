@@ -1,8 +1,8 @@
 import React from "react";
-import { Brain, Bot, Gamepad, MessageSquare, Code, ExternalLink, GraduationCap, BookOpen, BookOpenCheck } from "lucide-react";
+import { Brain, Bot, Gamepad, MessageSquare, Code, ExternalLink, Presentation, BookOpen, BookOpenCheck } from "lucide-react";
 import { Page, Card, Warning } from "../components.js";
 
-const ExternalLinks = infos => infos.map(info => <li><a href={info[1]}><ExternalLink className="h-4 w-4 mr-3 inline-block"/>{info[0]}</a>{info[2] && <><br/><em>{info[2]}</em></>}</li>);
+const ExternalLinks = (id, infos) => infos.map((info, i) => <li key={`${id}-${i}`}><a href={info[1]}><ExternalLink className="h-4 w-4 mr-3 inline-block"/>{info[0]}</a>{info[2] && <><br/><em>{info[2]}</em></>}</li>);
 
 export default () => (
   <Page>
@@ -15,11 +15,11 @@ export default () => (
     <h2>Materials</h2>
 
     <ul>
-      <li>
-        <GraduationCap className="h-6 w-6 mr-3 inline-block"/> <a href="https://docs.google.com/document/d/1cYXk0e5gJvPNNAK7hVaYL92rY6LBhiG1/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Syllabus</a> and <a href="https://docs.google.com/document/d/18NAtN2zkJ43KiPlO2KIB5-Pv-Uab_mLK/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Lesson Plan</a>
+      <li key="materials-1">
+        <BookOpen className="h-6 w-6 mr-3 inline-block"/> <a href="https://docs.google.com/document/d/1cYXk0e5gJvPNNAK7hVaYL92rY6LBhiG1/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Syllabus</a> and <a href="https://docs.google.com/document/d/18NAtN2zkJ43KiPlO2KIB5-Pv-Uab_mLK/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Lesson Plan</a>
       </li>
-      <li>
-        <BookOpen className="h-6 w-6 mr-3 inline-block"/> Slides for {[
+      <li key="materials-2">
+        <Presentation className="h-6 w-6 mr-3 inline-block"/> Slides for {[
           "https://docs.google.com/presentation/d/188nltVxQSKqMbygC-cd1nB52rxQriuf4nzLJg2cUnRw/edit?usp=sharing",
           "https://docs.google.com/presentation/d/1z3IEMEtK6uhHfu40vUL1Cjno3X9erOQKx7-owggN-ZU/edit?usp=sharing",
           "https://docs.google.com/presentation/d/1Pf9qvz1UVUmnt87XwkeZcpm_RYAV4NMebHIW9Jk63kk/edit?usp=sharing",
@@ -54,7 +54,7 @@ export default () => (
 
     <h2><Brain className="h-6 w-6 mr-3 inline-block"/>AI Topic Exploration</h2>
     <ul>
-      {ExternalLinks([
+      {ExternalLinks('exploration', [
         ["But what is a neural network?", "https://www.youtube.com/watch?v=aircAruvnKk", null],
         ["Gradient descent, how neural networks learn", "https://www.youtube.com/watch?v=IHZwWFHWa-w", null],
         ["What is backpropagation really doing?", "https://www.youtube.com/watch?v=Ilg3gGewQ5U", null],
@@ -66,7 +66,7 @@ export default () => (
 
     <h2><Code className="h-6 w-6 mr-3 inline-block"/>AI Coding in Python</h2>
     <ul>
-      {ExternalLinks([
+      {ExternalLinks('python', [
         ["Q-Learning in Python", "https://www.geeksforgeeks.org/q-learning-in-python/", "This is the algorithm we implemented for you in our RL projects"],
       ])}
     </ul>
