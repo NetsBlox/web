@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronRight, Code, Cloud, Users, Zap } from "lucide-react";
+import { ChevronRight} from "lucide-react";
 import { Page, Youtube } from "../components.js";
 
 const taglines = [
@@ -51,29 +51,6 @@ const taglines = [
     image: "images/backgrounds/robot-laptop.jpeg",
     link: "editor",
     buttonText: "Start Creating: NetsBlox Editor",
-  },
-];
-
-const features = [
-  {
-    icon: Code,
-    title: "Visual Programming",
-    description: "Create projects with intuitive block-based coding.",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud-Based",
-    description: "Access your work from anywhere, anytime.",
-  },
-  {
-    icon: Users,
-    title: "Collaborative",
-    description: "Work together on projects in real-time.",
-  },
-  {
-    icon: Zap,
-    title: "Powerful",
-    description: "Build complex simulations and interactive applications.",
   },
 ];
 
@@ -129,20 +106,6 @@ export default () => {
           <br/>
         </p>
         <br/><a href="curriculum"><button>Get Started!</button></a>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-        {features.map((feature, index) => (
-          <div key={index} className="bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-            <feature.icon className={`w-12 h-12 mb-4 ${hoveredFeature === index ? "text-blue-500 dark:text-blue-400" : "text-gray-600 dark:text-gray-400"} transition-colors duration-300`} />
-            <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
-              {feature.title}
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              {feature.description}
-            </p>
-          </div>
-        ))}
       </div>
     </Page>
   );

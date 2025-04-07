@@ -5,18 +5,18 @@ import { Grid } from "../components.js";
 export default () => (
   <footer className="bg-white dark:bg-gray-900 p-4 container mx-auto">
     <Grid cols={3}>
-      <div>
+      <div key="footer-1">
         <h3>About NetsBlox</h3>
         <p>NetsBlox is a project of the Institute for Software Integrated Systems at Vanderbilt University.</p>
         <p><MapPin className="h-5 w-5 mr-1 inline-block" /> 1025 16th Ave S, Nashville, TN 37212</p>
       </div>
-      <div>
+      <div key="footer-2">
         <h3>Additional Resources</h3>
         <ul>
           <li><a href="research">Research</a></li>
         </ul>
       </div>
-      <div>
+      <div key="footer-3">
         <h3>Connect</h3>
         <ul>
           <li><a href="people">People</a></li>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Headphones, Music, PlayCircle, Share2, Users, PenTool, Layers } from "lucide-react";
-import { Page, Card, Grid, Youtube, Warning } from "../components.js";
+import { Headphones, Music, PlayCircle, Share2, Users, PenTool, Layers, Clapperboard } from "lucide-react";
+import { Page, Card, Grid, Youtube } from "../components.js";
 
 const demoClasses = "text-center my-8";
 

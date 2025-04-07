@@ -11,7 +11,7 @@ import Home from "./pages/home.js";
 import NavBar from "./pages/navbar.js";
 import Projects from "./pages/projects.js";
 import Footer from "./pages/footer.js";
-import PhoneIOT from "./pages/phoneiot.js";
+import PhoneIoT from "./pages/phoneiot.js";
 import CurriculumPage from "./pages/curriculum.js";
 import MultiplayerPage from "./pages/multiplayer.js";
 import PyBloxPage from "./pages/pyblox.js";
@@ -46,7 +46,7 @@ const MyApp = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/phoneiot" element={<PhoneIOT />} />
+        <Route path="/phoneiot" element={<PhoneIoT />} />
         <Route path="/curriculum" element={<CurriculumPage />} />
         <Route path="/multiplayer" element={<MultiplayerPage />} />
         <Route path="/pyblox" element={<PyBloxPage />} />
