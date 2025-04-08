@@ -103,7 +103,6 @@ export default () => {
       <div className="text-center my-14">
         <p className="max-w-xl text-center inline-block">
           NetsBlox is more than just a coding platform - it's an educational ecosystem designed to inspire and empower young minds. With our innovative tools and connected approach, students can create distributed programs, collaborate in real-time, and bring their ideas to life through code.
-          <br/>
         </p>
         <br/><a href="curriculum"><button>Get Started!</button></a>
       </div>

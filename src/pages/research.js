@@ -1,7 +1,6 @@
 import React from "react";
-import {Download} from "lucide-react";
-
-import {Page, Card} from "../components.js";
+import { Download , ExternalLink} from "lucide-react";
+import { Page } from "../components.js";
 
 const publications = [
   {
@@ -50,6 +49,7 @@ const publications = [
     journal: "International Conference of the Learning Sciences",
     year: 2022,
     link: "documents/publications/low-friction-trans.pdf",
+    doi: null,
   },
   {
     authors: "Devin Jean, Brian Broll, Gordon Stein, and Akos Ledeczi",
@@ -73,6 +73,7 @@ const publications = [
     journal: "ASEE Annual Conference & Exposition",
     year: 2022,
     link: "documents/publications/engaging-female-hs-students.pdf",
+    doi: null,
   },
   {
     authors: "Lauren Alvarez, Isabella Gransbury, Veronica Catete, Tiffany Barnes, Akos Ledeczi, and Shuchi Grover",
@@ -148,14 +149,59 @@ const publications = [
   },
 ];
 
+const grants = [
+  {
+    pis: "Kevin Leach, Akos Ledeczi, and Corey Brady",
+    title: "RoCCeM: Bringing Robotics, Cybersecurity and Computer Science to the Middled School Classroom",
+    agency: "National Science Foundation",
+    number: "2312057",
+    startYear: 2023,
+    endYear: 2026,
+    amount: 409997,
+    link: "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2312057&HistoricalAwards=false",
+  },
+  {
+    pis: "Akos Ledeczi and Brian Broll",
+    title: "Beyond CS Principles: Engaging Female High School Students in New Frontiers of Computing",
+    agency: "National Science Foundation",
+    number: "1949472",
+    startYear: 2020,
+    endYear: 2025,
+    amount: 595380,
+    link: "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1949472&HistoricalAwards=false",
+  },
+  {
+    pis: "Akos Ledeczi and Christopher Vanags",
+    title: "NetsBlox: Visual Programming Environment for Teaching Distributed Computing Concepts",
+    agency: "National Science Foundation",
+    number: "1644848",
+    startYear: 2016,
+    endYear: 2019,
+    amount: 299798,
+    link: "https://www.nsf.gov/awardsearch/showAward?AWD_ID=1644848&HistoricalAwards=false",
+  },
+];
+
 export default () => (
   <Page>
     <h1>Research</h1>
-    <ol className="text-justify pl-6" style={{listStyle: "list-item outside"}}>
-      {publications.map(info => <li className="my-2">
+
+    <h2>Publications</h2>
+
+    <ol className="pl-6" style={{listStyle: "list-item outside"}}>
+      {publications.map(info => <li key={JSON.stringify(info)}>
         {info.authors}. <em>{info.title}</em>. {info.journal}, {info.year}.
         {info.doi && <> doi: <a href={`https://doi.org/${info.doi}`}>{info.doi}</a>.</>}
-        {info.link && <> <a href={info.link}><Download className="inline-block w-4 h-4" /></a></>}
+        {info.link && <> <a href={info.link}><Download className="w-4 h-4 inline-block" /></a></>}
+      </li>)}
+    </ol>
+
+    <h2>Grants</h2>
+
+    <ol className="pl-6" style={{listStyle: "list-item outside"}}>
+      {grants.map(info => <li key={JSON.stringify(info)}>
+        {info.pis}. <em>{info.title}</em>. {info.agency} grant {info.link ? <a href={info.link}>{info.number}</a> : info.number}, {info.startYear}-{info.endYear}.
+        {info.amount && <> Total Award: ${info.amount.toLocaleString('en-US')}.</>}
       </li>)}
     </ol>
 </Page>
