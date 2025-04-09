@@ -1,6 +1,6 @@
 import React from "react";
 import { Smartphone, Activity, Settings, Gamepad2, MapPin, BookOpen, Clapperboard } from "lucide-react";
-import { Page, Card, Grid, Youtube } from "../components.js";
+import { Page, Card, Grid, Youtube, Warning } from "../components.js";
 
 const demoClasses = "text-center my-8";
 
@@ -33,6 +33,10 @@ export default () => (
 
     <h2><Clapperboard className="h-8 w-8 mr-3 inline-block"/>Demos</h2>
 
+    <Warning>
+      Note: When running any of the following projects, make sure to switch the device/password values in the project code to match your personal PhoneIoT device.
+    </Warning>
+
     <Grid cols={2}>
       <div className={demoClasses}>
         <h2><BookOpen className="h-6 w-6 mr-3 inline-block"/>Introduction to PhoneIoT</h2>
@@ -44,12 +48,14 @@ export default () => (
         <h2><Gamepad2 className="h-6 w-6 mr-3 inline-block"/>Drop Game Project</h2>
         <Youtube id="iyxgsvazFq0"/>
         <p>Use the accelerometer to control a sprite's movement in an exciting game.</p>
+        <p className="text-center"><a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=drop-game-simple-with-gui&editMode&noRun"><button>Try Project!</button></a></p>
       </div>
 
       <div className={demoClasses}>
         <h2><MapPin className="h-6 w-6 mr-3 inline-block"/>GPS Tracker</h2>
         <Youtube id="kTtO7iuRQWI"/>
         <p>Build a live GPS tracker combining sensor data, custom controls, and NetsBlox services.</p>
+        <p className="text-center"><a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=gps-tracker&editMode&noRun"><button>Try Project!</button></a></p>
       </div>
     </Grid>
   </Page>
