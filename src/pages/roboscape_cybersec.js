@@ -34,7 +34,7 @@ export default function RoboScapeCyberSec() {
         <main className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Shield className="h-8 w-8 text-blue-600" />
+              <Shield className="h-8 w-8 text-blue-600"/>
               <h1 className="text-4xl font-bold text-center text-blue-600 dark:text-white">
                 Cybersecurity Education with RoboScape
               </h1>
@@ -64,8 +64,7 @@ export default function RoboScapeCyberSec() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                     className="rounded-lg"
-                    style={{ aspectRatio: "16 / 9" }}
-                  />
+                    style={{ aspectRatio: "16 / 9" }}/>
                 </div>
               </CardContent>
             </Card>
@@ -118,13 +117,13 @@ export default function RoboScapeCyberSec() {
                 <p className="text-slate-600 dark:text-slate-300 mb-4">The minimum requirements for running this camp:</p>
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <Chrome className="h-5 w-5 text-blue-600 mt-1" />
+                    <Chrome className="h-5 w-5 text-blue-600 mt-1"/>
                     <span className="text-slate-600 dark:text-slate-300">
                       Computers capable of running an up-to-date chromium based browser such as Chromium or Google Chrome for students. These include but are not limited to: Chromebooks, MacBooks, laptops, and personal computers running Mac OS, Windows, or Linux.
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Bot className="h-5 w-5 text-blue-600 mt-1" />
+                    <Bot className="h-5 w-5 text-blue-600 mt-1"/>
                     <span className="text-slate-600 dark:text-slate-300">
                       RoboScape supported robots: Parallax ActivityBot 360 (
                       <a href="https://docs.google.com/document/d/1wudv0uNGX6zZxWaxV_bao0XyJYQgYNlu1Z-zYzvuRPA/edit?usp=sharing" className="text-blue-500 hover:text-blue-600">
@@ -134,7 +133,7 @@ export default function RoboScapeCyberSec() {
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Wifi className="h-5 w-5 text-blue-600 mt-1" />
+                    <Wifi className="h-5 w-5 text-blue-600 mt-1"/>
                     <span className="text-slate-600 dark:text-slate-300">
                       A wireless access point (WiFi) with functional Internet connection or for more advanced setups a local NetsBlox server.
                     </span>
@@ -152,13 +151,13 @@ export default function RoboScapeCyberSec() {
                 <ul className="space-y-3">
                   <li>
                     <a href="https://netsblox.org/roboscape/cybersecurity#:~:text=SIGCSE%20%2D%20ACM%202019-,link,-%22A%20visual%20programming" className="text-blue-500 hover:text-blue-600 flex items-center gap-2">
-                      <ExternalLink className="h-4 w-4" />
+                      <ExternalLink className="h-4 w-4"/>
                       "Teaching Cybersecurity with Networked Robots", SIGCSE - ACM 2019
                     </a>
                   </li>
                   <li>
                     <a href="https://www.sciencedirect.com/science/article/pii/S0743731518300996" className="text-blue-500 hover:text-blue-600 flex items-center gap-2">
-                      <ExternalLink className="h-4 w-4" />
+                      <ExternalLink className="h-4 w-4"/>
                       "A visual programming environment for introducing distributed computing to secondary education", JPDC - Elsevier 2018
                     </a>
                   </li>

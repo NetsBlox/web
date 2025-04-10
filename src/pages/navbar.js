@@ -103,9 +103,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               }
             >
               {darkMode ? (
-                <Sun className="w-5 h-5" />
+                <Sun className="w-5 h-5"/>
               ) : (
-                <Moon className="w-5 h-5" />
+                <Moon className="w-5 h-5"/>
               )}
             </button> : null}
           </div>
@@ -115,9 +115,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             aria-label="Toggle mobile menu"
           >
             {mobileMenuOpen ? (
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6"/>
             ) : (
-              <Menu className="w-6 h-6" />
+              <Menu className="w-6 h-6"/>
             )}
           </button>
         </div>
@@ -140,8 +140,8 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                 >
                   {item.name}
                   {item.submenu && (openSubmenu === index ?
-                    <ChevronUp className="inline ml-1" /> :
-                    <ChevronDown className="inline ml-1" />
+                    <ChevronUp className="inline ml-1"/> :
+                    <ChevronDown className="inline ml-1"/>
                   )}
                 </a>
                 {item.submenu && openSubmenu === index && (

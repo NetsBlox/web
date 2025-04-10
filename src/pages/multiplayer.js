@@ -6,7 +6,7 @@ const StepCard = ({ step, index }) => (
     <div className="p-6">
       <div className="flex items-start gap-4">
         <div className={`rounded-full p-3 bg-gradient-to-br ${step.color}`}>
-          <step.icon className="h-6 w-6 text-white" />
+          <step.icon className="h-6 w-6 text-white"/>
         </div>
         <div className="flex-1">
           <h2 className="text-xl font-bold mb-2 text-blue-600 dark:text-white">
@@ -101,13 +101,12 @@ const MultiplayerPage = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                   style={{ aspectRatio: "16 / 9" }}
-                  className="border-0"
-                />
+                  className="border-0"/>
               </div>
 
               <div className="space-y-6">
                 {steps.map((step, index) => (
-                  <StepCard key={index} step={step} index={index} />
+                  <StepCard key={index} step={step} index={index}/>
                 ))}
               </div>
 

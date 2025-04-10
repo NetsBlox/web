@@ -8,7 +8,7 @@ export default function RoboScapeCurriculum() {
         <main className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Shield className="h-8 w-8 text-blue-600" />
+              <Shield className="h-8 w-8 text-blue-600"/>
               <h1 className="text-4xl font-bold text-center text-blue-600 dark:text-white">
                 RoboScape Curriculum
               </h1>
@@ -16,7 +16,7 @@ export default function RoboScapeCurriculum() {
 
             <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm mb-8 p-6 rounded-lg">
               <div className="flex items-center gap-2 mb-4">
-                <Shield className="h-5 w-5" />
+                <Shield className="h-5 w-5"/>
                 <h2 className="text-xl font-bold text-blue-600 dark:text-white">
                   Cybersecurity Focus
                 </h2>
@@ -35,7 +35,7 @@ export default function RoboScapeCurriculum() {
                 href="roboscape/curriculum/cybersecurity"
                 className="text-blue-500 hover:text-blue-600 inline-flex items-center gap-2"
               >
-                <ExternalLink className="h-4 w-4" />
+                <ExternalLink className="h-4 w-4"/>
                 Click here for more information about the Cybersecurity
                 curriculum
               </a>
@@ -43,7 +43,7 @@ export default function RoboScapeCurriculum() {
 
             <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm mb-8 p-6 rounded-lg">
               <div className="flex items-center gap-2 mb-4">
-                <Car className="h-5 w-5" />
+                <Car className="h-5 w-5"/>
                 <h2 className="text-xl font-bold text-blue-600 dark:text-white">
                   Autonomous Robotics
                 </h2>
@@ -61,7 +61,7 @@ export default function RoboScapeCurriculum() {
                 href="#"
                 className="text-blue-500 hover:text-blue-600 inline-flex items-center gap-2"
               >
-                <ExternalLink className="h-4 w-4" />
+                <ExternalLink className="h-4 w-4"/>
                 See the ROCCEM page for more information on this initiative
               </a>
             </div>
@@ -69,7 +69,7 @@ export default function RoboScapeCurriculum() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg flex items-center gap-4">
                 <div className="rounded-full p-3 bg-gradient-to-br from-blue-400 to-cyan-500">
-                  <Bot className="h-6 w-6 text-white" />
+                  <Bot className="h-6 w-6 text-white"/>
                 </div>
                 <div className="text-slate-600 dark:text-slate-300">
                   Hands-on robotics activities with physical and virtual robots
@@ -77,7 +77,7 @@ export default function RoboScapeCurriculum() {
               </div>
               <div className="bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg flex items-center gap-4">
                 <div className="rounded-full p-3 bg-gradient-to-br from-purple-400 to-pink-500">
-                  <Cpu className="h-6 w-6 text-white" />
+                  <Cpu className="h-6 w-6 text-white"/>
                 </div>
                 <div className="text-slate-600 dark:text-slate-300">
                   Learn cybersecurity through practical, engaging exercises

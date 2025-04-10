@@ -31,17 +31,17 @@ const ResourceLink = ({ link }) => {
       href={link.url}
       className="text-blue-500 hover:text-blue-600 flex items-center gap-2 group"
     >
-      <Icon className="h-4 w-4 text-blue-400 group-hover:text-blue-500" />
+      <Icon className="h-4 w-4 text-blue-400 group-hover:text-blue-500"/>
       <span className="flex-grow whitespace-normal">{link.title}</span>
       {link.isMultiplayer && (
         <span className="bg-blue-100 text-blue-600 dark:bg-blue-900 dark:text-blue-300 px-2 py-1 rounded-full flex items-center">
-          <Gamepad className="h-3 w-3 mr-1" />
+          <Gamepad className="h-3 w-3 mr-1"/>
           Multiplayer
         </span>
       )}
       {link.duration && (
         <span className="flex-shrink-0 text-sm text-slate-500 dark:text-slate-400 flex items-center">
-          <Clock className="h-3 w-3 mr-1" />
+          <Clock className="h-3 w-3 mr-1"/>
           {link.duration}
         </span>
       )}
@@ -52,7 +52,7 @@ const ResourceLink = ({ link }) => {
 const ResourceCard = ({ section }) => (
   <div className="bg-white dark:bg-slate-800 transition-all duration-300 hover:shadow-xl flex flex-col rounded-2xl shadow-lg h-full">
     <div className="p-6 flex flex-col flex-grow items-center">
-      <section.icon className="h-8 w-8 text-blue-600 dark:text-white mb-4" />
+      <section.icon className="h-8 w-8 text-blue-600 dark:text-white mb-4"/>
       <h2 className="text-2xl font-bold text-blue-600 dark:text-white mb-4">
         {section.title}
       </h2>
@@ -62,7 +62,7 @@ const ResourceCard = ({ section }) => (
       <ul className="space-y-2 mb-4 flex-grow">
         {section.links.map((link, index) => (
           <li key={index}>
-            <ResourceLink link={link} />
+            <ResourceLink link={link}/>
           </li>
         ))}
       </ul>
@@ -339,7 +339,7 @@ const LearnPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {sections.map((section, index) => (
-                <ResourceCard key={index} section={section} />
+                <ResourceCard key={index} section={section}/>
               ))}
             </div>
           </div>

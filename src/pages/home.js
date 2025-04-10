@@ -78,7 +78,7 @@ export default () => {
     <Page>
       <div className="h-screen">
         <AnimatePresence mode="wait">
-          <motion.div key={currentTagline} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }} className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${taglines[currentTagline].image})` }} />
+          <motion.div key={currentTagline} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }} className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${taglines[currentTagline].image})` }}/>
         </AnimatePresence>
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center">
@@ -97,12 +97,15 @@ export default () => {
 
       <Youtube id="b4YkDPtoaIs"/>
 
-      <div className="text-center my-14">
-        <p className="max-w-xl text-center inline-block">
-          NetsBlox is more than just a coding platform - it's an educational ecosystem designed to inspire and empower young minds. With our innovative tools and connected approach, students can create distributed programs, collaborate in real-time, and bring their ideas to life through code.
-        </p>
-        <br/><a href="curriculum"><button>Get Started!</button></a>
-      </div>
+      <p>
+        NetsBlox is a cloud-based visual programming language that enables novice programmers to easily create networked programs such as multi-player games. NetsBlox opens up the internet with its vast array of public domain data sources, making it possible to create advanced STEM projects such as displaying seismic activity anywhere on Earth using an interactive Google Maps background.
+      </p>
+
+      <p>
+        But NetsBlox is more than just a coding platform - it's an educational ecosystem designed to inspire and empower young minds. With our innovative tools and connected approach, students can create distributed programs, collaborate in real-time, and bring their ideas to life through code.
+      </p>
+
+      <p className="text-center"><a href="curriculum"><button>Get Started!</button></a></p>
     </Page>
   );
 };

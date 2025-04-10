@@ -42,30 +42,30 @@ const MyApp = () => {
 
   return (
     <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/web/' : "/"}>
-      <NavBar darkMode={darkMode} setDarkMode={setDarkMode} />
+      <NavBar darkMode={darkMode} setDarkMode={setDarkMode}/>
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/phoneiot" element={<PhoneIoT />} />
-        <Route path="/curriculum" element={<CurriculumPage />} />
-        <Route path="/multiplayer" element={<MultiplayerPage />} />
-        <Route path="/pyblox" element={<PyBloxPage />} />
-        <Route path="/roboscape" element={<RoboScapePage />} />
-        <Route path="/roboscapecurriculum" element={<RoboScapeCurriculum />} />
-        <Route path="/roboscapecurriculumcybersecurity" element={<RoboScapeCyberSec />} />
-        <Route path="/learn" element={<LearnPage />} />
-        <Route path="/beatblox" element={<Beatblox />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/roccem" element={<Roccem />} />
-        <Route path="/wildlife" element={<WildlifePage />} />
-        <Route path="/aicamp" element={<AICamp />} />
-        <Route path="/people" element={<People />} />
-        <Route path="/research" element={<Research />} />
+        <Route exact path="/" element={<Home/>}/>
+        <Route path="/projects" element={<Projects/>}/>
+        <Route path="/phoneiot" element={<PhoneIoT/>}/>
+        <Route path="/curriculum" element={<CurriculumPage/>}/>
+        <Route path="/multiplayer" element={<MultiplayerPage/>}/>
+        <Route path="/pyblox" element={<PyBloxPage/>}/>
+        <Route path="/roboscape" element={<RoboScapePage/>}/>
+        <Route path="/roboscapecurriculum" element={<RoboScapeCurriculum/>}/>
+        <Route path="/roboscapecurriculumcybersecurity" element={<RoboScapeCyberSec/>}/>
+        <Route path="/learn" element={<LearnPage/>}/>
+        <Route path="/beatblox" element={<Beatblox/>}/>
+        <Route path="/projects" element={<Projects/>}/>
+        <Route path="/roccem" element={<Roccem/>}/>
+        <Route path="/wildlife" element={<WildlifePage/>}/>
+        <Route path="/aicamp" element={<AICamp/>}/>
+        <Route path="/people" element={<People/>}/>
+        <Route path="/research" element={<Research/>}/>
       </Routes>
-      <Footer />
+      <Footer/>
     </BrowserRouter>
   );
 };
 
 const root = createRoot(document.getElementById("mainDiv"));
-root.render(<MyApp />);
+root.render(<MyApp/>);
