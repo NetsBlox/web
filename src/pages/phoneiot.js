@@ -41,20 +41,20 @@ export default () => (
 
     <Grid cols={2}>
       <div className={demoClasses}>
-        <h2><BookOpen/>Introduction to PhoneIoT</h2>
+        <h3><BookOpen/>Introduction to PhoneIoT</h3>
         <Youtube id="oRWda9jT_c8"/>
         <p>Learn the basics of PhoneIoT, including how to access sensors and create custom displays.</p>
       </div>
 
       <div className={demoClasses}>
-        <h2><Gamepad2/>Drop Game Project</h2>
+        <h3><Gamepad2/>Drop Game Project</h3>
         <Youtube id="iyxgsvazFq0"/>
         <p>Use the accelerometer to control a sprite's movement in an exciting game.</p>
         <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=drop-game-simple-with-gui&editMode&noRun"><button>Try Project!</button></a>
       </div>
 
       <div className={demoClasses}>
-        <h2><MapPin/>GPS Tracker</h2>
+        <h3><MapPin/>GPS Tracker</h3>
         <Youtube id="kTtO7iuRQWI"/>
         <p>Build a live GPS tracker combining sensor data, custom controls, and NetsBlox services.</p>
         <a href="https://editor.netsblox.org/?action=present&Username=devinjean&ProjectName=gps-tracker&editMode&noRun"><button>Try Project!</button></a>

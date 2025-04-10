@@ -129,15 +129,6 @@ const LearnPage = () => {
       buttonLink: "https://editor.netsblox.org/docs/fundamentals/concepts.html",
     },
     {
-      title: "Documentation",
-      icon: Book,
-      description:
-        "Check out the comprehensive documentation for NetsBlox including walkthroughs, documentation for all RPCs, custom deployment, and more!",
-      links: [],
-      buttonText: "Read More",
-      buttonLink: "https://editor.netsblox.org/docs/",
-    },
-    {
       title: "Videos",
       icon: Video,
       description:

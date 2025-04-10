@@ -33,49 +33,49 @@ export default () => (
 
     <Grid cols={2}>
       <div className={demoClasses}>
-        <h2><Music/>Basic Music</h2>
+        <h3><Music/>Basic Music</h3>
         <Youtube id="YVK3ysKePc8"/>
         <p>Introduction to BeatBlox showcasing a simple block-based musical effect.</p>
         <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=beepblox&editMode&noRun"><button>Try Project!</button></a>
       </div>
 
       <div className={demoClasses}>
-        <h2><Headphones/>Multi-Instrument</h2>
+        <h3><Headphones/>Multi-Instrument</h3>
         <Youtube id="_-9BKaLxeQw"/>
         <p>Beethoven's "Ode to Joy" with multiple instruments and score visualization.</p>
         <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=code-to-joy&editMode&noRun"><button>Try Project!</button></a>
       </div>
 
       <div className={demoClasses}>
-        <h2><PlayCircle/>Real-Time Graphics</h2>
+        <h3><PlayCircle/>Real-Time Graphics</h3>
         <Youtube id="t6NO8M-WykQ"/>
         <p>Various visualizations accompanying musical compositions.</p>
         <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=circle-viz&editMode&noRun"><button>Try Project!</button></a>
       </div>
 
       <div className={demoClasses}>
-        <h2><Share2/>Distributed Projects</h2>
+        <h3><Share2/>Distributed Projects</h3>
         <Youtube id="eqd-MeSWxfI"/>
         <p>A four-piece band first on a single computer and then by four individual BeatBlox users being played back synchronously.</p>
         <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=sprite-orchestra&editMode&noRun"><button>Try Project!</button></a>
       </div>
 
       <div className={demoClasses}>
-        <h2><Layers/>Networked Effects And Graphics</h2>
+        <h3><Layers/>Networked Effects And Graphics</h3>
         <Youtube id="m38ea6as4s0"/>
         <p>Helicopter flyby on a single computer first, then in three separate browser tabs, and finally, using distributed audiovisual animation across three computers showing a helicopter moving both visually and acoustically between individually running programs.</p>
         <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=helicopter&editMode&noRun"><button>Try Project!</button></a>
       </div>
 
       <div className={demoClasses}>
-        <h2><PenTool/>External Device Access</h2>
+        <h3><PenTool/>External Device Access</h3>
         <Youtube id="HXxqptj6w0Q"/>
         <p>Musical compositions demonstrating ease of access to external devices, such as MIDI keyboards and mobile phones. To try maracas on your phone, you need to install the PhoneIoT mobile app from the app store and then scan the QR code as shown in the video.</p>
         <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%2C%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBetterShare%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=phoneiot-maraca&editMode&noRun"><button>Try Project!</button></a>
       </div>
 
       <div className={demoClasses}>
-        <h2><Music/>Augmented Reality</h2>
+        <h3><Music/>Augmented Reality</h3>
         <Youtube id="ymLOQZyKuWc"/>
         <p>Two hardware-free instrument implementations allowing users to experiment with playing music without requiring physical hardware or instruments using a webcam only.</p>
         <a href="https://editor.netsblox.org/?extensions=%5B%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FAugmentedReality%2Findex.js%22%2C%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FBeatBlox%2Findex.js%22%2C%22https%3A%2F%2Fextensions.netsblox.org%2Fextensions%2FHandGestures%2Findex.js%22%5D&action=present&Username=beatblox&ProjectName=theremin&editMode&noRun"><button>Try Project!</button></a>
