@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Shield, Power, Palette, PawPrint, Map, ShoppingCart, MessageSquare, Clapperboard, PanelsTopLeft, NotebookText, Bot, CarFront, Code, KeyboardOff, BrickWall, GraduationCap, ShieldAlert, Ear, Bug, Swords, Gauge } from "lucide-react";
+import { Shield, Power, Palette, PawPrint, Map, ShoppingCart, MessageSquare, Clapperboard, PanelsTopLeft, NotebookText, Bot, CarFront, Code, KeyboardOff, BrickWall, GraduationCap, ShieldAlert, Ear, Bug, Swords, Gauge, AudioLines, RefreshCw, Lock, Wifi, Binary, ArrowRightFromLine } from "lucide-react";
 import { Page, Youtube, TabView } from "../components.js";
 
 export default () => (
@@ -116,7 +116,7 @@ export default () => (
         <ul>
           <li><ShieldAlert/>Understand the dangers of plain text communication over a shared medium</li>
           <li><NotebookText/>Learn methods of authentication through a shared secret (key, password, etc.)</li>
-          <li><Shield/>Explain confidentiality through encryption</li>
+          <li><Lock/>Explain confidentiality through encryption</li>
         </ul>
 
         <h3>Activities</h3>
@@ -124,7 +124,72 @@ export default () => (
         <ul>
           <li><Ear/><strong>Eavesdropping</strong> - Demonstrate the eavesdropping issue, allowing students to listen in on the commands everyone else is sending.</li>
           <li><ShieldAlert/><strong>Lack of Authentication</strong> - Demonstrate how easy it is to control someone else's robot by simply sending unexpected commands to it, similar to previous experiences with Tug of War.</li>
-          <li><Shield/><strong>Basic Encryption</strong> - To counter this problem, the secret code will be used to encrypt all messages from the computer to the robot and vice versa. It uses Caesar cipher with the code/key being the shift amount. This can be shown off to the class by running a simple example of robot movement (turning in a circle), but now using encryption. They will not be able to send it off course or delay commands to the robot as they could previously.</li>
+          <li><Lock/><strong>Basic Encryption</strong> - To counter this problem, the secret code will be used to encrypt all messages from the computer to the robot and vice versa. It uses Caesar cipher with the code/key being the shift amount. This can be shown off to the class by running a simple example of robot movement (turning in a circle), but now using encryption. They will not be able to send it off course or delay commands to the robot as they could previously.</li>
+        </ul>
+      </div>
+      <div name="Key Cracking">
+        <h3>Description</h3>
+
+        <p>Being a rudimentary cipher, Caesar cipher is easily susceptible to a host of attacks. The Caesar cipher has a very small key space, as there are only so many single shift values that can be chosen even moving into ASCII characters. Therefore, it is trivial for a computer program (or even humans) to explore the key space and find out the encryption key. In this unit, we demonstrate Caesar cipher's weaknesses and provide solutions.</p>
+
+        <h3>Learning Goals</h3>
+
+        <ul>
+          <li><NotebookText/>Learn how to perform brute-force attacks by exposing the weakness of basic encryption algorithms</li>
+          <li><Shield/>Understand the importance of the strength of a cipher's algorithm and the secret key</li>
+        </ul>
+
+        <h3>Activities</h3>
+
+        <ul>
+          <li><RefreshCw/><strong>Discussing Key Cracking: Brute Force</strong> - If the key size is small (e.g., a short password) we can just go through all possible key values looking for a decrypted text that is what we'd expect to see (such as "set speed").</li>
+          <li><AudioLines/><strong>Discussing Key Cracking: Frequency Analysis</strong> - In a longer message especially, by examining how often letters come up in the encrypted text and comparing it to the data of percent likelihood for a particular letter to be used in English words, we can make educated guesses on decryption. This can be assisted by examining either spaces between words that have been encrypted or, if you can still see the spaces as plain text, by considering the length of common words for the particular application ("set" and "speed" in particular for the robots).</li>
+          <li><Bug/><strong>Brute Force in Action</strong> - By this point, students might have already discovered that given the limited set of shift values in the ASCII implementation of the cipher, they can break each other's encryption by brute-forcing the key. One option is a "partially-known" plain-text attack: capture the encrypted command, cucle through all the shift values until you get a sensible text, and use that value to encrypt messages and attack the robot. Another option is to encrypt your command with different shift values and check if any command succeeds (<code>true</code> return value from the <code>send</code> RPC), which indicates that the correct key has been discovered.</li>
+          <li><Shield/><strong>Develop Mitigation Strategies</strong> - There are different strategies to protect against brute force attacks to a reasonable extent: for instance, increasing the key size by using a more complex cypher or reducing the key lifetime by changing it periodically during operation.</li>
+          <li><Lock/><strong>Example: Shift Array</strong> - A simple way of enforcing the Caesar cipher that we have is to modify it to use a list of shift values. Instead of shifting all the characters by a constant shift value, we will loop through a series of shift values and shift each character differently, making the search space for a brute force attack much bigger. The longer the list of shift values, the harder it would be to crack. Incorporating this technique means that a dumb brute-force attack in NetsBlox would take long enough to make it infeasible.</li>
+        </ul>
+      </div>
+      <div name="Key Exchange">
+        <h3>Description</h3>
+
+        <p>So far, we've learned that our communications are not secure without encryption - and the initial key exchange between the student and the robot is no exception. Therefore, it should not happen in the open. We'll show one way how the key can be securely transmitted. It will be sent from the robot to the student instead of the other way around.</p>
+
+        <h3>Learning Goals</h3>
+
+        <ul>
+          <li><Wifi/>Understand the insecurity of any key when the message sending the key to robots is vulnerable to an attacker</li>
+          <li><Binary/>Understand how to read and write binary numbers</li>
+          <li><Shield/>Learn how to implement a new hardware-based key exchange that is more secure (initially) than previous methods</li>
+        </ul>
+
+        <h3>Activities</h3>
+
+        <ul>
+          <li><Wifi/><strong>Discussion: Network Key Exchange</strong> - The initial unencrypted key exchange between the robot and the student that is needed to setup the encryption is happening on the same communication channel as all the other robots. This means that anyone overhearing at the time can hear what the key is being set to and steal it. This is a big issue that can be demonstrated easily. In short, the attacker would start listening to the target robot and filter the commands it overhears for one starting with <code>set key</code>. As soon as such a command is found, the hacker knows the key and can use this key to decrypt the future communication of the student with the target robot.
+          </li>
+          <li><Binary/><strong>Binary Numbers Review</strong> - Use these resources to provide students with an introduction to basic binary numbers: <a href="https://en.wikipedia.org/wiki/Binary_number">Binary Numbers</a> and <a href="https://ryanstutorials.net/binary-tutorial/binary-conversions.php">Binary Conversion</a>.</li>
+          <li><Shield/><strong>Hardware Key Exchange</strong> - In the real world, to avoid the problems with an insecure key exchange, there are exchange protocols (such as SSL) that ensure keys are sent properly and cannot be overheard or used by unauthorized users. To somewhat replicate this within the features of the robots, we use a feature that facilitates transfer of the initial keys directly from the robot to the students. There is a button on the RoboScape robots that, when pressed, will instruct the robot to generate a 16 bit random number. Then by default (when using Caesar cipher) this sequence is assigned as the encryption key in the form of four 4-bit numbers. These 16 bits are immediately "transferred" to the user through a pair of blinking LEDs on the robot, one for zero and the other for 1. At this point the students will have to write down the sequence, convert it to decimal, and use it as their encryption key. They can also write a simple set of blocks that does this conversion for them! The robot will only accept commands encrypted with this key afterwards.</li>
+        </ul>
+      </div>
+      <div name="Replay Attacks">
+        <h3>Description</h3>
+
+        <p>Even with safely exchanged strong keys, replay attacks can still wreak havoc. The solution is to introduce sequence numbering, such that commands that don't have a higher sequence number are ignored by the robot. Replay attackers can't change the sequence number without knowing the key or keys, in which case replay attacks aren't necessary anyways.</p>
+
+        <h3>Learning Goals</h3>
+
+        <ul>
+          <li><ShieldAlert/>Understand that replay attacks can still be effective even with strong encryption</li>
+          <li><Shield/>Explain how to stop replay attacks by using sequence numbering</li>
+          <li><NotebookText/>Understand the constant cycle of vulnerability, fixes, new vulnerability, stronger fixes, etc. in cybersecurity</li>
+        </ul>
+
+        <h3>Activities</h3>
+
+        <ul>
+          <li><RefreshCw/><strong>Replay Attacks</strong> - Even when an attacker cannot understand, decrypt or manipulate the contents of a message being sent to the robot, they still can capture and replay those commands. By storing a previously sent message - assuming it's a valid one - the attacker can play them back to the robot at any time to achieve the same results. This is done in the real world to "hack" such things as automatic locks in cars and remote-triggered garage door openers. The messages sent around are encrypted, but that doesn't matter with replay attacks. This allowed hackers to unlock or lock cars, open or close garage doors, etc. before these exploits were fixed. To demonstrate how a robot's intended behavior can be hijacked or interfered with through replaying their commands, we will listen to and capture the communication to the target robot and wait for an interesting command to be issued. Then it's just a matter of storing that last issued command for later use. Another approach could be to randomly play the last "n" commands back to the robot in random order.</li>
+          <li><Swords/><strong>Revised Tug of War</strong> - Students will perform another tug of war activity using all of the more advanced methods of both attack and defense that have been covered by this point.</li>
+          <li><ArrowRightFromLine/><strong>Sequencing</strong> - Demonstration of a simple technique to prevent even replay attacks. By simply adding a number to the beginning of each command - generally starting with 1 and increasing by at least 1 but no more than 100 for each successive command - replay attacks are rendered ineffective.</li>
         </ul>
       </div>
     </TabView>

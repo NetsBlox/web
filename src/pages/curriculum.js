@@ -26,7 +26,7 @@ export default () => (
       <div className={entryClasses}>
         <h3><Rocket/>Robotics and Cybersecurity</h3>
         <p>With RoboScape and RoboScape Online, students can write NetsBlox programs that remotely control physical or virtual robots. Learn about encryption, cipher-breaking, and hack other robots in exciting challenges!</p>
-        <a href="roboscape"><button>Start Robotics Adventure</button></a>
+        <a href="cybersecurity"><button>Start Robotics Adventure</button></a>
       </div>
 
       <div className={entryClasses}>
