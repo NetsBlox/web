@@ -90,10 +90,7 @@ export default () => {
                 {taglines[currentTagline].text}
               </motion.h2>
             </AnimatePresence>
-            <a href={taglines[currentTagline].link} className="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:via-blue-700 hover:to-blue-800 text-white px-8 py-3 rounded-full text-lg font-semibold inline-flex items-center shadow-lg transition-all duration-300">
-              {taglines[currentTagline].buttonText}
-              <ChevronRight className="ml-2" size="20" />
-            </a>
+            <a href={taglines[currentTagline].link}><button>{taglines[currentTagline].buttonText}</button></a>
           </div>
         </div>
       </div>

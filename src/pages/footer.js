@@ -8,7 +8,7 @@ export default () => (
       <div>
         <h3>About NetsBlox</h3>
         <p>NetsBlox is a project of the Institute for Software Integrated Systems at Vanderbilt University.</p>
-        <p><MapPin className="h-5 w-5 mr-1 inline-block" /> 1025 16th Ave S, Nashville, TN 37212</p>
+        <p><MapPin/>1025 16th Ave S, Nashville, TN 37212</p>
       </div>
       <div>
         <h3>Additional Resources</h3>

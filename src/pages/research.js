@@ -192,7 +192,7 @@ export default () => (
       {publications.map(info => <li key={JSON.stringify(info)}>
         {info.authors}. <em>{info.title}</em>. {info.journal}, {info.year}.
         {info.doi && <> doi: <a href={`https://doi.org/${info.doi}`}>{info.doi}</a>.</>}
-        {info.link && <> <a href={info.link}><Download className="w-4 h-4 inline-block" /></a></>}
+        {info.link && <> <a href={info.link}><Download/></a></>}
       </li>)}
     </ol>
 

@@ -38,6 +38,24 @@ h2 {
 h3 {
   @apply text-xl mb-2;
 }
+h4, h5, h6 {
+  @apply text-lg mb-2;
+}
+
+/* ------------------------------------------------------------------------- */
+
+h1 > svg {
+  @apply w-12 h-12 mr-3 inline-block;
+}
+h2 > svg {
+  @apply w-8 h-8 mr-3 inline-block;
+}
+h3 > svg, li > svg, button > svg {
+  @apply w-6 h-6 mr-3 inline-block;
+}
+h4 > svg, h5 > svg, h6 > svg, p > svg, a > svg {
+  @apply w-5 h-5 mr-3 inline-block;
+}
 
 /* ------------------------------------------------------------------------- */
 
@@ -64,4 +82,7 @@ button {
   @apply shadow-md bg-gradient-to-r from-green-400 to-blue-500;
   @apply hover:shadow-lg hover:scale-105;
   user-select: none;
+}
+iframe, img {
+  @apply rounded-xl;
 }

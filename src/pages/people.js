@@ -11,7 +11,7 @@ const Person = ({ img, name }) => (
 
 export default () => (
   <Page>
-    <h1><Users className="h-12 w-12 mr-3 inline-block"/>People</h1>
+    <h1><Users/>People</h1>
 
     <Card>
       <h2 className="text-center">Faculty and Research Staff</h2>

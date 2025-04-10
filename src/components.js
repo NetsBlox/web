@@ -39,5 +39,5 @@ export function Warning({children}) {
 }
 
 export function Youtube({id}) {
-  return <iframe className="rounded-xl shadow-lg my-4 first:mt-0 last:mb-0" width="100%" style={{ aspectRatio: "16 / 9" }} src={`https://www.youtube.com/embed/${id}?rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>;
+  return <iframe className="shadow-lg my-4 first:mt-0 last:mb-0" width="100%" style={{ aspectRatio: "16 / 9" }} src={`https://www.youtube.com/embed/${id}?rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>;
 }

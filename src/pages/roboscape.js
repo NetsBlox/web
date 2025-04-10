@@ -1,5 +1,5 @@
 import React from "react";
-import { Globe, Wrench, PackageOpen, Users, PocketKnife, Clapperboard, GraduationCap, AppWindow, Wifi, Bot } from "lucide-react";
+import { Globe, Wrench, PackageOpen, Users, PocketKnife, Clapperboard, AppWindow, Wifi, Bot, Settings } from "lucide-react";
 import { Page, Card, Grid, Youtube } from "../components.js";
 
 export default () => (
@@ -13,19 +13,19 @@ export default () => (
     </p>
 
     <Grid cols={2}>
-      <p className="text-center"><img src="images/roboscape/bot.png" className="h-64 inline-block rounded-xl shadow-md"/></p>
-      <p className="text-center"><img src="images/roboscape/cybersec.png" className="h-64 inline-block rounded-xl shadow-md"/></p>
+      <div className="text-center"><img src="images/roboscape/bot.png" className="h-64 inline-block shadow-md"/></div>
+      <div className="text-center"><img src="images/roboscape/cybersec.png" className="h-64 inline-block shadow-md"/></div>
     </Grid>
 
     <h3>Physical Robot Requirements</h3>
 
     <ul>
-      <li><AppWindow className="h-6 w-6 mr-3 inline-block"/>Computers with an up-to-date Chromium-based browser such as Edge or Chrome.</li>
-      <li><Bot className="h-6 w-6 mr-3 inline-block"/>RoboScape supported robots: Parallax ActivityBot 360 (<a href="https://docs.google.com/document/d/1wudv0uNGX6zZxWaxV_bao0XyJYQgYNlu1Z-zYzvuRPA/edit?usp=sharing">assembly instructions</a>)</li>
-      <li><Wifi className="h-6 w-6 mr-3 inline-block"/>A public or password-protected Wi-Fi network with Internet access</li>
+      <li><AppWindow/>Computers with an up-to-date Chromium-based browser such as Edge or Chrome.</li>
+      <li><Bot/>RoboScape supported robots: Parallax ActivityBot 360 (<a href="https://docs.google.com/document/d/1wudv0uNGX6zZxWaxV_bao0XyJYQgYNlu1Z-zYzvuRPA/edit?usp=sharing">assembly instructions</a>)</li>
+      <li><Wifi/>A public or password-protected Wi-Fi network with Internet access</li>
     </ul>
 
-    <h2><Globe className="h-8 w-8 mr-3 inline-block"/>RoboScape Online</h2>
+    <h2><Globe/>RoboScape Online</h2>
 
     <p>
       While RoboScape can bring many new and exciting activities to the classroom, physical robots can be expensive and difficult to maintain. To resolve this issue, we have introduced RoboScape Online, a robotics simulator for RoboScape robots (and much more).
@@ -33,35 +33,37 @@ export default () => (
 
     <p className="text-center"><a href="https://docs.google.com/presentation/d/1iaUKDoqclTCwOBEVEZ7TKQ_ihas08rta2DIUaMPWPok/edit?usp=sharing"><button>Try RoboScape Online</button></a></p>
 
+    <h2><Wrench/>Features</h2>
+
     <Card>
-      <h3><Wrench className="w-6 h-6 mr-3 inline-block"/>Customizable</h3>
+      <h3><Settings/>Customizable</h3>
       <p>
         The RoboScape Online simulator loads specially-designed "scenario" files that specify details of the virtual environment, the available robots, the task to complete, and so on. These scenario files are simply NetsBlox projects, which students can create, customize, and share.
       </p>
     </Card>
 
     <Card>
-      <h3><PocketKnife className="w-6 h-6 mr-3 inline-block"/>Advanced Sensing Features</h3>
+      <h3><PocketKnife/>Advanced Sensing Features</h3>
       <p>
         Due to its simulated nature, RoboScape Online is able to simulate advanced types of sensors that would be impractically expensive in real-world classroom robotics projects. For instance, some scenarios equip robots with GPS or LIDAR sensors for advanced autonomous driving tasks.
       </p>
     </Card>
 
     <Card>
-      <h3><Users className="w-6 h-6 mr-3 inline-block"/>Collaboration</h3>
+      <h3><Users/>Collaboration</h3>
       <p>
         RoboScape Online environments can be shared, allowing students to join the same robotics simulation and remotely manipulate the same robots. This allows students to collaborate on robotics problems even in online classroom scenarios where students cannot meet in-person.
       </p>
     </Card>
 
     <Card>
-      <h3><PackageOpen className="w-6 h-6 mr-3 inline-block"/>Free and Open-Source</h3>
+      <h3><PackageOpen/>Free and Open-Source</h3>
       <p>
         Simulated robots are completely free, allowing RoboScape to be used in any classroom or even at home.
       </p>
     </Card>
 
-    <h2><Clapperboard className="h-8 w-8 mr-3 inline-block"/>Demos</h2>
+    <h2><Clapperboard/>Demos</h2>
 
     <Youtube id="9ldd-Gcqv1s"/>
   </Page>
