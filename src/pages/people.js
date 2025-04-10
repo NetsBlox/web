@@ -3,7 +3,7 @@ import { Users } from "lucide-react";
 import { Page, Card, Flex } from "../components.js";
 
 const Person = ({ img, name }) => (
-  <div className="m-4 inline-block">
+  <div>
     <img className="shadow-lg rounded-full w-24 h-24" src={img}></img>
     <p className="text-center w-24">{name}</p>
   </div>

@@ -18,7 +18,7 @@ export function Card({children}) {
 }
 
 export function Flex({children}) {
-  return <div className="flex flex-row flex-wrap justify-center">
+  return <div className="flex flex-row flex-wrap justify-center gap-4">
     {children}
   </div>;
 }
@@ -72,7 +72,7 @@ export function TabView({children, key="TabView"}) {
   return (
     <Card key={key}>
       <Flex>
-        {children.map((x, i) => <button key={`${key}-t${i}`} style={{textDecorationLine: ordering[0] === i ? "underline" : "none"}} onClick={() => setActive(i)}>{x.props.title || `Tab ${i+1}`}</button>)}
+        {children.map((x, i) => <div key={`${key}-t${i}`}><button style={{textDecorationLine: ordering[0] === i ? "underline" : "none"}} onClick={() => setActive(i)}>{x.props.name || `Tab ${i+1}`}</button></div>)}
       </Flex>
       {ordering.map((i, j) => <div key={`${key}-c${i}`} className={`transition-all duration-300 ease-in-out overflow-hidden`} style={j === 0 ? {marginTop: "2rem", opacity: 100} : {marginTop: 0, maxHeight: 0, opacity: 0}}>{children[i]}</div>)}
     </Card>

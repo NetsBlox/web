@@ -77,8 +77,11 @@ p, li {
 a {
   @apply text-blue-600 hover:underline;
 }
+a:not(:last-child) > button {
+  @apply mr-4;
+}
 button {
-  @apply px-5 py-2 mr-4 text-white font-bold rounded-full transition-all duration-300 transform;
+  @apply px-5 py-2 text-white font-bold rounded-full transition-all duration-300 transform;
   @apply shadow-md bg-gradient-to-r from-green-400 to-blue-500;
   @apply hover:shadow-lg hover:scale-105;
   user-select: none;
