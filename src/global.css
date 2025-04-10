@@ -86,3 +86,9 @@ button {
 iframe, img {
   @apply rounded-xl;
 }
+strong {
+  @apply font-bold;
+}
+code {
+  @apply p-1 rounded-lg bg-gray-200;
+}

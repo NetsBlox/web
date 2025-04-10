@@ -59,13 +59,22 @@ export function Collapsable({title, children}) {
 }
 
 export function TabView({children, key="TabView"}) {
-  const [active, setActive] = useState(0);
+  children = children.map ? children : [children];
+
+  const [ordering, setOrdering] = useState(children.map((_, i) => i));
+  const setActive = i => {
+    const newOrdering = [...ordering];
+    newOrdering.splice(newOrdering.indexOf(i), 1);
+    newOrdering.unshift(i);
+    setOrdering(newOrdering);
+  };
+
   return (
     <Card key={key}>
       <Flex>
-        {children.map((x, i) => <button key={`${key}-t${i}`} style={{textDecorationLine: active === i ? "underline" : "none"}} onClick={() => setActive(i)}>{x.props.title || `Tab ${i+1}`}</button>)}
+        {children.map((x, i) => <button key={`${key}-t${i}`} style={{textDecorationLine: ordering[0] === i ? "underline" : "none"}} onClick={() => setActive(i)}>{x.props.title || `Tab ${i+1}`}</button>)}
       </Flex>
-      {children.map((x, i) => <div key={`${key}-c${i}`} className={`transition-all duration-300 ease-in-out overflow-hidden`} style={active === i ? {marginTop: "2rem", maxHeight: "100vh", opacity: 100} : {marginTop: 0, maxHeight: 0, opacity: 0}}>{x}</div>)}
+      {ordering.map((i, j) => <div key={`${key}-c${i}`} className={`transition-all duration-300 ease-in-out overflow-hidden`} style={j === 0 ? {marginTop: "2rem", opacity: 100} : {marginTop: 0, maxHeight: 0, opacity: 0}}>{children[i]}</div>)}
     </Card>
   );
 }
