@@ -1,7 +1,7 @@
 
 import React from "react";
-import { Shield, Power, Palette, PawPrint, Map, ShoppingCart, MessageSquare, Clapperboard, PanelsTopLeft, NotebookText } from "lucide-react";
-import { Page, Youtube, TabView, Collapsable } from "../components.js";
+import { Shield, Power, Palette, PawPrint, Map, ShoppingCart, MessageSquare, Clapperboard, PanelsTopLeft, NotebookText, Bot, CarFront, Code, KeyboardOff, BrickWall, GraduationCap } from "lucide-react";
+import { Page, Youtube, TabView } from "../components.js";
 
 export default () => (
   <Page>
@@ -11,22 +11,22 @@ export default () => (
 
     <p><a href="roboscape">RoboScape</a> is a collaborative networked robotics environment which provides several twists on conventional platforms in order to make key concepts in robotics and cybersecurity accessible to K-12 students. First, a user's program controlling the robot runs in the browser, rather than on the robot. Second, the wireless communication between a student's program and the robot can be overheard by the programs of the other students. This makes cybersecurity an immediate need that students realize and can work to address while others attempt to counter their defenses.</p>
 
-    <h2>Lessons</h2>
+    <h2><GraduationCap/>Lessons</h2>
 
     <TabView>
       <div title="Lesson 1">
-        <h2>Description</h2>
+        <h3>Description</h3>
 
         <p>This lesson introduces students to programming in NetsBlox. The curriculum does not assume any prior knowledge of computer programming. Therefore, the first day is dedicated to teaching basic concepts such as control structures, variables, data types and functions (custom blocks).</p>
 
-        <h2>Learning Goals</h2>
+        <h3>Learning Goals</h3>
 
         <ul>
           <li><PanelsTopLeft/>Understand how to navigate around the various areas of the NetsBlox interface and use a variety of features</li>
           <li><NotebookText/>Learn several programming concepts that will be necessary to understand when it comes time to work with the physical robot down the line</li>
         </ul>
 
-        <h2>Activities</h2>
+        <h3>Activities</h3>
 
         <ul>
           <li><Power/><strong>Introduction to the NetsBlox environment</strong> - Basics of creating projects and navigating the interface.</li>
@@ -39,19 +39,27 @@ export default () => (
         </ul>
       </div>
       <div title="Lesson 2">
-        <h2>Description</h2>
+        <h3>Description</h3>
 
         <p>Introduction to programming RoboScape robots. The second day is dedicated to programming the robots with NetsBlox to carry our simple tasks. This will familiarize the students with robot programming in general, as well as lets them practice their newly acquired programming/NetsBlox skills.</p>
 
-        <h2>Learning Goals</h2>
+        <h3>Learning Goals</h3>
 
         <ul>
-          <li>Learn about the various remote procedure calls (RPCs) of RoboScape</li>
-          <li>Communicate with robots by using the <code>getRobots</code>, <code>listen</code>, and <code>send</code> RPCs</li>
-          <li>Apply previously learned programming concepts, such as variables and loops, in order to move the robot both manually and autonomously</li>
+          <li><NotebookText/>Learn about the various remote procedure calls (RPCs) of RoboScape</li>
+          <li><Bot/>Communicate with robots by using the <code>getRobots</code>, <code>listen</code>, and <code>send</code> RPCs</li>
+          <li><Code/>Apply previously learned programming concepts, such as variables and loops, in order to move the robot both manually and autonomously</li>
         </ul>
 
-        <h2>Activities</h2>
+        <h3>Activities</h3>
+
+        <ul>
+          <li><Bot/><strong>Introduction to RoboScape</strong> - Show basic commands and sensor data access. Students will do simple tasks such as having their robot beep at a specified frequency.</li>
+          <li><CarFront/><strong>Robot Driving</strong> - Implement program to enable driving the robot with the arrow keys. After giving students time to test ideas, organize a race around an obstacle course.</li>
+          <li><KeyboardOff/><strong>Self-Driving Robot</strong> - Implement a program that drives the robot around a large rectangle without user interaction. Organize a competition, and declare whoever has the shortest distance between start and end points as the winner.</li>
+          <li><BrickWall/><strong>Approach Wall without Touching</strong> - Use <code>get range</code> and conditional statements such as "if" in order to stop the robot at a specific distance from the wall.</li>
+          <li><BrickWall/><strong>Touch Wall and Return</strong> - Listen to the robot to be able to receive back messages using <code>robot message</code>. The whiskers will trigger one of these messages upon touching the wall. Use get ticks before beginning to move to get an initial reading, then use that data to return to the initial position.</li>
+        </ul>
       </div>
     </TabView>
   </Page>
