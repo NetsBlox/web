@@ -1,9 +1,7 @@
 import React from "react";
 import {
   HelpCircle,
-  Book,
   Video,
-  FileText,
   GraduationCap,
   Folder,
   Clock,
@@ -14,8 +12,6 @@ import {
   Bot,
   Smartphone,
   Shield,
-  Laptop,
-  Newspaper,
   BookOpen,
   Star,
   Map,

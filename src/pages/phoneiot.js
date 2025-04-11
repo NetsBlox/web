@@ -10,9 +10,7 @@ export default () => (
 
     <h1><Smartphone/>PhoneIoT</h1>
 
-    <p>
-      PhoneIoT is a free app for iOS and Android which connects your phone to the Internet of Things (IoT). This allows you to use NetsBlox code to remotely read sensor data from the device, as well as customize a graphical display on the phone screen. Using these features, students can create engaging projects such as an accelerometer-based "tilting" controller for a game, a GPS-powered tracking app which maps out the phone's location on a Google Maps image, or an orientation-based navigation app such as a compass, all from within NetsBlox.
-    </p>
+    <p>PhoneIoT is a free app for iOS and Android which connects your phone to the Internet of Things (IoT). This allows you to use NetsBlox code to remotely read sensor data from the device, as well as customize a graphical display on the phone screen. Using these features, students can create engaging projects such as an accelerometer-based "tilting" controller for a game, a GPS-powered tracking app which maps out the phone's location on a Google Maps image, or an orientation-based navigation app such as a compass, all from within NetsBlox.</p>
 
     <p className="text-center"><a href="https://editor.netsblox.org/docs/services/PhoneIoT/index.html"><button>Get Started</button></a></p>
 
@@ -35,9 +33,7 @@ export default () => (
 
     <h2><Clapperboard/>Demos</h2>
 
-    <Warning>
-      Note: When running any of the following projects, make sure to switch the device/password values in the project code to match your personal PhoneIoT device.
-    </Warning>
+    <Warning>Note: When running any of the following projects, make sure to switch the device/password values in the project code to match your personal PhoneIoT device.</Warning>
 
     <Grid cols={2}>
       <div className={demoClasses}>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Download , ExternalLink} from "lucide-react";
+import { Download } from "lucide-react";
 import { Page } from "../components.js";
 
 const publications = [

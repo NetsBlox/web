@@ -6,13 +6,9 @@ export default () => (
   <Page>
     <h1><Bird/>Wildlife Conservation</h1>
 
-    <p>
-      This resource hub showcases educational projects that leverage the power of NetsBlox to teach students about wildlife conservation. By integrating real-world data and interactive programming, these projects provide hands-on learning experiences that highlight the importance of protecting our planet's biodiversity. NetsBlox's unique capabilities enable students to create simulations, visualizations, and networked applications that illustrate key concepts in wildlife conservation, from tracking animal migrations to analyzing environmental impact.
-    </p>
+    <p>This resource hub showcases educational projects that leverage the power of NetsBlox to teach students about wildlife conservation. By integrating real-world data and interactive programming, these projects provide hands-on learning experiences that highlight the importance of protecting our planet's biodiversity. NetsBlox's unique capabilities enable students to create simulations, visualizations, and networked applications that illustrate key concepts in wildlife conservation, from tracking animal migrations to analyzing environmental impact.</p>
 
-    <p>
-      This module is designed to fill five 3-hour sessions with a target demographic of early high school students. Importantly, no prior programming experience is required. Materials and projects for each day are provided below. Note that the final day is intended to cover student-chosen personal or group projects.
-    </p>
+    <p>This module is designed to fill five 3-hour sessions with a target demographic of early high school students. Importantly, no prior programming experience is required. Materials and projects for each day are provided below. Note that the final day is intended to cover student-chosen personal or group projects.</p>
 
     <h2>Materials</h2>
 
@@ -20,9 +16,7 @@ export default () => (
       <li><Presentation/><a href="https://docs.google.com/presentation/d/16jVldPfZpInwWujLVMXu-xmSnAb3sDPTJi9V2TnjJf0/edit?usp=sharing">Combined slides</a> for all four days of instruction</li>
     </ul>
 
-    <Warning>
-      Warning: Some of the embedded videos included in the slide deck contain graphic images related to animal poaching and may not be appropriate for all audiences. Instructors are advised to screen video content before presenting to students.
-    </Warning>
+    <Warning>Warning: Some of the embedded videos included in the slide deck contain graphic images related to animal poaching and may not be appropriate for all audiences. Instructors are advised to screen video content before presenting to students.</Warning>
 
     <h2>Projects</h2>
 

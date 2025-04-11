@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Sun, Moon, Menu, X, ChevronDown, ChevronUp, Flag } from "lucide-react";
 
 const flagColor = "#28b52a";

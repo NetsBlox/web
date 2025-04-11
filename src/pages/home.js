@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronRight} from "lucide-react";
 import { Page, Youtube } from "../components.js";
 
 const taglines = [
