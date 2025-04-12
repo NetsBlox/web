@@ -13,7 +13,6 @@ import Projects from "./pages/projects.js";
 import Footer from "./pages/footer.js";
 import PhoneIoT from "./pages/phoneiot.js";
 import CurriculumPage from "./pages/curriculum.js";
-import MultiplayerPage from "./pages/multiplayer.js";
 import PyBloxPage from "./pages/pyblox.js";
 import RoboScapePage from "./pages/roboscape.js";
 import LearnPage from "./pages/learn_page.js";
@@ -47,7 +46,6 @@ const MyApp = () => {
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/phoneiot" element={<PhoneIoT/>}/>
         <Route path="/curriculum" element={<CurriculumPage/>}/>
-        <Route path="/multiplayer" element={<MultiplayerPage/>}/>
         <Route path="/pyblox" element={<PyBloxPage/>}/>
         <Route path="/roboscape" element={<RoboScapePage/>}/>
         <Route path="/cybersecurity" element={<Cybersecurity/>}/>

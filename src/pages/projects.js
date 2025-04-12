@@ -1,130 +1,75 @@
 import React from "react";
+import { Activity, ChartColumn, Clapperboard, Dices, Flag, Gamepad2, Gauge, Joystick, Lightbulb, MessageCircleQuestion, MessagesSquare, Play, Telescope, TrafficCone, UserPlus, Users } from "lucide-react";
+import { Page, Card, Grid, Warning, Youtube } from "../components.js";
 
-const featuredProjects = [
-  {
-    title: "ThingSpeak",
-    src: "https://editor.netsblox.org/?action=example&ProjectName=Thingspeak&appMode=true&embedMode=true&noRun",
-    description: "Data visualization and analysis platform",
-    href: "https://editor.netsblox.org/?action=example&ProjectName=Thingspeak",
-  },
-  {
-    title: "NASA",
-    src: "https://editor.netsblox.org/?action=example&ProjectName=NASA&appMode=true&embedMode=true&noRun",
-    description: "Space exploration and astronomical data",
-    href: "https://editor.netsblox.org/?action=example&ProjectName=NASA",
-  },
-  {
-    title: "CastShow",
-    src: "https://editor.netsblox.org/?action=example&ProjectName=CastShow&appMode=true&embedMode=true&noRun",
-    description: "Interactive media presentation platform",
-    href: "https://editor.netsblox.org/?action=example&ProjectName=CastShow",
-  },
-];
+const aspectRatio = "4 / 3";
+const Example = ({icon: Icon, proj, desc}) => (
+  <div key={`ex-${proj}`} className="text-center mt-8">
+    <h3><Icon/>{proj}</h3>
+    <img src={`https://cloud.netsblox.org/projects/thumbnail?url=${encodeURIComponent(`https://editor.netsblox.org/Examples/${encodeURIComponent(proj)}.xml`)}&aspectRatio=${eval(aspectRatio)}`} className="w-64 mt-0 shadow-md inline-block" style={{ aspectRatio }}/>
+    {desc && <p>{desc}</p>}
+    <p className="text-center"><a href={`https://editor.netsblox.org?action=example&projectname=${encodeURIComponent(proj)}&editMode&noRun`} target="_blank"><button>Try Project!</button></a></p>
+  </div>
+);
 
-const mapProjects = [
-  {
-    title: "QuickQuake",
-    src: "https://editor.netsblox.org/?action=example&ProjectName=QuickQuake&appMode=true&embedMode=true&noRun",
-    description: "Real-time earthquake visualization",
-    href: "https://editor.netsblox.org/?action=example&ProjectName=QuickQuake",
-  },
-  {
-    title: "Traffic",
-    src: "https://editor.netsblox.org/?action=example&ProjectName=Traffic&appMode=true&embedMode=true&noRun",
-    description: "Real-time traffic monitoring",
-    href: "https://editor.netsblox.org/?action=example&ProjectName=Traffic",
-  },
-  {
-    title: "COVID19Daily",
-    src: "https://editor.netsblox.org/?action=example&ProjectName=COVID-19Daily&appMode=true&embedMode=true&noRun",
-    description: "COVID-19 case tracking and visualization",
-    href: "https://editor.netsblox.org/?action=example&ProjectName=COVID-19Daily",
-  },
-];
+export default () => (
+  <Page>
+    <h1><Lightbulb/>Featured Projects</h1>
 
-export default function Projects() {
-  return (
-    <div>
-      <div className="min-h-screen bg-gradient-to-b from-white to-blue-50 dark:from-slate-900 dark:to-slate-800">
-        <main className="container mx-auto px-4 py-12">
-          <h1 className="text-4xl font-bold mb-8 text-center text-blue-600 dark:text-white">
-            Projects
-          </h1>
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <p className="text-lg text-slate-600 dark:text-slate-300 p-4">
-              Our projects offer collaborative editing in a cloud-based
-              environment, allowing novice programmers to create networked
-              programs like multiplayer games. NetsBlox enables real-world data
-              integration, such as Google Maps, and offers data sources like the
-              Open Movie Database and Sloan Digital Sky Server. Browse through
-              published projects below.
-            </p>
-            <button className="text-lg px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500 text-white font-bold rounded-full transition-all duration-300 transform hover:scale-110">
-              Explore Projects Below!
-            </button>
-          </div>
+    <p>Our projects offer collaborative editing in a cloud-based environment, allowing novice programmers to create networked programs like multiplayer games. NetsBlox enables real-world data integration, such as Google Maps, and offers data sources like the Open Movie Database and Sloan Digital Sky Server. Browse through published projects below.</p>
 
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-white">
-              Featured Projects
-            </h2>
-            <div className="flex flex-wrap gap-6 justify-center rounded-lg columns-2">
-              {featuredProjects.map((project, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col rounded-lg items-center bg-white dark:bg-slate-800 transition-all duration-300 hover:shadow-xl overflow-hidden min-w-[300px] max-w-[400px] flex-1"
-                >
-                  <iframe
-                    src={project.src}
-                    title={project.title}
-                    className="w-full h-64"
-                    allowFullScreen
-                  ></iframe>
-                  <a href={project.href}>
-                    <div className="p-4">
-                      <h3 className="text-xl font-bold text-blue-600 dark:text-white mb-2">
-                        {project.title}
-                      </h3>
-                      <p className="text-sm text-slate-600 dark:text-slate-300">
-                        {project.description}
-                      </p>
-                    </div>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </section>
+    <h2>Single-Player Projects</h2>
 
-          <section>
-            <h2 className="text-3xl font-bold mb-8 text-blue-600 dark:text-white">
-              Projects using Google Maps
-            </h2>
-            <div className="flex flex-wrap gap-6 justify-center rounded-lg  columns-2">
-              {mapProjects.map((project, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center rounded-lg bg-white dark:bg-slate-800 transition-all duration-300 hover:shadow-xl overflow-hidden min-w-[300px] max-w-[400px] flex-1"
-                >
-                  <iframe
-                    src={project.src}
-                    title={project.title}
-                    className="w-full h-64"
-                    allowFullScreen
-                  ></iframe>
-                  <div className="p-4">
-                    <h3 className="text-xl font-bold text-blue-600 dark:text-white mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-slate-600 dark:text-slate-300">
-                      {project.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        </main>
-      </div>
-    </div>
-  );
-}
+    <Grid cols={3}>
+      <Example icon={Gauge} proj="Thingspeak"/>
+      <Example icon={Telescope} proj="NASA"/>
+      <Example icon={Users} proj="CastShow"/>
+      <Example icon={Activity} proj="QuickQuake"/>
+      <Example icon={TrafficCone} proj="Traffic"/>
+      <Example icon={ChartColumn} proj="COVID-19Daily"/>
+    </Grid>
+
+    <h2>Multi-Player Projects</h2>
+
+    <Warning>Note: Running multi-player NetsBlox projects requires a bit of setup in order to connect the two (or more) programs together over the internet. See the section below for instructions.</Warning>
+
+    <Grid cols={3}>
+      <Example icon={Gamepad2} proj="Battleship"/>
+      <Example icon={Gamepad2} proj="ConnectN"/>
+      <Example icon={Dices} proj="Dice"/>
+      <Example icon={MessageCircleQuestion} proj="Twenty Questions"/>
+      <Example icon={MessagesSquare} proj="Story"/>
+      <Example icon={Joystick} proj="Pong"/>
+    </Grid>
+
+    <h2>Playing Multiplayer Games</h2>
+
+    <p>NetsBlox makes it easy to create multiplayer games. After going through these steps, you will learn about a few different techniques to make games that you can play with your friends worldwide. Before we start with creating games, let's see how you can play one that is already created by our users.</p>
+
+    <Card>
+      <h3><Users/>1. Sign in</h3>
+      <p>Before playing multiplayer games, all the players need to be signed up and logged in. Detailed sign up information can be found <a href="https://editor.netsblox.org/docs/fundamentals/howto.html#signing-up-in">here</a>.</p>
+    </Card>
+
+    <Card>
+      <h3><Play/>2. Find and Open a Game</h3>
+      <p>You can go through the list of our example multiplayer games above, or have a friend share their own multiplayer creation with you.</p>
+    </Card>
+
+    <Card>
+      <h3><UserPlus/>3. Invite all Players to the Game Room</h3>
+      <p>If you are the first one opening the game (owner), to invite your opponents/teammates, go to the room tab you will see an overview of the current room and available roles. Each player occupies one role. To invite players, click on a role choose invite users and search for your friend's username and press ok to ask them to join your game.</p>
+      <p>If you are being invited to a game, make sure you have editor.netsblox.org open in your browser and that you are signed in. After you are invited, you will get a dialog asking you if you want to join the game.</p>
+    </Card>
+
+    <Card>
+      <h3><Flag/>4. Start the Game</h3>
+      <p>Make sure all the players are in by looking at the room view, if there is someone missing go back to the third step. Now that you are all set, the main role can start the game by clicking on the green flag at the top right corner. You can maximize the stage (playground) by clicking on the icon.</p>
+    </Card>
+
+    <Card>
+      <h3><Clapperboard/>Demo</h3>
+      <Youtube id="h5q8M-N25uI"/>
+    </Card>
+  </Page>
+);

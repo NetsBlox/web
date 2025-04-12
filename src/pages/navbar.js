@@ -10,7 +10,6 @@ const navItems = [
     submenu: [
       { name: "Curriculum", href: "curriculum" },
       { name: "Projects", href: "projects" },
-      { name: "Multiplayer", href: "multiplayer" },
       { name: "Documentation", href: "https://editor.netsblox.org/docs/" },
       { name: "Learn More", href: "learn" },
     ],
