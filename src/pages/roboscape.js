@@ -23,6 +23,8 @@ export default () => (
       <li><Wifi/>A public or password-protected Wi-Fi network with Internet access</li>
     </ul>
 
+    <p className="text-center"><a href="cybersecurity"><button>View Curriculum</button></a></p>
+
     <h2><Globe/>RoboScape Online</h2>
 
     <p>While RoboScape can bring many new and exciting activities to the classroom, physical robots can be expensive and difficult to maintain. To resolve this issue, we have introduced RoboScape Online, a robotics simulator for RoboScape robots (and much more).</p>

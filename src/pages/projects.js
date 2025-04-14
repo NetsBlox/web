@@ -1,6 +1,8 @@
 import React from "react";
-import { Activity, ChartColumn, Clapperboard, Dices, Flag, Gamepad2, Gauge, Joystick, Lightbulb, MessageCircleQuestion, MessagesSquare, Play, Telescope, TrafficCone, UserPlus, Users } from "lucide-react";
+import { Activity, BookOpen, ChartColumn, Clapperboard, Dices, Flag, Gamepad2, Gauge, Joystick, Lightbulb, MessageCircleQuestion, MessagesSquare, PawPrint, Play, Telescope, TrafficCone, UserPlus, Users } from "lucide-react";
 import { Page, Card, Grid, Warning, Youtube } from "../components.js";
+
+const demoClasses = "mt-8 text-center";
 
 const aspectRatio = "4 / 3";
 const Example = ({icon: Icon, proj, desc}) => (
@@ -67,9 +69,17 @@ export default () => (
       <p>Make sure all the players are in by looking at the room view, if there is someone missing go back to the third step. Now that you are all set, the main role can start the game by clicking on the green flag at the top right corner. You can maximize the stage (playground) by clicking on the icon.</p>
     </Card>
 
-    <Card>
-      <h3><Clapperboard/>Demo</h3>
-      <Youtube id="h5q8M-N25uI"/>
-    </Card>
+    <h2><Clapperboard/>Multiplayer Demos</h2>
+
+    <Grid cols={2}>
+      <div className={demoClasses}>
+        <h3><BookOpen/>Multiplayer Starter Guide</h3>
+        <Youtube id="h5q8M-N25uI"/>
+      </div>
+      <div className={demoClasses}>
+        <h3><PawPrint/>Distributed Animation</h3>
+        <Youtube id="NRIUUiJMCmI"/>
+      </div>
+    </Grid>
   </Page>
 );

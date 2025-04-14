@@ -8,14 +8,13 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "../public/index.css";
 
 import Home from "./pages/home.js";
-import NavBar from "./pages/navbar.js";
+import NavBar from "./navbar.js";
 import Projects from "./pages/projects.js";
-import Footer from "./pages/footer.js";
+import Footer from "./footer.js";
 import PhoneIoT from "./pages/phoneiot.js";
 import CurriculumPage from "./pages/curriculum.js";
 import PyBloxPage from "./pages/pyblox.js";
 import RoboScapePage from "./pages/roboscape.js";
-import LearnPage from "./pages/learn_page.js";
 import Beatblox from "./pages/beatblox.js";
 import Roccem from "./pages/roccem.js";
 import WildlifePage from "./pages/wildlife.js";
@@ -49,7 +48,6 @@ const MyApp = () => {
         <Route path="/pyblox" element={<PyBloxPage/>}/>
         <Route path="/roboscape" element={<RoboScapePage/>}/>
         <Route path="/cybersecurity" element={<Cybersecurity/>}/>
-        <Route path="/learn" element={<LearnPage/>}/>
         <Route path="/beatblox" element={<Beatblox/>}/>
         <Route path="/projects" element={<Projects/>}/>
         <Route path="/roccem" element={<Roccem/>}/>

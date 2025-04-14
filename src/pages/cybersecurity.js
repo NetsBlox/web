@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Shield, Power, Palette, PawPrint, Map, ShoppingCart, MessageSquare, Clapperboard, PanelsTopLeft, NotebookText, Bot, CarFront, Code, KeyboardOff, BrickWall, GraduationCap, ShieldAlert, Ear, Bug, Swords, Gauge, AudioLines, RefreshCw, Lock, Wifi, Binary, ArrowRightFromLine } from "lucide-react";
+import { Shield, Power, Palette, PawPrint, Map, ShoppingCart, MessageSquare, Clapperboard, PanelsTopLeft, NotebookText, Bot, CarFront, Code, KeyboardOff, BrickWall, GraduationCap, ShieldAlert, Ear, Bug, Swords, Gauge, AudioLines, RefreshCw, Lock, Wifi, Binary, ArrowRightFromLine, Download } from "lucide-react";
 import { Page, Youtube, TabView } from "../components.js";
 
 export default () => (
@@ -32,10 +32,10 @@ export default () => (
           <li><Power/><strong>Introduction to the NetsBlox environment</strong> - Basics of creating projects and navigating the interface.</li>
           <li><PawPrint/><strong>Cat and Mouse Game</strong> - Mouse is "driven" by the user using the keyboard arrow keys, while the cat is following the mouse trying to catch it. Time-based scoring, with increasing difficulty level as time progresses. Introduces if-statements, sprites/backgrounds, loops, variables, events and concurrent scripts.</li>
           <li><Palette/><strong>Digital Art</strong> - Polygon drawing custom block. Implements various ways of creating geometric art. Introduces custom blocks (functions).</li>
-          <li><Map/><strong>Interactive Weather Map</strong> - Create a fully interactive google map background with panning and zooming. Display current weather conditions wherever the user clicks. Introduces Remote Procedure Calls (RPCs).</li>
+          <li><Map/><strong>Interactive Weather Map</strong> - Create a fully interactive google map background with panning and zooming. Display current weather conditions wherever the user clicks. Introduces Remote Procedure Calls (RPCs). <a href="documents/lessons/weather-app.pdf"><Download/></a></li>
           <li><ShoppingCart/><strong>Shopping List App</strong> - Simple project to introduce lists. Set variables equal to lists and then add items to them. Further list manipulation is available as time permits.</li>
-          <li><MessageSquare/><strong>Chatroom</strong> - Introduction to messages. Learn how to automatically send messages from one computer to everyone else able to receive it.</li>
-          <li><Clapperboard/><strong>Movie Cast Info</strong> - Using the MovieDB service, display photos of leading cast members of any movie based on its title. Stresses lists.</li>
+          <li><MessageSquare/><strong>Chatroom</strong> - Introduction to messages. Learn how to automatically send messages from one computer to everyone else able to receive it. <a href="documents/lessons/chatroom.pdf"><Download/></a></li>
+          <li><Clapperboard/><strong>Movie Cast Info</strong> - Using the MovieDB service, display photos of leading cast members of any movie based on its title. Stresses lists. <a href="documents/lessons/movie-app.pdf"><Download/></a></li>
         </ul>
       </div>
       <div name="General RoboScape">

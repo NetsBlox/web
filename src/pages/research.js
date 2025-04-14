@@ -1,6 +1,6 @@
 import React from "react";
-import { Download } from "lucide-react";
-import { Page } from "../components.js";
+import { BookOpen, BookOpenCheck, BookOpenText, Bot, Download, GraduationCap, Hammer, PiggyBank, Presentation, Smartphone, ThermometerSnowflake, ThermometerSun, Wifi } from "lucide-react";
+import { Page, Grid, Youtube, Warning } from "../components.js";
 
 const publications = [
   {
@@ -182,11 +182,69 @@ const grants = [
   },
 ];
 
+const presentations = [
+  {
+    title: "Introduction to NetsBlox",
+    icon: BookOpen,
+    video: "Iq86M0boVLg",
+  },
+  {
+    title: "Cybersecurity with RoboScape",
+    icon: Bot,
+    video: "UtcMZVPvnUs",
+  },
+  {
+    title: "Distributed Virtual CPS",
+    icon: Bot,
+    video: "KnCF3VJ0cHA",
+  },
+  {
+    title: "Hands-On IoT Education",
+    icon: Smartphone,
+    video: "CpWH_FiyXDc",
+  },
+  {
+    title: "Your Phone as a Sensor",
+    icon: Smartphone,
+    video: "Or4zIiDn0m0",
+  },
+  {
+    title: "Shared Virtual Worlds",
+    icon: Bot,
+    video: "9ldd-Gcqv1s",
+  },
+  {
+    title: "Python Tooling for Snap!",
+    icon: Bot,
+    video: "ADnao4uZd9E",
+  },
+  {
+    title: "Internet Access in Snap!",
+    icon: Wifi,
+    video: "CLd-OK00vgc",
+  },
+  {
+    title: "Build Your Own Service",
+    icon: Hammer,
+    video: "7LH3aeHYlSg",
+  },
+  {
+    title: "Exploring Climate Change",
+    icon: ThermometerSun,
+    video: "SN_DZANWJ0E",
+  },
+  {
+    title: "Eclipse Temperature Trends",
+    icon: ThermometerSnowflake,
+    video: "QGsJ4OjWCBU",
+  },
+];
+
 export default () => (
   <Page>
-    <h1>Research</h1>
+    <h1><BookOpenCheck/>Research</h1>
 
-    <h2>Publications</h2>
+    <h2><BookOpenText/>Publications</h2>
 
     <ol className="pl-6" style={{listStyle: "list-item outside"}}>
       {publications.map(info => <li key={JSON.stringify(info)}>
@@ -196,7 +254,7 @@ export default () => (
       </li>)}
     </ol>
 
-    <h2>Grants</h2>
+    <h2><PiggyBank/>Grants</h2>
 
     <ol className="pl-6" style={{listStyle: "list-item outside"}}>
       {grants.map(info => <li key={JSON.stringify(info)}>
@@ -204,5 +262,18 @@ export default () => (
         {info.amount && <> Total Award: ${info.amount.toLocaleString('en-US')}.</>}
       </li>)}
     </ol>
+
+    <p className="text-center">Total Awards: ${grants.map(x => x.amount || 0).reduce((a, b) => a + b, 0).toLocaleString('en-US')}</p>
+
+    <h2><Presentation/>Presentations</h2>
+
+    <Warning>Note: The following is not an exhaustive list of NetsBlox-related presentations, but rather a subset for which recordings were available.</Warning>
+
+    <Grid cols={2}>
+      {presentations.map(info => <div key={JSON.stringify(info)} className="mt-8">
+        <h3 className="text-center"><info.icon/>{info.title}</h3>
+        <Youtube id={info.video}/>
+      </div>)}
+    </Grid>
 </Page>
 );

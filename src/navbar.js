@@ -11,7 +11,6 @@ const navItems = [
       { name: "Curriculum", href: "curriculum" },
       { name: "Projects", href: "projects" },
       { name: "Documentation", href: "https://editor.netsblox.org/docs/" },
-      { name: "Learn More", href: "learn" },
     ],
   },
   {
