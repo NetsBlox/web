@@ -24,8 +24,13 @@ export function Flex({children}) {
 }
 
 export function Grid({children, cols}) {
+  const grids = {
+    1: 'grid-cols-1 md:grid-cols-1 lg:grid-cols-1',
+    2: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-2',
+    3: 'grid-cols-1 md:grid-cols-3 lg:grid-cols-3',
+  };
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-${cols} lg:grid-cols-${cols} gap-8 my-4 first:mt-0 last:mb-0`}>
+    <div className={`grid ${grids[cols]} gap-8 my-4 first:mt-0 last:mb-0`}>
       {children}
     </div>
   );
