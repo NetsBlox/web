@@ -13,16 +13,16 @@ export default () => (
       <div>
         <h3>Additional Resources</h3>
         <ul>
-          <li><a href="research">Research</a></li>
+          <li><a className="plain" href="research">Research</a></li>
         </ul>
       </div>
       <div>
         <h3>Connect</h3>
         <ul>
-          <li><a href="people">People</a></li>
-          <li><a href="https://www.facebook.com/netsblox">Facebook</a></li>
-          <li><a href="https://github.com/netsblox">Github</a></li>
-          <li><a href="mailto:netsblox.apis@gmail.com">Contact Us</a></li>
+          <li><a className="plain" href="people">People</a></li>
+          <li><a className="plain" href="https://www.facebook.com/netsblox">Facebook</a></li>
+          <li><a className="plain" href="https://github.com/netsblox">Github</a></li>
+          <li><a className="plain" href="mailto:netsblox.apis@gmail.com">Contact Us</a></li>
         </ul>
       </div>
     </Grid>

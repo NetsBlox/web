@@ -71,11 +71,18 @@ li {
 
 /* ------------------------------------------------------------------------- */
 
+nav, button {
+  user-select: none;
+}
 p, li {
   @apply fancyjustify;
 }
 a {
-  @apply text-blue-600 hover:underline;
+  cursor: pointer;
+  @apply hover:underline;
+}
+a:not(.plain) {
+  @apply text-blue-600;
 }
 a:not(:last-child) > button {
   @apply mr-4;
@@ -84,7 +91,6 @@ button {
   @apply px-5 py-2 text-white font-bold rounded-full transition-all duration-300 transform;
   @apply shadow-md bg-gradient-to-r from-green-400 to-blue-500;
   @apply hover:shadow-lg hover:scale-105;
-  user-select: none;
 }
 iframe, img {
   @apply rounded-xl;
