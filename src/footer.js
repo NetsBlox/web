@@ -10,12 +10,14 @@ export default () => (
         <p>NetsBlox is a project of the Institute for Software Integrated Systems at Vanderbilt University.</p>
         <p><MapPin/>1025 16th Ave S, Nashville, TN 37212</p>
       </div>
+
       <div>
         <h3>Additional Resources</h3>
         <ul>
           <li><a className="plain" href="research">Research</a></li>
         </ul>
       </div>
+
       <div>
         <h3>Connect</h3>
         <ul>
@@ -26,6 +28,7 @@ export default () => (
         </ul>
       </div>
     </Grid>
+
     <p className="text-center">&copy; 2025 Institute for Software Integrated Systems / Vanderbilt University / School of Engineering</p>
   </footer>
 );

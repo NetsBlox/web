@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Menu, X, ChevronDown, ChevronUp, Flag } from "lucide-react";
 
+const dropdownClasses = "plain block px-4 py-2 hover:bg-blue-100 rounded-lg";
+
 const navItems = [
   { name: "Home", href: "." },
   {
@@ -27,79 +29,49 @@ const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
-  const toggleSubmenu = (index) => {
-    setOpenSubmenu(openSubmenu === index ? null : index);
+  const toggleSubmenu = i => {
+    setOpenSubmenu(openSubmenu === i ? null : i);
   };
 
-  return (
+  return <>
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-1">
-          <a href=".">
+          <a href="." style={{ textDecorationLine: "none" }}>
             <img src="images/logos/netsblox.svg" className="w-16 h-16 mr-1 inline-block"/>
             <span className="text-3xl font-bold text-blue-600" style={{ verticalAlign: "middle" }}>NetsBlox</span>
           </a>
           <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item, i) => (
-              <div key={`nav-${item.name}`} className="relative" >
-                <a href={item.href} onClick={item.submenu && (() => toggleSubmenu(i))} className="plain">
-                  {item.name}
-                  {item.submenu && (openSubmenu === i ? <ChevronUp className="mr-0"/> : <ChevronDown className="mr-0"/>)}
-                </a>
-                {item.submenu && openSubmenu === i && (
-                  <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg">
-                    {item.submenu.map(subItem => (
-                      <a key={`nav-${item.name}-${subItem.name}`} href={subItem.href} className="plain block px-4 py-2 hover:bg-blue-100 rounded-lg">
-                        {subItem.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+            {navItems.map((item, i) => <div key={`nav-${item.name}`} className="relative">
+              <a href={item.href} onClick={() => toggleSubmenu(i)} className="plain">
+                {item.name}{item.submenu && (openSubmenu === i ? <ChevronUp className="mr-0"/> : <ChevronDown className="mr-0"/>)}
+              </a>
+              {item.submenu && openSubmenu === i && <div className="absolute mt-2 bg-white shadow-lg rounded-lg">
+                {item.submenu.map(subItem => <a key={`nav-${item.name}-${subItem.name}`} href={subItem.href} className={dropdownClasses}>{subItem.name}</a>)}
+              </div>}
+            </div>)}
             <a href="https://editor.netsblox.org" target="_blank"><button><Flag/>Create!</button></a>
           </div>
-          <button
-            className="md:hidden p-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-blue-500"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle mobile menu"
-          >
+          <button className="md:hidden p-2 rounded-full" onClick={() => { setOpenSubmenu(null); setMobileMenuOpen(!mobileMenuOpen); }}>
             {mobileMenuOpen ? <X className="w-6 h-6 mr-0"/> : <Menu className="w-6 h-6 mr-0"/>}
           </button>
         </div>
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4">
-            {navItems.map((item, i) => (
-              <div key={`nav-${item.name}`} className="relative">
-                <a
-                  href={item.href}
-                  className="block py-2 text-gray-700 hover:text-blue-500 transition-colors"
-                  onClick={item.submenu && (() => toggleSubmenu(i))}
-                >
-                  {item.name}
-                  {item.submenu && (openSubmenu === i ? <ChevronUp className="mr-0"/> : <ChevronDown className="mr-0"/>)}
-                </a>
-                {item.submenu && openSubmenu === i && (
-                  <div className="mt-2 w-full bg-white shadow-lg rounded-lg">
-                    {item.submenu.map((subItem) => (
-                      <a
-                        key={`nav-${item.name}-${subItem.name}`}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 transition-colors rounded-lg"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {subItem.name}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
+
+        {mobileMenuOpen && <div className="md:hidden py-4">
+          {navItems.map((item, i) => <div key={`nav-${item.name}`}>
+            <a href={item.href} onClick={() => toggleSubmenu(i)} className={dropdownClasses}>
+              {item.name}{item.submenu && (openSubmenu === i ? <ChevronUp className="mr-0"/> : <ChevronDown className="mr-0"/>)}
+            </a>
+            {item.submenu && openSubmenu === i && <div className="ml-4">
+              {item.submenu.map(subItem => <a key={`nav-${item.name}-${subItem.name}`} href={subItem.href} className={dropdownClasses}>{subItem.name}</a>)}
+            </div>}
+          </div>)}
+        </div>}
       </div>
     </nav>
-  );
+
+    {(mobileMenuOpen || openSubmenu) && <div className="fixed top-0 left-0 w-screen h-screen" style={{ zIndex: 49 }} onClick={e => { e.preventDefault(); setMobileMenuOpen(false); setOpenSubmenu(false); }}/>}
+  </>;
 };
 
 export default Navbar;

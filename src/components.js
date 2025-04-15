@@ -14,7 +14,7 @@ export function Page({children}) {
 }
 
 export function Card({children}) {
-  return <div className="p-4 my-4 first:mt-0 last:mb-0 bg-white/50 backdrop-blur-sm rounded-xl shadow-md">{children}</div>;
+  return <div className="p-4 my-4 first:mt-0 last:mb-0 bg-white/50 rounded-xl shadow-md">{children}</div>;
 }
 
 export function Flex({children}) {
