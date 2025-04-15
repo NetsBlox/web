@@ -27,8 +27,8 @@ export default () => (
       <h2 className="text-center">Graduate Students</h2>
       <Flex>
         <Person img="images/people/saman-kittani.jpeg" name="Saman Kittani"/>
-        <Person img="images/placeholder.png" name="Gabriel Barnard"/>
-        <Person img="images/placeholder.png" name="Tito Ebiwonjumi"/>
+        <Person img="images/people/gabriel-barnard.jpeg" name="Gabriel Barnard"/>
+        <Person img="images/people/tito-ebiwonjumi.jpeg" name="Tito Ebiwonjumi"/>
       </Flex>
     </Card>
 
