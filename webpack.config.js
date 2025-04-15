@@ -1,6 +1,3 @@
-/* Copyright G. Hemingway, @2024 - All rights reserved */
-"use strict";
-
 import path from "node:path";
 import url from "url";
 
@@ -14,9 +11,9 @@ export default {
     path: path.resolve(__dirname, "public"),
     publicPath: process.env.NODE_ENV === 'production' ? '/web/' : "/",
   },
-  // optimization: {
-  //   minimize: process.env.NODE_ENV === "production", // Minifies in production
-  // },
+  optimization: {
+    minimize: process.env.NODE_ENV === "production",
+  },
   module: {
     rules: [
       {

@@ -3,8 +3,8 @@ import { Activity, BookOpen, ChartColumn, Clapperboard, Dices, Flag, Gamepad2, G
 import { Page, Card, Grid, Warning, Youtube } from "../components.js";
 
 const demoClasses = "mt-8 text-center";
-
 const aspectRatio = "4 / 3";
+
 const Example = ({icon: Icon, proj, desc}) => (
   <div key={`ex-${proj}`} className="text-center mt-8">
     <h3><Icon/>{proj}</h3>
@@ -76,6 +76,7 @@ export default () => (
         <h3><BookOpen/>Multiplayer Starter Guide</h3>
         <Youtube id="h5q8M-N25uI"/>
       </div>
+
       <div className={demoClasses}>
         <h3><PawPrint/>Distributed Animation</h3>
         <Youtube id="NRIUUiJMCmI"/>

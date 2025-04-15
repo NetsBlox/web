@@ -2,8 +2,6 @@ import React from "react";
 import { Brain, Bot, Gamepad2, MessageSquare, Code, ExternalLink, Presentation, BookOpen, BookOpenCheck, Scale } from "lucide-react";
 import { Page, Card, Warning } from "../components.js";
 
-const ExternalLinks = (id, infos) => infos.map((info, i) => <li key={`${id}-${i}`}><a href={info[1]}><ExternalLink/>{info[0]}</a>{info[2] && <><br/><em>{info[2]}</em></>}</li>);
-
 export default () => (
   <Page>
     <h1><Bot/>AI Camp Curriculum</h1>
@@ -14,14 +12,7 @@ export default () => (
 
     <ul>
       <li><BookOpen/><a href="https://docs.google.com/document/d/1cYXk0e5gJvPNNAK7hVaYL92rY6LBhiG1/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Syllabus</a> and <a href="https://docs.google.com/document/d/18NAtN2zkJ43KiPlO2KIB5-Pv-Uab_mLK/edit?usp=sharing&ouid=109658049399807181387&rtpof=true&sd=true">Lesson Plan</a></li>
-      <li>
-        <Presentation/>Slides for {[
-          "https://docs.google.com/presentation/d/188nltVxQSKqMbygC-cd1nB52rxQriuf4nzLJg2cUnRw/edit?usp=sharing",
-          "https://docs.google.com/presentation/d/1z3IEMEtK6uhHfu40vUL1Cjno3X9erOQKx7-owggN-ZU/edit?usp=sharing",
-          "https://docs.google.com/presentation/d/1Pf9qvz1UVUmnt87XwkeZcpm_RYAV4NMebHIW9Jk63kk/edit?usp=sharing",
-          "https://docs.google.com/presentation/d/1BliPIzu7qy2ejdJTajxnuXhLtopXgeMgRt4c0DtwXMg/edit?usp=sharing",
-        ].map((url, i) => <span key={url}><a href={url}>Day {i + 1}</a>{i < 2 ? ", " : i < 3 ? ", and " : ""}</span>)}
-      </li>
+      <li><Presentation/>Slides for <a href="https://docs.google.com/presentation/d/188nltVxQSKqMbygC-cd1nB52rxQriuf4nzLJg2cUnRw/edit?usp=sharing">Day 1</a>, <a href="https://docs.google.com/presentation/d/1z3IEMEtK6uhHfu40vUL1Cjno3X9erOQKx7-owggN-ZU/edit?usp=sharing">Day 2</a>, <a href="https://docs.google.com/presentation/d/1Pf9qvz1UVUmnt87XwkeZcpm_RYAV4NMebHIW9Jk63kk/edit?usp=sharing">Day 3</a>, and <a href="https://docs.google.com/presentation/d/1BliPIzu7qy2ejdJTajxnuXhLtopXgeMgRt4c0DtwXMg/edit?usp=sharing">Day 4</a></li>
     </ul>
 
     <h2>Projects</h2>
@@ -50,21 +41,17 @@ export default () => (
 
     <h2><Brain/>AI Topic Exploration</h2>
     <ul>
-      {ExternalLinks('exploration', [
-        ["But what is a neural network?", "https://www.youtube.com/watch?v=aircAruvnKk", null],
-        ["Gradient descent, how neural networks learn", "https://www.youtube.com/watch?v=IHZwWFHWa-w", null],
-        ["What is backpropagation really doing?", "https://www.youtube.com/watch?v=Ilg3gGewQ5U", null],
-        ["Backpropagation calculus", "https://www.youtube.com/watch?v=tIeHLnjs5U8", null],
-        ["But what is a GPT? Visual intro to transformers", "https://www.youtube.com/watch?v=wjZofJX0v4M", null],
-        ["Attention in transformers, visually explained", "https://www.youtube.com/watch?v=eMlx5fFNoYc", null],
-      ])}
+      <li><a href="https://www.youtube.com/watch?v=aircAruvnKk"><ExternalLink/>But what is a neural network?</a></li>
+      <li><a href="https://www.youtube.com/watch?v=IHZwWFHWa-w"><ExternalLink/>Gradient descent, how neural networks learn</a></li>
+      <li><a href="https://www.youtube.com/watch?v=Ilg3gGewQ5U"><ExternalLink/>What is backpropagation really doing?</a></li>
+      <li><a href="https://www.youtube.com/watch?v=tIeHLnjs5U8"><ExternalLink/>Backpropagation calculus</a></li>
+      <li><a href="https://www.youtube.com/watch?v=wjZofJX0v4M"><ExternalLink/>But what is a GPT? Visual intro to transformers</a></li>
+      <li><a href="https://www.youtube.com/watch?v=eMlx5fFNoYc"><ExternalLink/>Attention in transformers, visually explained</a></li>
     </ul>
 
     <h2><Code/>AI Coding in Python</h2>
     <ul>
-      {ExternalLinks('python', [
-        ["Q-Learning in Python", "https://www.geeksforgeeks.org/q-learning-in-python/", "This is the algorithm we implemented for you in our RL projects"],
-      ])}
+      <li><a href="https://www.geeksforgeeks.org/q-learning-in-python/"><ExternalLink/>Q-Learning in Python</a><br/><em>This is the algorithm we implemented for you in our RL projects</em></li>
     </ul>
   </Page>
 );

@@ -38,6 +38,7 @@ export default () => (
           <li><Clapperboard/><strong>Movie Cast Info</strong> - Using the MovieDB service, display photos of leading cast members of any movie based on its title. Stresses lists. <a href="documents/lessons/movie-app.pdf"><Download/></a></li>
         </ul>
       </div>
+
       <div name="General RoboScape">
         <h3>Description</h3>
 
@@ -61,6 +62,7 @@ export default () => (
           <li><BrickWall/><strong>Touch Wall and Return</strong> - Listen to the robot to be able to receive back messages using <code>robot message</code>. The whiskers will trigger one of these messages upon touching the wall. Use get ticks before beginning to move to get an initial reading, then use that data to return to the initial position.</li>
         </ul>
       </div>
+
       <div name="Simple Attacks">
         <h3>Description</h3>
 
@@ -83,6 +85,7 @@ export default () => (
           <li><Swords/><strong>Tug of War</strong> - Students work in pairs: one has the task of writing a self-driving program that tries to escape from a circle. The other has to write an attack program that tries to prevent this escape.</li>
         </ul>
       </div>
+
       <div name="Denial of Service">
         <h3>Description</h3>
 
@@ -104,6 +107,7 @@ export default () => (
           <li><Swords/><strong>Updated Tug of War Challenge</strong> - This challenge is a perfect fit for reinforcing the ideas of rate control. The competition changes drastically as either everyone combined or a specific user is suddenly limited in the number of actions that can be taken per second.</li>
         </ul>
       </div>
+
       <div name="Encryption">
         <h3>Description</h3>
 
@@ -127,6 +131,7 @@ export default () => (
           <li><Lock/><strong>Basic Encryption</strong> - To counter this problem, the secret code will be used to encrypt all messages from the computer to the robot and vice versa. It uses Caesar cipher with the code/key being the shift amount. This can be shown off to the class by running a simple example of robot movement (turning in a circle), but now using encryption. They will not be able to send it off course or delay commands to the robot as they could previously.</li>
         </ul>
       </div>
+
       <div name="Key Cracking">
         <h3>Description</h3>
 
@@ -149,6 +154,7 @@ export default () => (
           <li><Lock/><strong>Example: Shift Array</strong> - A simple way of enforcing the Caesar cipher that we have is to modify it to use a list of shift values. Instead of shifting all the characters by a constant shift value, we will loop through a series of shift values and shift each character differently, making the search space for a brute force attack much bigger. The longer the list of shift values, the harder it would be to crack. Incorporating this technique means that a dumb brute-force attack in NetsBlox would take long enough to make it infeasible.</li>
         </ul>
       </div>
+
       <div name="Key Exchange">
         <h3>Description</h3>
 
@@ -171,6 +177,7 @@ export default () => (
           <li><Shield/><strong>Hardware Key Exchange</strong> - In the real world, to avoid the problems with an insecure key exchange, there are exchange protocols (such as SSL) that ensure keys are sent properly and cannot be overheard or used by unauthorized users. To somewhat replicate this within the features of the robots, we use a feature that facilitates transfer of the initial keys directly from the robot to the students. There is a button on the RoboScape robots that, when pressed, will instruct the robot to generate a 16 bit random number. Then by default (when using Caesar cipher) this sequence is assigned as the encryption key in the form of four 4-bit numbers. These 16 bits are immediately "transferred" to the user through a pair of blinking LEDs on the robot, one for zero and the other for 1. At this point the students will have to write down the sequence, convert it to decimal, and use it as their encryption key. They can also write a simple set of blocks that does this conversion for them! The robot will only accept commands encrypted with this key afterwards.</li>
         </ul>
       </div>
+
       <div name="Replay Attacks">
         <h3>Description</h3>
 
