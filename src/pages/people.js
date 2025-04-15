@@ -19,14 +19,14 @@ export default () => (
         <Person img="images/people/akos-ledeczi.jpeg" name="Akos Ledeczi"/>
         <Person img="images/people/brian-broll.jpeg" name="Brian Broll"/>
         <Person img="images/people/gordon-stein.jpeg" name="Gordon Stein"/>
-        <Person img="images/people/devin-jean.jpg" name="Devin Jean"/>
+        <Person img="images/people/devin-jean.jpeg" name="Devin Jean"/>
       </Flex>
     </Card>
 
     <Card>
       <h2 className="text-center">Graduate Students</h2>
       <Flex>
-        <Person img="images/placeholder.png" name="Saman Kittani"/>
+        <Person img="images/people/saman-kittani.jpeg" name="Saman Kittani"/>
         <Person img="images/placeholder.png" name="Gabriel Barnard"/>
         <Person img="images/placeholder.png" name="Tito Ebiwonjumi"/>
       </Flex>
