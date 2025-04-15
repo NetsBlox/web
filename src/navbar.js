@@ -25,7 +25,7 @@ const navItems = [
   },
 ];
 
-const Navbar = () => {
+export default () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
@@ -73,5 +73,3 @@ const Navbar = () => {
     {(mobileMenuOpen || openSubmenu) && <div className="fixed top-0 left-0 w-screen h-screen" style={{ zIndex: 49 }} onClick={e => { e.preventDefault(); setMobileMenuOpen(false); setOpenSubmenu(false); }}/>}
   </>;
 };
-
-export default Navbar;

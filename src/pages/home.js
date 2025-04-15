@@ -86,13 +86,9 @@ export default () => {
 
       <Youtube id="b4YkDPtoaIs"/>
 
-      <p>
-        NetsBlox is a cloud-based visual programming language that enables novice programmers to easily create networked programs such as multi-player games. NetsBlox opens up the internet with its vast array of public domain data sources, making it possible to create advanced STEM projects such as displaying seismic activity anywhere on Earth using an interactive Google Maps background.
-      </p>
+      <p>NetsBlox is a cloud-based visual programming language that enables novice programmers to easily create networked programs such as multi-player games. NetsBlox opens up the internet with its vast array of public domain data sources, making it possible to create advanced STEM projects such as displaying seismic activity anywhere on Earth using an interactive Google Maps background.</p>
 
-      <p>
-        But NetsBlox is more than just a coding platform - it's an educational ecosystem designed to inspire and empower young minds. With our innovative tools and connected approach, students can create distributed programs, collaborate in real-time, and bring their ideas to life through code.
-      </p>
+      <p>But NetsBlox is more than just a coding platform - it's an educational ecosystem designed to inspire and empower young minds. With our innovative tools and connected approach, students can create distributed programs, collaborate in real-time, and bring their ideas to life through code.</p>
 
       <p className="text-center"><a href="curriculum"><button>Get Started!</button></a></p>
     </Page>
