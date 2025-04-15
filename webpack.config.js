@@ -11,9 +11,6 @@ export default {
     path: path.resolve(__dirname, "public"),
     publicPath: process.env.NODE_ENV === 'production' ? '/web/' : "/",
   },
-  optimization: {
-    minimize: process.env.NODE_ENV === "production",
-  },
   module: {
     rules: [
       {
@@ -28,5 +25,5 @@ export default {
     ],
   },
   plugins: [],
-  mode: process.env.NODE_ENV === "production" ? "production" : "development",
+  mode: process.env.NODE_ENV || "development",
 };
