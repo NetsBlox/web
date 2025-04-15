@@ -54,8 +54,6 @@ const taglines = [
 ];
 
 export default () => {
-  const [hoveredFeature, setHoveredFeature] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
   const [currentTagline, setCurrentTagline] = useState(0);
 
   useEffect(() => {
@@ -64,14 +62,6 @@ export default () => {
     }, 5000);
     return () => clearInterval(timer);
   }, []);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
 
   return (
     <Page>

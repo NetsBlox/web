@@ -1,7 +1,7 @@
 /* Copyright G. Hemingway, @2024 - All rights reserved */
 "use strict";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -24,22 +24,9 @@ import Cybersecurity from "./pages/cybersecurity.js";
 import Research from "./pages/research.js";
 
 const MyApp = () => {
-  const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem("darkMode");
-    return saved ? JSON.parse(saved) : false;
-  });
-
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [darkMode]);
-
   return (
     <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/web/' : "/"}>
-      <NavBar darkMode={darkMode} setDarkMode={setDarkMode}/>
+      <NavBar/>
       <Routes>
         <Route exact path="/" element={<Home/>}/>
         <Route path="/projects" element={<Projects/>}/>

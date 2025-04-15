@@ -23,7 +23,7 @@ const navItems = [
   },
 ];
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
@@ -37,7 +37,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         <div className="flex justify-between items-center py-1">
           <a href=".">
             <img src="images/logos/netsblox.svg" className="w-16 h-16 mr-1 inline-block"/>
-            <span className="text-3xl font-bold text-blue-600 dark:text-blue-400" style={{ verticalAlign: "middle" }}>NetsBlox</span>
+            <span className="text-3xl font-bold text-blue-600" style={{ verticalAlign: "middle" }}>NetsBlox</span>
           </a>
           <div className="hidden md:flex items-center space-x-6">
             {navItems.map((item, i) => (
@@ -47,9 +47,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   {item.submenu && (openSubmenu === i ? <ChevronUp className="mr-0"/> : <ChevronDown className="mr-0"/>)}
                 </a>
                 {item.submenu && openSubmenu === i && (
-                  <div className="absolute left-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+                  <div className="absolute left-0 mt-2 bg-white shadow-lg rounded-lg">
                     {item.submenu.map(subItem => (
-                      <a key={`nav-${item.name}-${subItem.name}`} href={subItem.href} className="plain block px-4 py-2 hover:bg-blue-100 dark:hover:bg-gray-700 rounded-lg">
+                      <a key={`nav-${item.name}-${subItem.name}`} href={subItem.href} className="plain block px-4 py-2 hover:bg-blue-100 rounded-lg">
                         {subItem.name}
                       </a>
                     ))}
@@ -60,7 +60,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <a href="https://editor.netsblox.org" target="_blank"><button><Flag/>Create!</button></a>
           </div>
           <button
-            className="md:hidden p-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 dark:from-gray-700 dark:to-gray-600 text-blue-500 dark:text-blue-400"
+            className="md:hidden p-2 rounded-full bg-gradient-to-r from-blue-100 to-blue-200 text-blue-500"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -73,19 +73,19 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               <div key={`nav-${item.name}`} className="relative">
                 <a
                   href={item.href}
-                  className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+                  className="block py-2 text-gray-700 hover:text-blue-500 transition-colors"
                   onClick={item.submenu && (() => toggleSubmenu(i))}
                 >
                   {item.name}
                   {item.submenu && (openSubmenu === i ? <ChevronUp className="mr-0"/> : <ChevronDown className="mr-0"/>)}
                 </a>
                 {item.submenu && openSubmenu === i && (
-                  <div className="mt-2 w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg">
+                  <div className="mt-2 w-full bg-white shadow-lg rounded-lg">
                     {item.submenu.map((subItem) => (
                       <a
                         key={`nav-${item.name}-${subItem.name}`}
                         href={subItem.href}
-                        className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors rounded-lg"
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 transition-colors rounded-lg"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {subItem.name}

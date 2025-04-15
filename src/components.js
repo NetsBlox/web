@@ -3,7 +3,7 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 export function Page({children}) {
   return (
-    <div className="min-h-screen bg-blue-50 dark:bg-slate-800">
+    <div className="min-h-screen bg-blue-50">
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {children}
@@ -14,7 +14,7 @@ export function Page({children}) {
 }
 
 export function Card({children}) {
-  return <div className="p-4 my-4 first:mt-0 last:mb-0 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm rounded-xl shadow-md">{children}</div>;
+  return <div className="p-4 my-4 first:mt-0 last:mb-0 bg-white/50 backdrop-blur-sm rounded-xl shadow-md">{children}</div>;
 }
 
 export function Flex({children}) {
@@ -38,7 +38,7 @@ export function Grid({children, cols}) {
 
 export function Warning({children}) {
   return (
-    <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-700 p-4 rounded-xl my-4 first:mt-0 last:mb-0 text-yellow-800 dark:text-yellow-200 shadow-md fancyjustify">
+    <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-xl my-4 first:mt-0 last:mb-0 text-yellow-800 shadow-md fancyjustify">
       {children}
     </div>
   );

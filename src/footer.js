@@ -3,7 +3,7 @@ import { MapPin } from "lucide-react";
 import { Grid } from "./components.js";
 
 export default () => (
-  <footer className="bg-white dark:bg-gray-900 p-4 container mx-auto">
+  <footer className="bg-white p-4 container mx-auto">
     <Grid cols={3}>
       <div>
         <h3>About NetsBlox</h3>
