@@ -48,6 +48,18 @@ export function Youtube({id}) {
   return <iframe className="shadow-lg my-4 first:mt-0 last:mb-0" width="100%" style={{ aspectRatio: "16 / 9" }} src={`https://www.youtube.com/embed/${id}?rel=0`} allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>;
 }
 
+export function Audio({title, src}) {
+  return (
+    <div>
+      {title && <h2 className="text-gray-700 mb-0">{title}</h2>}
+      <audio className="w-full" controls>
+        <source src={src} type={`audio/${src.slice(src.lastIndexOf('.') + 1)}`} />
+        <Warning>Your browser does not support audio elements.</Warning>
+      </audio>
+    </div>
+  );
+}
+
 export function Collapsable({title, children}) {
   const [isOpen, setIsOpen] = useState(false);
   return (

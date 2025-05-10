@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Page, Youtube } from "../components.js";
+import { Page, Youtube, Audio } from "../components.js";
 
 const taglines = [
   {
@@ -85,6 +85,10 @@ export default () => {
       </div>
 
       <Youtube id="b4YkDPtoaIs"/>
+
+      <div className="my-12">
+        <Audio title="NetsBlox Podcast" src="audio/podcast.mp3"/>
+      </div>
 
       <p>NetsBlox is a cloud-based visual programming language that enables novice programmers to easily create networked programs such as multi-player games. NetsBlox opens up the internet with its vast array of public domain data sources, making it possible to create advanced STEM projects such as displaying seismic activity anywhere on Earth using an interactive Google Maps background.</p>
 
