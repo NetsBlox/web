@@ -19,6 +19,8 @@ import Research from "./pages/research.js";
 import RoboScape from "./pages/roboscape.js";
 import ROCCEM from "./pages/roccem.js";
 import Wildlife from "./pages/wildlife.js";
+import Privacy from "./pages/privacy.js";
+import Terms from "./pages/terms.js";
 
 const MyApp = () => {
   return (
@@ -38,6 +40,8 @@ const MyApp = () => {
         <Route path="/roboscape" element={<RoboScape/>}/>
         <Route path="/roccem" element={<ROCCEM/>}/>
         <Route path="/wildlife" element={<Wildlife/>}/>
+        <Route path="/privacy" element={<Privacy/>}/>
+        <Route path="/terms" element={<Terms/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>
