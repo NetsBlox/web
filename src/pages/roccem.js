@@ -72,23 +72,13 @@ export default () => (
           src: "https://docs.google.com/document/d/1Xm9Q7hHZuPO38j0EiiZrevYDxD278YGLJCZ114ZeIMc/preview",
         },
       ].map(({ title, src }) => (
-        <details key={title} className="mt-4 group">
-          <summary className="cursor-pointer select-none list-none flex items-center gap-2 w-fit font-semibold text-blue-600 hover:text-blue-800 transition-colors">
-            <span className="transition-transform duration-200 group-open:rotate-90">
-              &#9654;
-            </span>
-            {title}
-          </summary>
-          <div className="mt-3 rounded-xl overflow-hidden shadow-inner ring-1 ring-black/10 bg-black/5">
-            <iframe
-              src={src}
-              width="100%"
-              height="800"
-              allowFullScreen
-              style={{ border: "none", display: "block" }}
-            />
-          </div>
-        </details>
+        <a
+          key={title}
+          href={src}
+          className="m-3 select-none list-none flex items-center gap-2 w-fit font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          &#9654; {title}
+        </a>
       ))}
     </Card>
     <Card>
@@ -119,23 +109,13 @@ export default () => (
           src: "https://docs.google.com/document/d/1aDuM186UVKIevxZyknhIHRNnbf_TdsKzxpS0mmZPQ5w/preview",
         },
       ].map(({ title, src }) => (
-        <details key={title} className="mt-4 group">
-          <summary className="cursor-pointer select-none list-none flex items-center gap-2 w-fit font-semibold text-blue-600 hover:text-blue-800 transition-colors">
-            <span className="transition-transform duration-200 group-open:rotate-90">
-              &#9654;
-            </span>
-            {title}
-          </summary>
-          <div className="mt-3 rounded-xl overflow-hidden shadow-inner ring-1 ring-black/10 bg-black/5">
-            <iframe
-              src={src}
-              width="100%"
-              height="800"
-              allowFullScreen
-              style={{ border: "none", display: "block" }}
-            />
-          </div>
-        </details>
+        <a
+          key={title}
+          href={src}
+          className="m-3 select-none list-none flex items-center gap-2 w-fit font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          &#9654; {title}
+        </a>
       ))}
     </Card>
 
@@ -177,23 +157,13 @@ export default () => (
           src: "https://docs.google.com/document/d/1hzPHadgM-BKXZbZupGjeWP-SA2NCfJ0PlgCHrS69yPc/preview",
         },
       ].map(({ title, src }) => (
-        <details key={title} className="mt-4 group">
-          <summary className="cursor-pointer select-none list-none flex items-center gap-2 w-fit font-semibold text-blue-600 hover:text-blue-800 transition-colors">
-            <span className="transition-transform duration-200 group-open:rotate-90">
-              &#9654;
-            </span>
-            {title}
-          </summary>
-          <div className="mt-3 rounded-xl overflow-hidden shadow-inner ring-1 ring-black/10 bg-black/5">
-            <iframe
-              src={src}
-              width="100%"
-              height="800"
-              allowFullScreen
-              style={{ border: "none", display: "block" }}
-            />
-          </div>
-        </details>
+        <a
+          key={title}
+          href={src}
+          className="m-3 select-none list-none flex items-center gap-2 w-fit font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          &#9654; {title}
+        </a>
       ))}
     </Card>
 
@@ -218,25 +188,15 @@ export default () => (
         {
           title: "World Building",
           src: "https://docs.google.com/document/d/16Bgeb58A44_QjLIOfCiRapcDj72YKluToxvZkWYYY8M/preview",
-        }
+        },
       ].map(({ title, src }) => (
-        <details key={title} className="mt-4 group">
-          <summary className="cursor-pointer select-none list-none flex items-center gap-2 w-fit font-semibold text-blue-600 hover:text-blue-800 transition-colors">
-            <span className="transition-transform duration-200 group-open:rotate-90">
-              &#9654;
-            </span>
-            {title}
-          </summary>
-          <div className="mt-3 rounded-xl overflow-hidden shadow-inner ring-1 ring-black/10 bg-black/5">
-            <iframe
-              src={src}
-              width="100%"
-              height="800"
-              allowFullScreen
-              style={{ border: "none", display: "block" }}
-            />
-          </div>
-        </details>
+        <a
+          key={title}
+          href={src}
+          className="m-3 select-none list-none flex items-center gap-2 w-fit font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+        >
+          &#9654; {title}
+        </a>
       ))}
     </Card>
   </Page>
